@@ -129,6 +129,35 @@ document.querySelectorAll('.hotspot-btn').forEach((btn) => {
   });
 });
 
+// Slide left and right functions
+function slideTo(direction) {
+  const total = features.length;
+  if (direction === 'next') {
+    activeSegment = (activeSegment + 1) % total;
+  } else {
+    activeSegment = (activeSegment - 1 + total) % total;
+  }
+  if (features[activeSegment]) {
+    activeFeature = features[activeSegment].id;
+  }
+  updateUI();
+}
+
+const slidePrevBtn = document.getElementById('slide-prev-btn');
+const slideNextBtn = document.getElementById('slide-next-btn');
+const photoPrevBtn = document.getElementById('photo-prev-btn');
+const photoNextBtn = document.getElementById('photo-next-btn');
+
+if (slidePrevBtn) slidePrevBtn.addEventListener('click', () => slideTo('prev'));
+if (slideNextBtn) slideNextBtn.addEventListener('click', () => slideTo('next'));
+if (photoPrevBtn) photoPrevBtn.addEventListener('click', () => slideTo('prev'));
+if (photoNextBtn) photoNextBtn.addEventListener('click', () => slideTo('next'));
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft') slideTo('prev');
+  if (e.key === 'ArrowRight') slideTo('next');
+});
+
 // Segment indicator buttons
 document.querySelectorAll('.segment-btn').forEach((btn) => {
   btn.addEventListener('click', () => {
