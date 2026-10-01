@@ -1,0 +1,6 @@
+{
+  "name": "Fleex Garment - The Traditional, Redefined",
+  "description": "Interactive product landing page for Fleex Garment men's traditional kurta-shalwar collection, featuring detailed craftsmanship breakdowns, hotspots, and footwear pairing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
