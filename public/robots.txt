@@ -2,5 +2,8 @@
 User-agent: *
 Allow: /
 
+# Host
+Host: https://fleexgarments.shop
+
 # Sitemaps
-Sitemap: https://fleexgarment.com/sitemap.xml
+Sitemap: https://fleexgarments.shop/sitemap.xml

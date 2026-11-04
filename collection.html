@@ -9,7 +9,7 @@
     <meta name="description" content="Fleex Garments Shop menswear collection. Sizes 20, 22, 24, 26, 28. Handcrafted stitched salwar kameez suits." />
     <meta name="keywords" content="fleex garments shop, salwar kameez, mens stitched suit, sizes 20 22 24 26 28" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://fleexgarment.com/collection.html" />
+    <link rel="canonical" href="https://fleexgarments.shop/collection.html" />
     <meta name="theme-color" content="#9bbad2" />
     
     <!-- OpenGraph & Twitter -->
@@ -17,7 +17,7 @@
     <meta property="og:site_name" content="Fleex Garment" />
     <meta property="og:title" content="Collections – Fleex Garments Shop" />
     <meta property="og:description" content="Explore handcrafted menswear. Sizes 20, 22, 24, 26, 28." />
-    <meta property="og:url" content="https://fleexgarment.com/collection.html" />
+    <meta property="og:url" content="https://fleexgarments.shop/collection.html" />
     <meta property="og:image" content="/src/assets/images/charcoal_kurta_suit_1790890713358.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -56,13 +56,6 @@
       .slide-item {
         flex: 0 0 100%;
         width: 100%;
-      }
-      .hide-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .hide-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
       }
     </style>
   </head>
@@ -135,31 +128,17 @@
       </div>
     </header>
 
-    <!-- Main Content Area: Full Image Showcase (No Product Specs List, No Slop) -->
+    <!-- Main Content Area: Pure Full Image Showcase (No Clothes Names, No WhatsApp Concierge, No Contact Us) -->
     <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-8 lg:px-12 py-2 flex flex-col justify-center">
       
-      <!-- Short Title Navigation Bar -->
-      <div class="mb-3">
-        <div class="flex items-center justify-center gap-2 overflow-x-auto hide-scrollbar pb-1">
-          <button type="button" class="tab-select-btn px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer whitespace-nowrap bg-[#0f2135] text-white shadow-xs" data-index="0">
-            Midnight Charcoal
-          </button>
-          <button type="button" class="tab-select-btn px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer whitespace-nowrap bg-white/60 hover:bg-white text-slate-800 border border-white/80" data-index="1">
-            Heritage Ivory
-          </button>
-          <button type="button" class="tab-select-btn px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer whitespace-nowrap bg-white/60 hover:bg-white text-slate-800 border border-white/80" data-index="2">
-            Royal Boski
-          </button>
-          <button type="button" class="tab-select-btn px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer whitespace-nowrap bg-white/60 hover:bg-white text-slate-800 border border-white/80" data-index="3">
-            Wash & Wear
-          </button>
-          <button type="button" class="tab-select-btn px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer whitespace-nowrap bg-white/60 hover:bg-white text-slate-800 border border-white/80" data-index="4">
-            Normandy Linen
-          </button>
-          <button type="button" class="tab-select-btn px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer whitespace-nowrap bg-white/60 hover:bg-white text-slate-800 border border-white/80" data-index="5">
-            Groom Waistcoat
-          </button>
-        </div>
+      <!-- Slide Indicator Dots -->
+      <div class="flex items-center justify-center gap-2 mb-3">
+        <button type="button" class="indicator-dot w-8 h-2 rounded-full bg-[#0f2135] transition-all cursor-pointer" data-index="0" aria-label="Slide 1"></button>
+        <button type="button" class="indicator-dot w-2.5 h-2 rounded-full bg-white/60 hover:bg-white transition-all cursor-pointer" data-index="1" aria-label="Slide 2"></button>
+        <button type="button" class="indicator-dot w-2.5 h-2 rounded-full bg-white/60 hover:bg-white transition-all cursor-pointer" data-index="2" aria-label="Slide 3"></button>
+        <button type="button" class="indicator-dot w-2.5 h-2 rounded-full bg-white/60 hover:bg-white transition-all cursor-pointer" data-index="3" aria-label="Slide 4"></button>
+        <button type="button" class="indicator-dot w-2.5 h-2 rounded-full bg-white/60 hover:bg-white transition-all cursor-pointer" data-index="4" aria-label="Slide 5"></button>
+        <button type="button" class="indicator-dot w-2.5 h-2 rounded-full bg-white/60 hover:bg-white transition-all cursor-pointer" data-index="5" aria-label="Slide 6"></button>
       </div>
 
       <!-- Slide Viewport: Full Image Display -->
@@ -167,234 +146,144 @@
         
         <div id="slide-track" class="slide-track">
 
-          <!-- SLIDE 1: Midnight Charcoal (Full Image) -->
+          <!-- SLIDE 1 (Full Image of Salwar and Kameez) -->
           <div class="slide-item p-3 sm:p-5 flex flex-col items-center justify-center">
-            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900 group">
+            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900">
               <div class="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img
                   src="/src/assets/images/charcoal_kurta_suit_1790890713358.jpg"
-                  alt="Midnight Charcoal Salwar Kameez Suit"
+                  alt="Salwar and Kameez Suit"
                   class="w-full h-full object-cover object-center"
                 />
                 
-                <!-- Bottom Floating Panel: Short Title, Size Numbers & Action -->
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0f2135]/95 via-[#0f2135]/75 to-transparent p-5 sm:p-6 pt-16 flex flex-col items-center text-center">
-                  <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2 drop-shadow-sm">
-                    Midnight Charcoal
-                  </h2>
-
-                  <!-- Size Numbers: 20, 22, 24, 26, 28 -->
-                  <div class="flex items-center justify-center gap-2 mb-3.5">
+                <!-- Bottom Size Numbers Overlay (No clothes name, no whatsapp, no contact us) -->
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0f2135]/90 via-[#0f2135]/60 to-transparent p-4 sm:p-5 pt-12 flex flex-col items-center text-center">
+                  <div class="flex items-center justify-center gap-2">
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="20">20</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="22">22</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white bg-white text-[#0f2135] text-xs font-bold transition-all cursor-pointer shadow-md" data-size="24">24</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="26">26</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="28">28</button>
                   </div>
-
-                  <!-- Actions -->
-                  <div class="flex items-center gap-3">
-                    <a href="https://wa.me/923702265968?text=Hello%20Fleex%20Garments,%20I%20am%20interested%20in%20Midnight%20Charcoal%20(Size%2024)" target="_blank" rel="noopener noreferrer" class="item-wa-btn px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md flex items-center gap-2" data-title="Midnight Charcoal">
-                      <span>WhatsApp Concierge</span>
-                    </a>
-                    <a href="/contact.html" class="px-5 py-2.5 rounded-xl bg-white/90 hover:bg-white text-[#0f2135] text-xs font-bold transition-all shadow-md">
-                      Contact Us
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- SLIDE 2: Heritage Ivory (Full Image) -->
+          <!-- SLIDE 2 (Full Image of Salwar and Kameez) -->
           <div class="slide-item p-3 sm:p-5 flex flex-col items-center justify-center">
-            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900 group">
+            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900">
               <div class="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img
                   src="/src/assets/images/fleex_kurta_model_1790884646861.jpg"
-                  alt="Heritage Ivory Salwar Kameez Suit"
+                  alt="Salwar and Kameez Suit"
                   class="w-full h-full object-cover object-center"
                 />
                 
-                <!-- Bottom Floating Panel: Short Title, Size Numbers & Action -->
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0f2135]/95 via-[#0f2135]/75 to-transparent p-5 sm:p-6 pt-16 flex flex-col items-center text-center">
-                  <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2 drop-shadow-sm">
-                    Heritage Ivory
-                  </h2>
-
-                  <!-- Size Numbers: 20, 22, 24, 26, 28 -->
-                  <div class="flex items-center justify-center gap-2 mb-3.5">
+                <!-- Bottom Size Numbers Overlay (No clothes name, no whatsapp, no contact us) -->
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0f2135]/90 via-[#0f2135]/60 to-transparent p-4 sm:p-5 pt-12 flex flex-col items-center text-center">
+                  <div class="flex items-center justify-center gap-2">
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="20">20</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="22">22</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white bg-white text-[#0f2135] text-xs font-bold transition-all cursor-pointer shadow-md" data-size="24">24</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="26">26</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="28">28</button>
                   </div>
-
-                  <!-- Actions -->
-                  <div class="flex items-center gap-3">
-                    <a href="https://wa.me/923702265968?text=Hello%20Fleex%20Garments,%20I%20am%20interested%20in%20Heritage%20Ivory%20(Size%2024)" target="_blank" rel="noopener noreferrer" class="item-wa-btn px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md flex items-center gap-2" data-title="Heritage Ivory">
-                      <span>WhatsApp Concierge</span>
-                    </a>
-                    <a href="/contact.html" class="px-5 py-2.5 rounded-xl bg-white/90 hover:bg-white text-[#0f2135] text-xs font-bold transition-all shadow-md">
-                      Contact Us
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- SLIDE 3: Royal Boski (Full Image) -->
+          <!-- SLIDE 3 (Full Image of Salwar and Kameez) -->
           <div class="slide-item p-3 sm:p-5 flex flex-col items-center justify-center">
-            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900 group">
+            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900">
               <div class="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img
                   src="/src/assets/images/boski_kurta_suit_1790890729308.jpg"
-                  alt="Royal Boski Stitched Salwar Kameez"
+                  alt="Salwar and Kameez Suit"
                   class="w-full h-full object-cover object-center"
                 />
                 
-                <!-- Bottom Floating Panel: Short Title, Size Numbers & Action -->
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0f2135]/95 via-[#0f2135]/75 to-transparent p-5 sm:p-6 pt-16 flex flex-col items-center text-center">
-                  <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2 drop-shadow-sm">
-                    Royal Boski
-                  </h2>
-
-                  <!-- Size Numbers: 20, 22, 24, 26, 28 -->
-                  <div class="flex items-center justify-center gap-2 mb-3.5">
+                <!-- Bottom Size Numbers Overlay (No clothes name, no whatsapp, no contact us) -->
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0f2135]/90 via-[#0f2135]/60 to-transparent p-4 sm:p-5 pt-12 flex flex-col items-center text-center">
+                  <div class="flex items-center justify-center gap-2">
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="20">20</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="22">22</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white bg-white text-[#0f2135] text-xs font-bold transition-all cursor-pointer shadow-md" data-size="24">24</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="26">26</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="28">28</button>
                   </div>
-
-                  <!-- Actions -->
-                  <div class="flex items-center gap-3">
-                    <a href="https://wa.me/923702265968?text=Hello%20Fleex%20Garments,%20I%20am%20interested%20in%20Royal%20Boski%20(Size%2024)" target="_blank" rel="noopener noreferrer" class="item-wa-btn px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md flex items-center gap-2" data-title="Royal Boski">
-                      <span>WhatsApp Concierge</span>
-                    </a>
-                    <a href="/contact.html" class="px-5 py-2.5 rounded-xl bg-white/90 hover:bg-white text-[#0f2135] text-xs font-bold transition-all shadow-md">
-                      Contact Us
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- SLIDE 4: Wash & Wear (Full Image) -->
+          <!-- SLIDE 4 (Full Image of Salwar and Kameez) -->
           <div class="slide-item p-3 sm:p-5 flex flex-col items-center justify-center">
-            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900 group">
+            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900">
               <div class="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img
                   src="/src/assets/images/wash_wear_suit_1790890742415.jpg"
-                  alt="Wash and Wear Salwar Kameez Suit"
+                  alt="Salwar and Kameez Suit"
                   class="w-full h-full object-cover object-center"
                 />
                 
-                <!-- Bottom Floating Panel: Short Title, Size Numbers & Action -->
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0f2135]/95 via-[#0f2135]/75 to-transparent p-5 sm:p-6 pt-16 flex flex-col items-center text-center">
-                  <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2 drop-shadow-sm">
-                    Wash & Wear
-                  </h2>
-
-                  <!-- Size Numbers: 20, 22, 24, 26, 28 -->
-                  <div class="flex items-center justify-center gap-2 mb-3.5">
+                <!-- Bottom Size Numbers Overlay (No clothes name, no whatsapp, no contact us) -->
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0f2135]/90 via-[#0f2135]/60 to-transparent p-4 sm:p-5 pt-12 flex flex-col items-center text-center">
+                  <div class="flex items-center justify-center gap-2">
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="20">20</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="22">22</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white bg-white text-[#0f2135] text-xs font-bold transition-all cursor-pointer shadow-md" data-size="24">24</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="26">26</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="28">28</button>
                   </div>
-
-                  <!-- Actions -->
-                  <div class="flex items-center gap-3">
-                    <a href="https://wa.me/923702265968?text=Hello%20Fleex%20Garments,%20I%20am%20interested%20in%20Wash%20and%20Wear%20(Size%2024)" target="_blank" rel="noopener noreferrer" class="item-wa-btn px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md flex items-center gap-2" data-title="Wash and Wear">
-                      <span>WhatsApp Concierge</span>
-                    </a>
-                    <a href="/contact.html" class="px-5 py-2.5 rounded-xl bg-white/90 hover:bg-white text-[#0f2135] text-xs font-bold transition-all shadow-md">
-                      Contact Us
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- SLIDE 5: Normandy Linen (Full Image) -->
+          <!-- SLIDE 5 (Full Image of Salwar and Kameez) -->
           <div class="slide-item p-3 sm:p-5 flex flex-col items-center justify-center">
-            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900 group">
+            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900">
               <div class="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img
                   src="/src/assets/images/fleex_kurta_model_1790884646861.jpg"
-                  alt="Normandy Linen Salwar Kameez Suit"
+                  alt="Salwar and Kameez Suit"
                   class="w-full h-full object-cover object-top"
                 />
                 
-                <!-- Bottom Floating Panel: Short Title, Size Numbers & Action -->
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0f2135]/95 via-[#0f2135]/75 to-transparent p-5 sm:p-6 pt-16 flex flex-col items-center text-center">
-                  <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2 drop-shadow-sm">
-                    Normandy Linen
-                  </h2>
-
-                  <!-- Size Numbers: 20, 22, 24, 26, 28 -->
-                  <div class="flex items-center justify-center gap-2 mb-3.5">
+                <!-- Bottom Size Numbers Overlay (No clothes name, no whatsapp, no contact us) -->
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0f2135]/90 via-[#0f2135]/60 to-transparent p-4 sm:p-5 pt-12 flex flex-col items-center text-center">
+                  <div class="flex items-center justify-center gap-2">
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="20">20</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="22">22</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white bg-white text-[#0f2135] text-xs font-bold transition-all cursor-pointer shadow-md" data-size="24">24</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="26">26</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="28">28</button>
-                  </div>
-
-                  <!-- Actions -->
-                  <div class="flex items-center gap-3">
-                    <a href="https://wa.me/923702265968?text=Hello%20Fleex%20Garments,%20I%20am%20interested%20in%20Normandy%20Linen%20(Size%2024)" target="_blank" rel="noopener noreferrer" class="item-wa-btn px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md flex items-center gap-2" data-title="Normandy Linen">
-                      <span>WhatsApp Concierge</span>
-                    </a>
-                    <a href="/contact.html" class="px-5 py-2.5 rounded-xl bg-white/90 hover:bg-white text-[#0f2135] text-xs font-bold transition-all shadow-md">
-                      Contact Us
-                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- SLIDE 6: Groom Waistcoat (Full Image) -->
+          <!-- SLIDE 6 (Full Image of Salwar and Kameez) -->
           <div class="slide-item p-3 sm:p-5 flex flex-col items-center justify-center">
-            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900 group">
+            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900">
               <div class="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
                 <img
                   src="/src/assets/images/groom_suit_set_1790890754363.jpg"
-                  alt="Groom Waistcoat and Salwar Kameez Suit"
+                  alt="Salwar and Kameez Suit"
                   class="w-full h-full object-cover object-center"
                 />
                 
-                <!-- Bottom Floating Panel: Short Title, Size Numbers & Action -->
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0f2135]/95 via-[#0f2135]/75 to-transparent p-5 sm:p-6 pt-16 flex flex-col items-center text-center">
-                  <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2 drop-shadow-sm">
-                    Groom Waistcoat
-                  </h2>
-
-                  <!-- Size Numbers: 20, 22, 24, 26, 28 -->
-                  <div class="flex items-center justify-center gap-2 mb-3.5">
+                <!-- Bottom Size Numbers Overlay (No clothes name, no whatsapp, no contact us) -->
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0f2135]/90 via-[#0f2135]/60 to-transparent p-4 sm:p-5 pt-12 flex flex-col items-center text-center">
+                  <div class="flex items-center justify-center gap-2">
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="20">20</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="22">22</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white bg-white text-[#0f2135] text-xs font-bold transition-all cursor-pointer shadow-md" data-size="24">24</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="26">26</button>
                     <button type="button" class="size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs" data-size="28">28</button>
-                  </div>
-
-                  <!-- Actions -->
-                  <div class="flex items-center gap-3">
-                    <a href="https://wa.me/923702265968?text=Hello%20Fleex%20Garments,%20I%20am%20interested%20in%20Groom%20Waistcoat%20(Size%2024)" target="_blank" rel="noopener noreferrer" class="item-wa-btn px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md flex items-center gap-2" data-title="Groom Waistcoat">
-                      <span>WhatsApp Concierge</span>
-                    </a>
-                    <a href="/contact.html" class="px-5 py-2.5 rounded-xl bg-white/90 hover:bg-white text-[#0f2135] text-xs font-bold transition-all shadow-md">
-                      Contact Us
-                    </a>
                   </div>
                 </div>
               </div>
@@ -437,12 +326,12 @@
       </div>
     </footer>
 
-    <!-- Slider JS: Slide Left to Right and Right to Left (No Slider Buttons, No Slide Counts) -->
+    <!-- Slider JS: Slide Left to Right and Right to Left -->
     <script>
       let currentSlide = 0;
       const totalSlides = 6;
       const track = document.getElementById('slide-track');
-      const tabs = document.querySelectorAll('.tab-select-btn');
+      const dots = document.querySelectorAll('.indicator-dot');
 
       function updateSlider(index) {
         if (index < 0) currentSlide = totalSlides - 1;
@@ -451,41 +340,32 @@
 
         track.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-        tabs.forEach((tab, idx) => {
+        dots.forEach((dot, idx) => {
           if (idx === currentSlide) {
-            tab.className = 'tab-select-btn px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer whitespace-nowrap bg-[#0f2135] text-white shadow-xs';
-            tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            dot.className = 'indicator-dot w-8 h-2 rounded-full bg-[#0f2135] transition-all cursor-pointer';
           } else {
-            tab.className = 'tab-select-btn px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer whitespace-nowrap bg-white/60 hover:bg-white text-slate-800 border border-white/80';
+            dot.className = 'indicator-dot w-2.5 h-2 rounded-full bg-white/60 hover:bg-white transition-all cursor-pointer';
           }
         });
       }
 
-      // Tab click to slide left-to-right / right-to-left
-      tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          const idx = parseInt(tab.getAttribute('data-index') || '0', 10);
+      // Dot click to slide left-to-right / right-to-left
+      dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+          const idx = parseInt(dot.getAttribute('data-index') || '0', 10);
           updateSlider(idx);
         });
       });
 
-      // Size Selection & WhatsApp link updating
+      // Size Selection
       document.querySelectorAll('.slide-item').forEach((slide) => {
         const sizeBtns = slide.querySelectorAll('.size-btn');
-        const waBtn = slide.querySelector('.item-wa-btn');
-        let selectedSize = '24';
-        const title = waBtn ? waBtn.getAttribute('data-title') : 'Fleex Garments Suit';
-
         sizeBtns.forEach((btn) => {
           btn.addEventListener('click', () => {
             sizeBtns.forEach((b) => {
               b.className = 'size-btn px-3.5 py-1.5 rounded-xl border border-white/30 bg-white/20 hover:bg-white text-white hover:text-[#0f2135] text-xs font-bold transition-all cursor-pointer backdrop-blur-xs';
             });
             btn.className = 'size-btn px-3.5 py-1.5 rounded-xl border border-white bg-white text-[#0f2135] text-xs font-bold transition-all cursor-pointer shadow-md';
-            selectedSize = btn.getAttribute('data-size');
-            if (waBtn) {
-              waBtn.href = `https://wa.me/923702265968?text=${encodeURIComponent(`Hello Fleex Garments, I am interested in ${title} (Size: ${selectedSize})`)}`;
-            }
           });
         });
       });

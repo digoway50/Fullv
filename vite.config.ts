@@ -25,6 +25,7 @@ export default defineConfig(() => {
           about: path.resolve(__dirname, 'about.html'),
           contact: path.resolve(__dirname, 'contact.html'),
           collection: path.resolve(__dirname, 'collection.html'),
+          googleVerification: path.resolve(__dirname, 'googlea8b96ec48b464526.html'),
         },
       },
     },

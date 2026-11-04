@@ -1,0 +1,6 @@
+{
+  "summary": "Comprehensive diagnostic and remediation plan to fix Google Search Console 'Discovered - currently not indexed' status. Resolves critical domain mismatches between CNAME (fleexgarments.shop) and canonical/sitemap URLs (fleexgarment.com), updates robots.txt, sitemap.xml, schema structured data, and provides Google Search Console re-indexing steps.",
+  "updatedAt": "2026-11-04T05:21:37.927354082Z",
+  "requestFeedback": true,
+  "userFacing": true
+}
