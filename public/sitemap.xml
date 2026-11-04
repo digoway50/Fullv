@@ -1,38 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fleexgarments.shop/</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://fleexgarments.shop/src/assets/images/fleex_kurta_model_1790884646861.jpg</image:loc>
-      <image:title>Fleex Garments Shop Luxury White Kurta Shalwar</image:title>
-      <image:caption>Handcrafted South Asian traditional menswear and stitched salwar kameez suits</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://fleexgarments.shop/collection.html</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://fleexgarments.shop/src/assets/images/charcoal_kurta_suit_1790890713358.jpg</image:loc>
-      <image:title>Ceremonial Midnight Charcoal Salwar Kameez Suit</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fleexgarments.shop/src/assets/images/boski_kurta_suit_1790890729308.jpg</image:loc>
-      <image:title>Royal Boski Stitched Salwar Kameez</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fleexgarments.shop/src/assets/images/wash_wear_suit_1790890742415.jpg</image:loc>
-      <image:title>Executive Wash and Wear Salwar Kameez</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://fleexgarments.shop/src/assets/images/groom_suit_set_1790890754363.jpg</image:loc>
-      <image:title>Groom Raw Silk Waistcoat and Salwar Kameez</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://fleexgarments.shop/about.html</loc>
