@@ -56,7 +56,7 @@ export const PRODUCTS: ProductItem[] = [
       "Wash and Wear Boys Suit",
       "Readymade Kids Garments"
     ],
-    image: "/assets/aistudio/1793957376347_4a65293c.jpg",
+    image: "assets/aistudio/1793957376347_4a65293c.jpg",
     badge: "BESTSELLER",
     tag: "Wash & Wear"
   },
@@ -77,7 +77,7 @@ export const PRODUCTS: ProductItem[] = [
       "Ready to Wear Boys Eastern Wear",
       "Minimalist Kids Kurta Pajama"
     ],
-    image: "/assets/aistudio/1793957380265_c059a715.jpg",
+    image: "assets/aistudio/1793957380265_c059a715.jpg",
     badge: "MINIMALIST",
     tag: "Cotton Blend"
   },
@@ -98,7 +98,7 @@ export const PRODUCTS: ProductItem[] = [
       "Formal Kids Kurta Shalwar",
       "Dark Blue Kids Dress"
     ],
-    image: "/assets/aistudio/1793957392138_6a9e5128.jpg",
+    image: "assets/aistudio/1793957392138_6a9e5128.jpg",
     badge: "NEW ARRIVAL",
     tag: "Textured Cotton"
   },
@@ -119,7 +119,7 @@ export const PRODUCTS: ProductItem[] = [
       "Bonanza Satrangi Kids Style",
       "Readymade Boys Eid Suit"
     ],
-    image: "/assets/aistudio/1793957396101_628635cd.jpg",
+    image: "assets/aistudio/1793957396101_628635cd.jpg",
     badge: "DESIGNER",
     tag: "Wash & Wear"
   },
@@ -140,7 +140,7 @@ export const PRODUCTS: ProductItem[] = [
       "Gold Button Kids Kurta",
       "Stitched Pret Boys Pakistan"
     ],
-    image: "/assets/aistudio/1793957401142_6f15b946.jpg",
+    image: "assets/aistudio/1793957401142_6f15b946.jpg",
     badge: "LUXURY PRET",
     tag: "Wash & Wear"
   },
@@ -161,7 +161,7 @@ export const PRODUCTS: ProductItem[] = [
       "J. Teen Boys Style",
       "Pakistani Readymade Kids Clothes"
     ],
-    image: "/assets/aistudio/1793957405200_e121423d.jpg",
+    image: "assets/aistudio/1793957405200_e121423d.jpg",
     badge: "TRENDING",
     tag: "Textured Dobby"
   },
@@ -182,7 +182,7 @@ export const PRODUCTS: ProductItem[] = [
       "Simple Kurta Design for Boys",
       "Sapphire Kids Pret"
     ],
-    image: "/assets/aistudio/1793957409076_a446f27c.jpg",
+    image: "assets/aistudio/1793957409076_a446f27c.jpg",
     badge: "SUMMER HIT",
     tag: "Cotton Linen"
   },
@@ -203,7 +203,7 @@ export const PRODUCTS: ProductItem[] = [
       "Ideas Kids Ready to Wear",
       "Stitched Boys Clothing Online"
     ],
-    image: "/assets/aistudio/1793957412810_b52fae88.jpg",
+    image: "assets/aistudio/1793957412810_b52fae88.jpg",
     badge: "ALL SEASON",
     tag: "Wash & Wear"
   },
@@ -224,7 +224,7 @@ export const PRODUCTS: ProductItem[] = [
       "Premium Kids Wear Pakistan",
       "Wash and Wear Boys Suit"
     ],
-    image: "/assets/aistudio/1793957407265_38f6545f.jpg",
+    image: "assets/aistudio/1793957407265_38f6545f.jpg",
     badge: "SIGNATURE",
     tag: "Wash & Wear"
   },
@@ -245,7 +245,7 @@ export const PRODUCTS: ProductItem[] = [
       "Durable Kids Wash and Wear",
       "Stitched 2 Piece Boys Suit"
     ],
-    image: "/src/assets/images/charcoal_kurta_suit_1790890713358.jpg",
+    image: "images/charcoal_kurta_suit_1790890713358.jpg",
     badge: "TIMELESS",
     tag: "Wash & Wear"
   },
@@ -266,7 +266,7 @@ export const PRODUCTS: ProductItem[] = [
       "Fleex Kids Festive Collection",
       "Boys Eid Collection 2026"
     ],
-    image: "/src/assets/images/fleex_kurta_model_1790884646861.jpg",
+    image: "images/fleex_kurta_model_1790884646861.jpg",
     badge: "FESTIVE EDIT",
     tag: "Wash & Wear"
   },
@@ -287,7 +287,7 @@ export const PRODUCTS: ProductItem[] = [
       "J. Kids Boys Style",
       "Wrinkle Free Kids Suit"
     ],
-    image: "/assets/aistudio/1793957417585_f8752f13.jpg",
+    image: "assets/aistudio/1793957417585_f8752f13.jpg",
     badge: "MODERN CLASSIC",
     tag: "Cotton Blend"
   }

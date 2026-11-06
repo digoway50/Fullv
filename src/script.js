@@ -220,7 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const target = e.currentTarget;
       const title = target.getAttribute('data-title') || 'Fleex Bespoke Suit';
-      const image = target.getAttribute('data-image') || '/src/assets/images/charcoal_kurta_suit_1790890713358.jpg';
+      const rawImage = target.getAttribute('data-image') || 'images/charcoal_kurta_suit_1790890713358.jpg';
+      const image = rawImage.replace(/^\/+/, '');
 
       const existingItem = cart.find((i) => i.title === title);
       if (existingItem) {
@@ -328,4 +329,18 @@ document.addEventListener('DOMContentLoaded', () => {
       closeCart();
     }
   });
+
+  // ----------------------------------------------------------
+  // 8. GLOBAL IMAGE LOAD RESILIENCE (GITHUB PAGES & SUBPATHS)
+  // ----------------------------------------------------------
+  window.addEventListener('error', (event) => {
+    const target = event.target;
+    if (target && target.tagName === 'IMG') {
+      const src = target.getAttribute('src') || '';
+      if (src.startsWith('/') && !target.dataset.retried) {
+        target.dataset.retried = 'true';
+        target.src = src.replace(/^\/+/, '');
+      }
+    }
+  }, true);
 });
