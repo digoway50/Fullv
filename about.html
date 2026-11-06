@@ -1,26 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us – Fleex Garment | The Traditional, Redefined</title>
+    <title>Our Atelier & Craftsmanship – Fleex Garments Pakistan</title>
     
     <!-- SEO Metadata -->
-    <meta name="description" content="Discover the craftsmanship behind Fleex Garment. Re-engineering Subcontinental men's traditional kurta-shalwar with Egyptian cotton, Belgian linen, and anatomical sherwani collars." />
-    <meta name="keywords" content="about fleex garment, luxury kurta shalwar atelier, pakistani menswear heritage, bespoke sherwani collar, master tailors hyderabad sindh" />
+    <meta name="description" content="Discover the craftsmanship behind Fleex Garments. Re-engineering Subcontinental menswear with Egyptian cotton, Belgian linen, Royal Boski, and master tailoring in Hyderabad & Sindh." />
+    <meta name="keywords" content="fleex garments atelier, bespoke tailoring hyderabad, mens royal boski stitched suit, pakistani luxury kurta shalwar, master tailoring tando ghulam ali" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://fleexgarments.shop/about.html" />
-    <meta name="theme-color" content="#9bbad2" />
+    <meta name="theme-color" content="#ffffff" />
     
     <!-- OpenGraph & Twitter -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Fleex Garment" />
-    <meta property="og:title" content="About Us – Fleex Garment Atelier" />
-    <meta property="og:description" content="The Traditional, Redefined. Hand-tailored men's traditional wear with courtly heritage and contemporary comfort." />
+    <meta property="og:title" content="Our Atelier & Craftsmanship – Fleex Garments Pakistan" />
+    <meta property="og:description" content="The Traditional, Redefined. Hand-tailored menswear with courtly heritage, 18-stitch precision, and contemporary comfort." />
     <meta property="og:url" content="https://fleexgarments.shop/about.html" />
-    <meta property="og:image" content="https://fleexgarments.shop/images/fleex_kurta_model_1790884646861.jpg" />
+    <meta property="og:image" content="https://fleexgarments.shop/src/assets/images/atelier_craft_preview_1793772174497.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
 
+    <!-- Google Fonts: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -44,236 +45,328 @@
     <style>
       body {
         font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background-color: #9bbad2;
+        background-color: #ffffff;
+        color: #111827;
+        overflow-x: hidden;
+      }
+      .scrollbar-none::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-none {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
       }
     </style>
   </head>
-  <body class="bg-[#9bbad2] text-slate-800 antialiased selection:bg-[#0f2135] selection:text-white min-h-screen flex flex-col justify-between relative font-['Outfit',sans-serif]">
+  <body class="bg-white text-slate-900 antialiased selection:bg-[#0f2135] selection:text-white min-h-screen flex flex-col justify-between font-['Outfit',sans-serif]">
 
-    <!-- Top Header Navbar -->
-    <header class="relative z-30 w-full pt-6 pb-2 px-6 sm:px-10 lg:px-14">
-      <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <!-- Brand Logo (Stacked Bold) -->
-        <a href="/" class="group block leading-[0.88] select-none">
-          <span class="block text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0f2135] transition-colors group-hover:text-sky-900">
-            Fleex
+    <!-- Sticky Header: Left Menu Bar + Right Logo (Card & Profile Removed) -->
+    <header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
+        
+        <!-- Left: Menu Bar (Hamburger + Desktop Nav Links on the Left Side) -->
+        <div class="flex items-center gap-4 sm:gap-6">
+          <button id="mobile-drawer-toggle" type="button" class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-slate-100 text-slate-900 transition-colors cursor-pointer" aria-label="Open menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"></path>
+            </svg>
+            <span class="text-xs font-black tracking-widest uppercase text-slate-900">MENU</span>
+          </button>
+
+          <!-- Desktop Navigation Menu Bar on the Left -->
+          <nav class="hidden md:flex items-center gap-6 text-xs font-bold tracking-widest text-slate-800 uppercase">
+            <a href="/" class="hover:text-black transition-colors py-1">Home</a>
+            <a href="/collection.html" class="hover:text-black transition-colors py-1">Collection</a>
+            <a href="/about.html" class="text-black border-b-2 border-black py-1">Atelier</a>
+            <a href="/contact.html" class="hover:text-black transition-colors py-1">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Right: Brand Logo (Placed where Profile and Card were) -->
+        <a href="/" class="block text-right select-none group">
+          <span class="text-xl sm:text-2xl lg:text-3xl font-black tracking-[0.22em] text-slate-900 uppercase transition-opacity group-hover:opacity-80">
+            FLEEX
           </span>
-          <span class="block text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0f2135] transition-colors group-hover:text-sky-900">
-            Garment
+          <span class="block text-[8px] sm:text-[9px] font-bold tracking-[0.38em] text-slate-500 uppercase -mt-1 text-right">
+            GARMENT
           </span>
         </a>
 
-        <!-- Desktop Navigation Menu (Top Right) -->
-        <nav class="hidden md:flex items-center gap-7 lg:gap-9 text-sm font-semibold text-[#0f2135]">
-          <a href="/collection.html" class="hover:text-sky-800 transition-colors py-1 relative group cursor-pointer">
-            <span>Collections</span>
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0f2135] transition-all group-hover:w-full"></span>
-          </a>
-
-          <a href="/about.html" class="text-sky-950 font-bold py-1 relative group cursor-pointer">
-            <span>About Us</span>
-            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-[#0f2135]"></span>
-          </a>
-
-          <a href="/contact.html" class="hover:text-sky-800 transition-colors py-1 relative group cursor-pointer">
-            <span>Contact</span>
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0f2135] transition-all group-hover:w-full"></span>
-          </a>
-        </nav>
-
-        <!-- Mobile menu toggle button -->
-        <button id="mobile-menu-toggle" type="button" class="md:hidden p-2 rounded-xl bg-white/60 text-[#0f2135] cursor-pointer" aria-label="Toggle menu">
-          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobile Dropdown Menu -->
-      <div id="mobile-menu" class="hidden md:hidden mt-3 p-4 bg-white/95 backdrop-blur-xl rounded-2xl border border-white/80 shadow-lg space-y-3">
-        <a href="/collection.html" class="block w-full text-left py-2 font-bold text-sm text-[#0f2135]">
-          Collections
-        </a>
-        <a href="/about.html" class="block w-full text-left py-2 font-bold text-sm text-[#0f2135] border-l-2 border-[#0f2135] pl-2">
-          About Us
-        </a>
-        <a href="/contact.html" class="block w-full text-left py-2 font-bold text-sm text-[#0f2135]">
-          Contact
-        </a>
       </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="flex-1 max-w-6xl w-full mx-auto px-6 sm:px-10 lg:px-14 py-8">
+    <!-- Main Content Body -->
+    <main class="flex-1 w-full pb-16">
       
-      <!-- Hero Narrative -->
-      <div class="mb-14 text-center max-w-3xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/50 border border-white/70 text-[#0f2135] text-xs font-bold tracking-wide uppercase mb-4">
-          <span class="w-2 h-2 rounded-full bg-sky-600"></span>
-          Our Atelier Story
-        </div>
-        <h1 class="text-4xl sm:text-6xl font-black text-[#0f2135] tracking-tight leading-[1.05] mb-5">
-          The Traditional, Redefined
+      <!-- Editorial Page Title -->
+      <section class="py-10 sm:py-14 px-4 sm:px-8 text-center max-w-3xl mx-auto border-b border-slate-100">
+        <span class="text-[11px] font-bold tracking-[0.25em] text-slate-400 uppercase block mb-1">
+          SINCE 2026 · SINDH ATELIER
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 uppercase mb-3">
+          THE TRADITIONAL, REDEFINED
         </h1>
-        <p class="text-base text-slate-700 leading-relaxed font-normal">
-          Founded on the core belief that traditional Subcontinental menswear should never compromise between regal elegance and relaxed, all-day comfort. Fleex Garment re-engineers classic Kurta-Shalwar ensembles with architectural collar structures, featherweight natural weaves, and master hand-finishing.
+        <p class="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
+          Rooted in the historic artisan heartland of Sindh, Fleex Garments re-engineers menswear with single-needle master tailoring, anatomical sherwani collars, and authentic heritage textiles.
         </p>
-      </div>
+      </section>
 
-      <!-- Atelier Stats Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-14">
-        <div class="p-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/80 text-center shadow-xs">
-          <div class="text-3xl sm:text-4xl font-black text-[#0f2135] mb-1">100%</div>
-          <div class="text-xs font-semibold text-slate-600 uppercase tracking-wider">Natural Fibers</div>
+      <!-- Atelier Photoshoot Banner -->
+      <section class="w-full max-w-6xl mx-auto px-4 sm:px-8 py-8">
+        <div class="relative w-full aspect-[16/8] sm:aspect-[21/9] overflow-hidden bg-slate-900 shadow-sm">
+          <img 
+            src="/src/assets/images/atelier_craft_preview_1793772174497.jpg" 
+            alt="Master Atelier Tailoring Sindh" 
+            class="w-full h-full object-cover object-center brightness-90"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 text-white max-w-lg">
+            <span class="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-slate-300 block mb-1">
+              PRECISION NEEDLEWORK
+            </span>
+            <h2 class="text-xl sm:text-3xl font-black uppercase tracking-tight">
+              18 STITCHES PER INCH
+            </h2>
+            <p class="text-xs text-slate-200 mt-1 hidden sm:block">
+              Single-needle tailored seams with internal bias reinforcement ensuring lifetime structural integrity.
+            </p>
+          </div>
         </div>
-        <div class="p-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/80 text-center shadow-xs">
-          <div class="text-3xl sm:text-4xl font-black text-[#0f2135] mb-1">48"</div>
-          <div class="text-xs font-semibold text-slate-600 uppercase tracking-wider">Traditional Ghera</div>
-        </div>
-        <div class="p-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/80 text-center shadow-xs">
-          <div class="text-3xl sm:text-4xl font-black text-[#0f2135] mb-1">30-Day</div>
-          <div class="text-xs font-semibold text-slate-600 uppercase tracking-wider">Fitting Guarantee</div>
-        </div>
-        <div class="p-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/80 text-center shadow-xs">
-          <div class="text-3xl sm:text-4xl font-black text-[#0f2135] mb-1">12,000+</div>
-          <div class="text-xs font-semibold text-slate-600 uppercase tracking-wider">Suits Handcrafted</div>
-        </div>
-      </div>
+      </section>
 
-      <!-- 4 Pillars of Craftsmanship -->
-      <div class="space-y-8 mb-14">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0f2135] tracking-tight text-center sm:text-left">
-          The Four Pillars of Fleex Garment
-        </h2>
+      <!-- 4 Pillars Grid (Sapphire Style) -->
+      <section class="max-w-6xl mx-auto px-4 sm:px-8 py-10">
+        <div class="text-center mb-10">
+          <span class="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase block mb-1">
+            UNCOMPROMISING STANDARDS
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-slate-900">
+            THE ATELIER PHILOSOPHY
+          </h2>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <!-- Pillar 1 -->
-          <div class="p-8 rounded-3xl bg-white/75 backdrop-blur-xl border border-white/85 shadow-lg shadow-slate-900/5">
-            <div class="w-12 h-12 rounded-2xl bg-sky-100 flex items-center justify-center text-sky-800 font-black text-base mb-5">
-              01
-            </div>
-            <h3 class="text-xl font-bold text-[#0f2135] mb-2">The Anatomical Sherwani Ban</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Standard commercial kurta collars easily collapse or fray. Our 1.25" bandhgala collar is interfaced with genuine horsehair canvas, ensuring it retains its noble upright stance throughout humid weddings and long ceremonial days while staying soft against the neck.
+          <div class="p-6 border border-slate-200 bg-slate-50/50">
+            <span class="text-xs font-black text-slate-400 uppercase tracking-widest block mb-2">01 / FIBERS</span>
+            <h3 class="text-sm font-black uppercase text-slate-900 mb-2">ROYAL BOSKI & GIZA</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              We weave unstitched yardage and stitched kurtas from pure long-staple Egyptian Giza cottons and silk-touch Royal Boski that maintain natural fluid draping in warm climates.
             </p>
           </div>
 
-          <!-- Pillar 2 -->
-          <div class="p-8 rounded-3xl bg-white/75 backdrop-blur-xl border border-white/85 shadow-lg shadow-slate-900/5">
-            <div class="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-800 font-black text-base mb-5">
-              02
-            </div>
-            <h3 class="text-xl font-bold text-[#0f2135] mb-2">Egyptian Giza & Normandy Flax</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              We source only extra-long staple Egyptian Giza cotton yarns blended with Normandy flax linen. The resulting 140 GSM weave breathes effortlessly, wicks moisture naturally, and becomes softer and more luxurious with every wash.
+          <div class="p-6 border border-slate-200 bg-slate-50/50">
+            <span class="text-xs font-black text-slate-400 uppercase tracking-widest block mb-2">02 / FIT</span>
+            <h3 class="text-sm font-black uppercase text-slate-900 mb-2">ANATOMICAL BAN COLLAR</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Our collars are sculpted with gentle curvature matching the cervical contour—eliminating throat chafing while preserving crisp royal upright posture all day.
             </p>
           </div>
 
-          <!-- Pillar 3 -->
-          <div class="p-8 rounded-3xl bg-white/75 backdrop-blur-xl border border-white/85 shadow-lg shadow-slate-900/5">
-            <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-800 font-black text-base mb-5">
-              03
-            </div>
-            <h3 class="text-xl font-bold text-[#0f2135] mb-2">Heritage Salwar Drape</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              We reject modern mass-market shortcuts. Each salwar is cut with a generous 48-inch ghera circumference for classical subcontinental volume and unrestricted comfort, finished with an 8.5-inch quadruple-stitched paincha cuff.
+          <div class="p-6 border border-slate-200 bg-slate-50/50">
+            <span class="text-xs font-black text-slate-400 uppercase tracking-widest block mb-2">03 / DETAILS</span>
+            <h3 class="text-sm font-black uppercase text-slate-900 mb-2">MOTHER-OF-PEARL BUTTONS</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Hand-set mother-of-pearl and natural horn buttons fastened with crow's foot lockstitch and reinforced button plackets that never buckle.
             </p>
           </div>
 
-          <!-- Pillar 4 -->
-          <div class="p-8 rounded-3xl bg-white/75 backdrop-blur-xl border border-white/85 shadow-lg shadow-slate-900/5">
-            <div class="w-12 h-12 rounded-2xl bg-purple-100 flex items-center justify-center text-purple-800 font-black text-base mb-5">
-              04
-            </div>
-            <h3 class="text-xl font-bold text-[#0f2135] mb-2">Single-Artisan Tailoring</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Instead of assembly line stitching, each Fleex Garment suit is entrusted to a single master tailor from initial chalk lines to the final buttonhole. This guarantees precision pattern alignment and unmatched longevity.
+          <div class="p-6 border border-slate-200 bg-slate-50/50">
+            <span class="text-xs font-black text-slate-400 uppercase tracking-widest block mb-2">04 / BESPOKE</span>
+            <h3 class="text-sm font-black uppercase text-slate-900 mb-2">PERFECT FIT GUARANTEE</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Every kurta shalwar is cut to custom measurements with master artisan consultations and 30-day tailoring adjustment support.
             </p>
           </div>
 
         </div>
-      </div>
+      </section>
 
-      <!-- Workshop CTA Banner -->
-      <div class="rounded-3xl p-8 sm:p-10 bg-gradient-to-r from-[#0f2135] to-[#1e3a5f] text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl shadow-sky-950/20">
-        <div>
-          <h3 class="text-2xl font-bold mb-1.5">Fleex Garments Atelier</h3>
-          <p class="text-xs sm:text-sm text-sky-200/90 max-w-lg mb-2">
-            Master tailoring crafted through heritage precision and artisanal South Asian silhouettes.
-          </p>
-          <div class="flex items-center gap-3 text-xs text-sky-100 font-semibold">
-            <span>Bespoke Tailoring</span>
-            <span>·</span>
-            <span>fleexgarments@gmail.com</span>
+      <!-- Visual 2-Column Story Section -->
+      <section class="max-w-6xl mx-auto px-4 sm:px-8 py-10 border-t border-slate-100">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          
+          <div class="aspect-[3/3.8] overflow-hidden bg-slate-900">
+            <img 
+              src="/src/assets/images/fleex_kurta_model_1790884646861.jpg" 
+              alt="Artisan Kurta Shalwar" 
+              class="w-full h-full object-cover"
+            />
           </div>
+
+          <div class="space-y-4 max-w-lg">
+            <span class="text-[11px] font-bold tracking-[0.2em] text-slate-400 uppercase block">
+              HERITAGE CRAFT
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-black uppercase tracking-tight text-slate-900 leading-tight">
+              FROM HYDERABAD & TANDO TO YOUR DOORSTEP
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+              For generations, master artisans of Sindh have perfected the balance between summer breathability and ceremonial gravitas. At Fleex Garments Shop (Mughal Market, Main Matli Road, Tando Ghulam Ali), we bring this heritage to modern gentlemen worldwide.
+            </p>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+              Whether you select an unstitched 4-meter suit piece or a ready-to-wear ensemble, each garment is inspected by master tailors before sealed packaging and dispatch.
+            </p>
+            <div class="pt-2 flex items-center gap-4">
+              <a href="/collection.html" class="px-6 py-3 bg-[#0f2135] hover:bg-black text-white text-xs font-bold tracking-widest uppercase transition-colors">
+                SHOP COLLECTION
+              </a>
+              <a href="/contact.html" class="px-6 py-3 border border-slate-300 hover:border-black text-slate-900 text-xs font-bold tracking-widest uppercase transition-colors">
+                VISIT ATELIER
+              </a>
+            </div>
+          </div>
+
         </div>
-        <div class="flex items-center gap-3">
-          <a href="/collection.html" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-colors">
-            View Collection
+      </section>
+
+      <!-- 3 ATELIER PILLARS -->
+      <section class="border-t border-slate-100 py-10 bg-slate-50/60 mt-8">
+        <div class="max-w-5xl mx-auto px-6 grid grid-cols-3 gap-4 text-center">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 mb-2 flex items-center justify-center text-slate-800">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+            </div>
+            <span class="text-[11px] sm:text-xs font-bold tracking-wider text-slate-900 uppercase">18-STITCH TAILORING</span>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 mb-2 flex items-center justify-center text-slate-800">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"/></svg>
+            </div>
+            <span class="text-[11px] sm:text-xs font-bold tracking-wider text-slate-900 uppercase">ROYAL BOSKI & GIZA</span>
+          </div>
+
+          <a href="/about.html" class="flex flex-col items-center group cursor-pointer">
+            <div class="w-10 h-10 mb-2 flex items-center justify-center text-slate-800 group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.614A2.993 2.993 0 009 9.35c.828 0 1.574-.336 2.121-.882a3.001 3.001 0 004.242 0c.547.546 1.293.882 2.121.882.828 0 1.574-.336 2.121-.882a3 3 0 001.39 1.882"></path></svg>
+            </div>
+            <span class="text-[11px] sm:text-xs font-bold tracking-wider text-slate-900 uppercase">OUR ATELIER</span>
           </a>
-          <a href="/contact.html" class="px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-[#0f2135] text-xs font-bold transition-colors shadow-xs">
-            Contact Us
-          </a>
         </div>
-      </div>
+      </section>
 
     </main>
 
-    <!-- Footer Links and Copyright -->
-    <footer class="w-full py-6 px-6 sm:px-10 lg:px-14 border-t border-white/20 mt-12 bg-sky-900/5">
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-slate-800">
-        <!-- Footer Links (Left) -->
-        <div class="flex items-center gap-5 sm:gap-6 flex-wrap">
-          <a href="/collection.html" class="hover:text-black transition-colors underline-offset-4 hover:underline">
-            Collections
-          </a>
-          <a href="/about.html" class="font-bold text-[#0f2135] underline-offset-4 underline">
-            About Us
-          </a>
-          <a href="/contact.html" class="hover:text-black transition-colors underline-offset-4 hover:underline">
-            Contact
-          </a>
-          <a href="/" class="hover:text-[#0f2135] transition-colors underline-offset-4 hover:underline">
-            Home
-          </a>
-          <span class="hidden md:inline text-slate-400">·</span>
-          <span class="hidden md:inline text-slate-600">
-            Artisanal Menswear & Heritage Tailoring
-          </span>
+    <!-- Sapphire Accordion Footer -->
+    <footer class="w-full bg-white border-t border-slate-100">
+      <div class="max-w-4xl mx-auto px-6 py-8">
+        
+        <div class="border-b border-slate-100">
+          <button type="button" class="accordion-toggle w-full py-4 flex items-center justify-between text-left text-xs font-bold tracking-widest text-slate-900 uppercase cursor-pointer" data-target="acc-contact">
+            <span>CONTACT US</span>
+            <span class="acc-icon text-base font-light">+</span>
+          </button>
+          <div id="acc-contact" class="hidden pb-4 text-xs text-slate-600 space-y-2">
+            <p><strong>WhatsApp Concierge:</strong> +92 370 2265968</p>
+            <p><strong>Phone Support:</strong> 0370 2265968</p>
+            <p><strong>Email:</strong> fleexgarments@gmail.com</p>
+            <p><strong>Store Address:</strong> Mughal Market, Main Matli Road, Tando Ghulam Ali, Hyderabad & Sindh</p>
+          </div>
         </div>
 
-        <!-- Copyright (Right) -->
-        <div class="text-right text-slate-600">
-          <p>© Fleex Garments Shop. All rights reserved.</p>
+        <div class="border-b border-slate-100">
+          <button type="button" class="accordion-toggle w-full py-4 flex items-center justify-between text-left text-xs font-bold tracking-widest text-slate-900 uppercase cursor-pointer" data-target="acc-care">
+            <span>CUSTOMER CARE & SIZING</span>
+            <span class="acc-icon text-base font-light">+</span>
+          </button>
+          <div id="acc-care" class="hidden pb-4 text-xs text-slate-600 space-y-2">
+            <p><strong>Bespoke Sizing:</strong> Visit our atelier in Sindh or consult our head master tailor directly on WhatsApp</p>
+            <p><strong>Fabric Authenticity:</strong> 100% genuine Royal Boski silk-feel yarns and Egyptian Giza cottons</p>
+            <p><strong>Size Guarantee:</strong> Free 30-day adjustments on collar, chest & sleeve length</p>
+          </div>
         </div>
+
+        <div class="border-b border-slate-100">
+          <button type="button" class="accordion-toggle w-full py-4 flex items-center justify-between text-left text-xs font-bold tracking-widest text-slate-900 uppercase cursor-pointer" data-target="acc-info">
+            <span>INFORMATION</span>
+            <span class="acc-icon text-base font-light">+</span>
+          </button>
+          <div id="acc-info" class="hidden pb-4 text-xs text-slate-600 space-y-2">
+            <p>Founded on authentic Subcontinental menswear heritage, Fleex Garment crafts unstitched & ready-to-wear kurta shalwars from the finest Belgian flax, Royal Boski silk-feel yarns, and long-staple Egyptian cotton.</p>
+          </div>
+        </div>
+
+        <div class="pt-8 pb-6 text-center max-w-md mx-auto">
+          <span class="text-xs font-bold tracking-widest text-slate-900 uppercase block mb-3">NEWSLETTER SIGNUP</span>
+          <form id="newsletter-form" class="flex gap-2">
+            <input type="email" id="newsletter-email" placeholder="Enter your email address" required class="flex-1 px-4 py-2.5 text-xs border border-slate-200 rounded-none focus:outline-none focus:border-black" />
+            <button type="submit" class="px-5 py-2.5 bg-slate-900 hover:bg-black text-white text-xs font-bold tracking-wider uppercase transition-colors cursor-pointer">SUBSCRIBE</button>
+          </form>
+          <p id="newsletter-msg" class="hidden text-emerald-600 text-[11px] font-semibold mt-2">Thank you for subscribing to Fleex Garments newsletter!</p>
+        </div>
+
+        <div class="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <p class="text-[10px] text-slate-400 font-medium tracking-wider uppercase">© COPYRIGHT 2026 FLEEX GARMENTS SHOP. ALL RIGHTS RESERVED.</p>
+          <div class="flex items-center gap-2 text-[10px] text-slate-500 font-bold uppercase">
+            <span class="px-2 py-0.5 border border-slate-200 rounded bg-slate-50">ATELIER DIRECT</span>
+            <span class="px-2 py-0.5 border border-slate-200 rounded bg-slate-50">VISA</span>
+            <span class="px-2 py-0.5 border border-slate-200 rounded bg-slate-50">MASTERCARD</span>
+          </div>
+        </div>
+
       </div>
     </footer>
 
-    <!-- Mobile menu script -->
-    <script>
-      const toggle = document.getElementById('mobile-menu-toggle');
-      const menu = document.getElementById('mobile-menu');
-      const hamburger = document.getElementById('hamburger-icon');
-      const closeIcon = document.getElementById('close-icon');
+    <!-- Slide-Over Mobile Nav Drawer -->
+    <div id="mobile-nav-drawer" class="fixed inset-0 z-50 hidden">
+      <div id="drawer-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-xs"></div>
+      <div class="relative w-4/5 max-w-sm h-full bg-white shadow-2xl flex flex-col justify-between p-6 z-10">
+        <div>
+          <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
+            <span class="text-lg font-black tracking-widest uppercase text-slate-900">FLEEX</span>
+            <button id="drawer-close-btn" type="button" class="p-1 text-slate-500 hover:text-black cursor-pointer" aria-label="Close menu">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
+          <nav class="space-y-4 text-sm font-bold tracking-wider text-slate-900 uppercase">
+            <a href="/" class="block py-1 hover:text-slate-600 transition-colors">Home</a>
+            <a href="/collection.html" class="block py-1 hover:text-slate-600 transition-colors">Collection</a>
+            <a href="/about.html" class="block py-1 text-black font-black">Our Atelier</a>
+            <a href="/contact.html" class="block py-1 hover:text-slate-600 transition-colors">Contact Us</a>
+          </nav>
+        </div>
+        <div class="pt-6 border-t border-slate-100 text-xs text-slate-500 space-y-2">
+          <p><strong>WhatsApp:</strong> +92 370 2265968</p>
+          <a href="https://wa.me/923702265968" target="_blank" rel="noopener noreferrer" class="block w-full py-2.5 text-center bg-[#0f2135] text-white font-bold uppercase tracking-wider mt-3">Contact Concierge</a>
+        </div>
+      </div>
+    </div>
 
-      if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-          const isHidden = menu.classList.contains('hidden');
-          if (isHidden) {
-            menu.classList.remove('hidden');
-            if (hamburger) hamburger.classList.add('hidden');
-            if (closeIcon) closeIcon.classList.remove('hidden');
-          } else {
-            menu.classList.add('hidden');
-            if (hamburger) hamburger.classList.remove('hidden');
-            if (closeIcon) closeIcon.classList.add('hidden');
-          }
-        });
-      }
-    </script>
+    <!-- Slide-Over Shopping Bag / Cart Drawer -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
+      <div id="cart-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-xs"></div>
+      <div class="absolute right-0 top-0 w-full max-w-md h-full bg-white shadow-2xl flex flex-col justify-between p-6 z-10">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-black tracking-wider uppercase text-slate-900">SELECTED SUITS</span>
+            <span id="cart-drawer-count-badge" class="text-xs font-bold bg-slate-100 text-slate-800 px-2 py-0.5 rounded-full">0</span>
+          </div>
+          <button id="cart-close-btn" type="button" class="p-1 text-slate-500 hover:text-black cursor-pointer" aria-label="Close cart">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div id="cart-items-container" class="flex-1 overflow-y-auto py-4 space-y-3">
+          <div id="cart-empty-state" class="py-16 text-center text-slate-400">
+            <div class="w-12 h-12 rounded-full bg-slate-100 mx-auto flex items-center justify-center text-xl mb-2 text-slate-500">🛍️</div>
+            <p class="text-xs font-bold text-slate-800">Your selected bag is empty</p>
+            <p class="text-[11px] text-slate-500 mt-1">Explore our latest stitched and unstitched suits.</p>
+          </div>
+        </div>
+        <div id="cart-footer" class="border-t border-slate-100 pt-4 hidden">
+          <div class="flex items-center justify-between text-xs font-bold uppercase mb-3">
+            <span>SELECTION:</span>
+            <span class="text-xs font-extrabold text-slate-900">READY FOR ATELIER CONSULTATION</span>
+          </div>
+          <button id="cart-whatsapp-checkout-btn" type="button" class="w-full py-3 bg-[#0f2135] hover:bg-black text-white text-xs font-bold tracking-widest uppercase transition-colors flex items-center justify-center gap-2 shadow-lg cursor-pointer">
+            <span>INQUIRE & ORDER ON WHATSAPP</span>
+          </button>
+          <p class="text-[10px] text-center text-slate-400 mt-2">Direct Master Atelier Consultation</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unified Script -->
+    <script type="module" src="/src/script.js"></script>
   </body>
 </html>

@@ -3,24 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Collections – Fleex Garments Shop</title>
+    <title>Collections & Lookbook – Fleex Garments | Ready to Wear & Unstitched Menswear</title>
     
     <!-- SEO Metadata -->
-    <meta name="description" content="Fleex Garments Shop menswear collection. Handcrafted stitched salwar kameez suits." />
-    <meta name="keywords" content="fleex garments shop, salwar kameez, mens stitched suit, bespoke menswear" />
+    <meta name="description" content="Explore Fleex Garments luxury menswear collections: Royal Boski, Egyptian Cotton, Charcoal Kurta Suits, Wash & Wear, and Ceremonial Waistcoats. Browse in Sapphire-style catalog grid or interactive swipe deck." />
+    <meta name="keywords" content="fleex garments collection, sapphire style catalog, ready to wear men, unstitched suit pakistan, royal boski suits, wash and wear gents suit" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://fleexgarments.shop/collection.html" />
-    <meta name="theme-color" content="#9bbad2" />
+    <meta name="theme-color" content="#ffffff" />
     
     <!-- OpenGraph & Twitter -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Fleex Garment" />
-    <meta property="og:title" content="Collections – Fleex Garments Shop" />
-    <meta property="og:description" content="Explore handcrafted menswear and bespoke stitched suits." />
+    <meta property="og:title" content="Collections & Lookbook – Fleex Garments Shop" />
+    <meta property="og:description" content="Explore handcrafted menswear and bespoke stitched suits with catalog grid and interactive swipe deck." />
     <meta property="og:url" content="https://fleexgarments.shop/collection.html" />
-    <meta property="og:image" content="https://fleexgarments.shop/images/charcoal_kurta_suit_1790890713358.jpg" />
+    <meta property="og:image" content="https://fleexgarments.shop/src/assets/images/charcoal_kurta_suit_1790890713358.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
 
+    <!-- Google Fonts: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -44,297 +45,962 @@
     <style>
       body {
         font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background-color: #9bbad2;
+        background-color: #ffffff;
+        color: #111827;
         overflow-x: hidden;
       }
-      .slide-track {
-        display: flex;
-        transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
-        width: 100%;
-        touch-action: pan-y;
+      .scrollbar-none::-webkit-scrollbar {
+        display: none;
       }
-      .slide-item {
-        flex: 0 0 100%;
-        width: 100%;
+      .scrollbar-none {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .tinder-card {
+        touch-action: none;
+        will-change: transform, opacity;
+        user-select: none;
+      }
+      .tinder-card.transitioning {
+        transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.15), opacity 0.35s ease-out;
+      }
+      .swipe-stamp {
+        transition: opacity 0.15s ease-out;
+      }
+      @keyframes popIn {
+        from { transform: scale(0.9); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+      .pop-in {
+        animation: popIn 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards;
+      }
+      .custom-scroll::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scroll::-webkit-scrollbar-thumb {
+        background: rgba(15, 33, 53, 0.15);
+        border-radius: 4px;
       }
     </style>
   </head>
-  <body class="bg-[#9bbad2] text-slate-800 antialiased selection:bg-[#0f2135] selection:text-white min-h-screen flex flex-col justify-between relative font-['Outfit',sans-serif]">
+  <body class="bg-white text-slate-900 antialiased selection:bg-[#0f2135] selection:text-white min-h-screen flex flex-col justify-between font-['Outfit',sans-serif]">
 
-    <!-- Top Header Navbar -->
-    <header class="relative z-30 w-full pt-4 pb-2 px-6 sm:px-10 lg:px-14">
-      <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <!-- Brand Logo (Stacked Bold) -->
-        <a href="/" class="group block leading-[0.88] select-none">
-          <span class="block text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0f2135] transition-colors group-hover:text-sky-900">
-            Fleex
-          </span>
-          <span class="block text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0f2135] transition-colors group-hover:text-sky-900">
-            Garment
-          </span>
-        </a>
+    <!-- Sticky Header: Left Menu Bar + Right Logo (Card & Profile Removed) -->
+    <header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
+        
+        <!-- Left: Menu Bar (Hamburger + Desktop Nav Links on the Left Side) -->
+        <div class="flex items-center gap-4 sm:gap-6">
+          <button id="mobile-drawer-toggle" type="button" class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-slate-100 text-slate-900 transition-colors cursor-pointer" aria-label="Open menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"></path>
+            </svg>
+            <span class="text-xs font-black tracking-widest uppercase text-slate-900">MENU</span>
+          </button>
 
-        <!-- Desktop Navigation Menu (Top Right) -->
-        <nav class="hidden md:flex items-center gap-7 lg:gap-9 text-sm font-semibold text-[#0f2135]">
-          <a href="/collection.html" class="text-sky-950 font-bold py-1 relative group cursor-pointer">
-            <span>Collections</span>
-            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-[#0f2135]"></span>
-          </a>
-
-          <a href="/about.html" class="hover:text-sky-800 transition-colors py-1 relative group cursor-pointer">
-            <span>About Us</span>
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0f2135] transition-all group-hover:w-full"></span>
-          </a>
-
-          <a href="/contact.html" class="hover:text-sky-800 transition-colors py-1 relative group cursor-pointer">
-            <span>Contact</span>
-            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0f2135] transition-all group-hover:w-full"></span>
-          </a>
-        </nav>
-
-        <!-- Shop Quick Contact Bar -->
-        <div class="hidden lg:flex items-center gap-3 text-xs font-bold text-[#0f2135] bg-white/70 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/80">
-          <a href="/contact.html" class="flex items-center gap-1.5 hover:text-emerald-700 transition-colors">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            Contact Concierge
-          </a>
+          <!-- Desktop Navigation Menu Bar on the Left -->
+          <nav class="hidden md:flex items-center gap-6 text-xs font-bold tracking-widest text-slate-800 uppercase">
+            <a href="/" class="hover:text-black transition-colors py-1">Home</a>
+            <a href="/collection.html" class="text-black border-b-2 border-black py-1">Collection</a>
+            <a href="/about.html" class="hover:text-black transition-colors py-1">Atelier</a>
+            <a href="/contact.html" class="hover:text-black transition-colors py-1">Contact</a>
+          </nav>
         </div>
 
-        <!-- Mobile menu toggle button -->
-        <button id="mobile-menu-toggle" type="button" class="md:hidden p-2 rounded-xl bg-white/60 text-[#0f2135] cursor-pointer" aria-label="Toggle menu">
-          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
+        <!-- Right: Brand Logo (Placed where Profile and Card were) -->
+        <a href="/" class="block text-right select-none group">
+          <span class="text-xl sm:text-2xl lg:text-3xl font-black tracking-[0.22em] text-slate-900 uppercase transition-opacity group-hover:opacity-80">
+            FLEEX
+          </span>
+          <span class="block text-[8px] sm:text-[9px] font-bold tracking-[0.38em] text-slate-500 uppercase -mt-1 text-right">
+            GARMENT
+          </span>
+        </a>
 
-      <!-- Mobile Dropdown Menu -->
-      <div id="mobile-menu" class="hidden md:hidden mt-3 p-4 bg-white/95 backdrop-blur-xl rounded-2xl border border-white/80 shadow-lg space-y-3">
-        <a href="/collection.html" class="block w-full text-left py-2 font-bold text-sm text-[#0f2135] border-l-2 border-[#0f2135] pl-2">
-          Collections
-        </a>
-        <a href="/about.html" class="block w-full text-left py-2 font-bold text-sm text-[#0f2135]">
-          About Us
-        </a>
-        <a href="/contact.html" class="block w-full text-left py-2 font-bold text-sm text-[#0f2135]">
-          Contact
-        </a>
-        <div class="pt-2 border-t border-slate-200 text-xs font-bold text-[#0f2135]">
-          <a href="/contact.html" class="block text-emerald-800 py-1">Contact Concierge</a>
-        </div>
       </div>
     </header>
 
-    <!-- Main Content Area: Pure Full Image Showcase (No Clothes Names, No WhatsApp Concierge, No Contact Us) -->
-    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-8 lg:px-12 py-2 flex flex-col justify-center">
+    <!-- Main Content Area -->
+    <main class="flex-1 w-full pb-16">
       
-      <!-- Slide Indicator Dots -->
-      <div class="flex items-center justify-center gap-2 mb-3">
-        <button type="button" class="indicator-dot w-8 h-2 rounded-full bg-[#0f2135] transition-all cursor-pointer" data-index="0" aria-label="Slide 1"></button>
-        <button type="button" class="indicator-dot w-2.5 h-2 rounded-full bg-white/60 hover:bg-white transition-all cursor-pointer" data-index="1" aria-label="Slide 2"></button>
-        <button type="button" class="indicator-dot w-2.5 h-2 rounded-full bg-white/60 hover:bg-white transition-all cursor-pointer" data-index="2" aria-label="Slide 3"></button>
-        <button type="button" class="indicator-dot w-2.5 h-2 rounded-full bg-white/60 hover:bg-white transition-all cursor-pointer" data-index="3" aria-label="Slide 4"></button>
-        <button type="button" class="indicator-dot w-2.5 h-2 rounded-full bg-white/60 hover:bg-white transition-all cursor-pointer" data-index="4" aria-label="Slide 5"></button>
-        <button type="button" class="indicator-dot w-2.5 h-2 rounded-full bg-white/60 hover:bg-white transition-all cursor-pointer" data-index="5" aria-label="Slide 6"></button>
-      </div>
+      <!-- Collection Hero Title & Mode Switcher -->
+      <section class="py-8 sm:py-12 px-4 sm:px-8 text-center max-w-4xl mx-auto border-b border-slate-100">
+        <span class="text-[11px] font-bold tracking-[0.25em] text-slate-400 uppercase block mb-1">
+          FALL WINTER '26
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 uppercase mb-3">
+          COLLECTIONS & LOOKBOOK
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-600 max-w-lg mx-auto font-normal leading-relaxed mb-6">
+          Handcrafted stitched suits, royal boski silk-fall ensembles, Egyptian cottons, and master atelier waistcoats crafted in Sindh.
+        </p>
 
-      <!-- Slide Viewport: Full Image Display -->
-      <div id="slider-viewport" class="relative overflow-hidden rounded-3xl bg-white/40 backdrop-blur-xl border border-white/70 shadow-2xl shadow-sky-950/10 cursor-grab active:cursor-grabbing select-none">
+        <!-- View Switcher (Catalog Grid vs Interactive Swipe Deck) -->
+        <div class="inline-flex items-center p-1 bg-slate-100 rounded-none border border-slate-200">
+          <button id="tab-grid-view" type="button" class="view-toggle-btn px-4 sm:px-6 py-2 text-xs font-bold tracking-wider uppercase bg-[#0f2135] text-white transition-all cursor-pointer">
+            CATALOG GRID (ALL)
+          </button>
+          <button id="tab-deck-view" type="button" class="view-toggle-btn px-4 sm:px-6 py-2 text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-black transition-all cursor-pointer">
+            INTERACTIVE SWIPE DECK
+          </button>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- VIEW 1: SAPPHIRE 2-COLUMN / 4-COLUMN CATALOG GRID VIEW -->
+      <!-- ============================================================ -->
+      <section id="collection-grid-view" class="max-w-7xl mx-auto px-4 sm:px-8 pt-8">
         
-        <div id="slide-track" class="slide-track">
+        <!-- Filter Category Tabs -->
+        <div class="flex items-center justify-center gap-4 sm:gap-8 overflow-x-auto pb-4 mb-8 scrollbar-none text-xs font-bold tracking-widest text-slate-500 uppercase border-b border-slate-100">
+          <button type="button" class="catalog-filter-btn text-slate-900 border-b-2 border-slate-900 pb-1 cursor-pointer" data-cat="all">
+            ALL COLLECTIONS
+          </button>
+          <button type="button" class="catalog-filter-btn hover:text-slate-900 transition-colors pb-1 cursor-pointer" data-cat="boski">
+            ROYAL BOSKI
+          </button>
+          <button type="button" class="catalog-filter-btn hover:text-slate-900 transition-colors pb-1 cursor-pointer" data-cat="cotton">
+            COTTON & LINEN
+          </button>
+          <button type="button" class="catalog-filter-btn hover:text-slate-900 transition-colors pb-1 cursor-pointer" data-cat="washwear">
+            WASH & WEAR
+          </button>
+          <button type="button" class="catalog-filter-btn hover:text-slate-900 transition-colors pb-1 cursor-pointer" data-cat="waistcoat">
+            WAISTCOATS
+          </button>
+        </div>
 
-          <!-- SLIDE 1 (Full Image of Salwar and Kameez) -->
-          <div class="slide-item p-3 sm:p-5 flex flex-col items-center justify-center">
-            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900">
-              <div class="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
-                <img
-                  src="/src/assets/images/charcoal_kurta_suit_1790890713358.jpg"
-                  alt="Salwar and Kameez Suit"
-                  class="w-full h-full object-cover object-center"
-                />
+        <!-- Product Cards Grid: 2 columns mobile, 4 columns desktop -->
+        <div id="catalog-products-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
+          
+          <!-- Card 1: Royal Boski -->
+          <div class="product-item group flex flex-col justify-between" data-cat="boski">
+            <div>
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2">
+                <img src="/src/assets/images/boski_kurta_suit_1790890729308.jpg" alt="Royal Boski Stitched Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-2 right-2 bg-black/70 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
+                  BESTSELLER
+                </span>
               </div>
+              <div class="flex items-start justify-between gap-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
+                  ROYAL BOSKI 2 PIECE SUIT
+                </h3>
+                <button type="button" class="quick-add-btn p-1 text-slate-600 hover:text-black cursor-pointer" data-title="ROYAL BOSKI 2 PIECE SUIT" data-price="5850" data-image="/src/assets/images/boski_kurta_suit_1790890729308.jpg" aria-label="Add to Bag">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                </button>
+              </div>
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
+                PURE SILK-FALL · READY TO WEAR
+              </p>
+            </div>
+            <div class="flex items-center justify-between mt-1">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">BESPOKE STITCHED</span>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Royal%20Boski%20Suit." target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                INQUIRE →
+              </a>
             </div>
           </div>
 
-          <!-- SLIDE 2 (Full Image of Salwar and Kameez) -->
-          <div class="slide-item p-3 sm:p-5 flex flex-col items-center justify-center">
-            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900">
-              <div class="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
-                <img
-                  src="/src/assets/images/fleex_kurta_model_1790884646861.jpg"
-                  alt="Salwar and Kameez Suit"
-                  class="w-full h-full object-cover object-center"
-                />
+          <!-- Card 2: Charcoal Suit -->
+          <div class="product-item group flex flex-col justify-between" data-cat="washwear">
+            <div>
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2">
+                <img src="/src/assets/images/charcoal_kurta_suit_1790890713358.jpg" alt="Master Atelier Charcoal Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-2 right-2 bg-black/70 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
+                  NEW IN
+                </span>
               </div>
+              <div class="flex items-start justify-between gap-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
+                  CHARCOAL MASTER ATELIER SUIT
+                </h3>
+                <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Charcoal%20Master%20Suit." target="_blank" rel="noopener noreferrer" class="p-1 text-slate-600 hover:text-black cursor-pointer" aria-label="Inquire via WhatsApp">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                </a>
+              </div>
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
+                PRINTED GRIP · BESPOKE FINISH
+              </p>
+            </div>
+            <div class="flex items-center justify-between mt-1">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">BESPOKE STITCHED</span>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Charcoal%20Master%20Suit." target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                INQUIRE →
+              </a>
             </div>
           </div>
 
-          <!-- SLIDE 3 (Full Image of Salwar and Kameez) -->
-          <div class="slide-item p-3 sm:p-5 flex flex-col items-center justify-center">
-            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900">
-              <div class="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
-                <img
-                  src="/src/assets/images/boski_kurta_suit_1790890729308.jpg"
-                  alt="Salwar and Kameez Suit"
-                  class="w-full h-full object-cover object-center"
-                />
+          <!-- Card 3: Crimson Grip Suit -->
+          <div class="product-item group flex flex-col justify-between" data-cat="washwear">
+            <div>
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2">
+                <img src="/src/assets/images/fleex_kurta_model_1790884646861.jpg" alt="Crimson Grip Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-2 right-2 bg-black/70 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
+                  POPULAR
+                </span>
               </div>
+              <div class="flex items-start justify-between gap-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
+                  CRIMSON EMBROIDERED SUIT
+                </h3>
+                <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Crimson%20Embroidered%20Suit." target="_blank" rel="noopener noreferrer" class="p-1 text-slate-600 hover:text-black cursor-pointer" aria-label="Inquire via WhatsApp">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                </a>
+              </div>
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
+                RTW FALL WINTER '26
+              </p>
+            </div>
+            <div class="flex items-center justify-between mt-1">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">BESPOKE STITCHED</span>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Crimson%20Embroidered%20Suit." target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                INQUIRE →
+              </a>
             </div>
           </div>
 
-          <!-- SLIDE 4 (Full Image of Salwar and Kameez) -->
-          <div class="slide-item p-3 sm:p-5 flex flex-col items-center justify-center">
-            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900">
-              <div class="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
-                <img
-                  src="/src/assets/images/wash_wear_suit_1790890742415.jpg"
-                  alt="Salwar and Kameez Suit"
-                  class="w-full h-full object-cover object-center"
-                />
+          <!-- Card 4: Signature Wash & Wear -->
+          <div class="product-item group flex flex-col justify-between" data-cat="washwear">
+            <div>
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2">
+                <img src="/src/assets/images/wash_wear_suit_1790890742415.jpg" alt="Wash and Wear Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-2 right-2 bg-black/70 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
+                  WRINKLE FREE
+                </span>
               </div>
+              <div class="flex items-start justify-between gap-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
+                  SIGNATURE WASH & WEAR SUIT
+                </h3>
+                <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Wash%20Wear%20Suit." target="_blank" rel="noopener noreferrer" class="p-1 text-slate-600 hover:text-black cursor-pointer" aria-label="Inquire via WhatsApp">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                </a>
+              </div>
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
+                SLATE NAVY · DAILY LUXURY
+              </p>
+            </div>
+            <div class="flex items-center justify-between mt-1">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">BESPOKE STITCHED</span>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Wash%20Wear%20Suit." target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                INQUIRE →
+              </a>
             </div>
           </div>
 
-          <!-- SLIDE 5 (Full Image of Salwar and Kameez) -->
-          <div class="slide-item p-3 sm:p-5 flex flex-col items-center justify-center">
-            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900">
-              <div class="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
-                <img
-                  src="/src/assets/images/fleex_kurta_model_1790884646861.jpg"
-                  alt="Salwar and Kameez Suit"
-                  class="w-full h-full object-cover object-top"
-                />
+          <!-- Card 5: Groom Waistcoat Set -->
+          <div class="product-item group flex flex-col justify-between" data-cat="waistcoat">
+            <div>
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2">
+                <img src="/src/assets/images/groom_suit_set_1790890754363.jpg" alt="Ceremonial Groom Waistcoat Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-2 right-2 bg-black/70 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
+                  EXCLUSIVE
+                </span>
               </div>
+              <div class="flex items-start justify-between gap-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
+                  3 PIECE GROOM WAISTCOAT SET
+                </h3>
+                <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Groom%20Waistcoat%20Set." target="_blank" rel="noopener noreferrer" class="p-1 text-slate-600 hover:text-black cursor-pointer" aria-label="Inquire via WhatsApp">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                </a>
+              </div>
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
+                HAND-EMBROIDERED BAN COLLAR
+              </p>
+            </div>
+            <div class="flex items-center justify-between mt-1">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">BESPOKE STITCHED</span>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Groom%20Waistcoat%20Set." target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                INQUIRE →
+              </a>
             </div>
           </div>
 
-          <!-- SLIDE 6 (Full Image of Salwar and Kameez) -->
-          <div class="slide-item p-3 sm:p-5 flex flex-col items-center justify-center">
-            <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-slate-900">
-              <div class="relative aspect-[3/4] w-full overflow-hidden bg-slate-950 flex items-center justify-center">
-                <img
-                  src="/src/assets/images/groom_suit_set_1790890754363.jpg"
-                  alt="Salwar and Kameez Suit"
-                  class="w-full h-full object-cover object-center"
-                />
+          <!-- Card 6: Egyptian Cotton -->
+          <div class="product-item group flex flex-col justify-between" data-cat="cotton">
+            <div>
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2">
+                <img src="/src/assets/images/model_white_studio_1793772224859.jpg" alt="Egyptian Giza Cotton Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-2 right-2 bg-black/70 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
+                  CLASSIC
+                </span>
               </div>
+              <div class="flex items-start justify-between gap-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
+                  EGYPTIAN GIZA COTTON SUIT
+                </h3>
+                <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Egyptian%20Cotton%20Suit." target="_blank" rel="noopener noreferrer" class="p-1 text-slate-600 hover:text-black cursor-pointer" aria-label="Inquire via WhatsApp">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                </a>
+              </div>
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
+                100% LONG STAPLE YARN · CRISP FALL
+              </p>
+            </div>
+            <div class="flex items-center justify-between mt-1">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">BESPOKE STITCHED</span>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Egyptian%20Cotton%20Suit." target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                INQUIRE →
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 7: Artisanal Heritage Kurta -->
+          <div class="product-item group flex flex-col justify-between" data-cat="cotton">
+            <div>
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2">
+                <img src="/src/assets/images/atelier_craft_preview_1793772174497.jpg" alt="Artisanal Heritage Kurta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-2 right-2 bg-black/70 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
+                  HERITAGE
+                </span>
+              </div>
+              <div class="flex items-start justify-between gap-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
+                  ARTISANAL HERITAGE KURTA
+                </h3>
+                <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Heritage%20Kurta." target="_blank" rel="noopener noreferrer" class="p-1 text-slate-600 hover:text-black cursor-pointer" aria-label="Inquire via WhatsApp">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                </a>
+              </div>
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
+                NEEDLEWORK CRAFT · STITCHED
+              </p>
+            </div>
+            <div class="flex items-center justify-between mt-1">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">BESPOKE STITCHED</span>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Heritage%20Kurta." target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                INQUIRE →
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 8: Belgian Flax Pure Linen -->
+          <div class="product-item group flex flex-col justify-between" data-cat="cotton">
+            <div>
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2">
+                <img src="/src/assets/images/charcoal_kurta_suit_1790890713358.jpg" alt="Belgian Pure Linen Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-2 right-2 bg-black/70 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
+                  LIMITED
+                </span>
+              </div>
+              <div class="flex items-start justify-between gap-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
+                  BELGIAN FLAX LINEN SUIT
+                </h3>
+                <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Belgian%20Linen%20Suit." target="_blank" rel="noopener noreferrer" class="p-1 text-slate-600 hover:text-black cursor-pointer" aria-label="Inquire via WhatsApp">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                </a>
+              </div>
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
+                BREATHABLE FLUID LINEN WEAVE
+              </p>
+            </div>
+            <div class="flex items-center justify-between mt-1">
+              <span class="text-[10px] font-bold tracking-wider uppercase text-slate-500">BESPOKE STITCHED</span>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20want%20to%20inquire%20about%20Belgian%20Linen%20Suit." target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                INQUIRE →
+              </a>
             </div>
           </div>
 
         </div>
+      </section>
 
-      </div>
+      <!-- ============================================================ -->
+      <!-- VIEW 2: INTERACTIVE TINDER SWIPE DECK VIEW (HIDDEN BY DEFAULT) -->
+      <!-- ============================================================ -->
+      <section id="collection-deck-view" class="hidden max-w-7xl mx-auto px-4 sm:px-8 pt-8">
+        
+        <div class="flex flex-col lg:flex-row gap-8 items-center lg:items-start justify-center">
+
+          <!-- Left Selected Suits Panel (Matching Sapphire clean white look) -->
+          <aside id="selected-panel" class="w-full lg:w-80 xl:w-96 bg-white border border-slate-200 p-5 shadow-sm flex flex-col shrink-0 order-2 lg:order-1 transition-all">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-black tracking-wider uppercase text-slate-900">SELECTED SUITS</span>
+                <span id="selected-count-pill" class="text-[10px] font-bold bg-[#0f2135] text-white px-2 py-0.5">0</span>
+              </div>
+              <button id="clear-selected-btn" type="button" class="hidden text-[11px] font-bold text-slate-400 hover:text-rose-600 transition-colors cursor-pointer uppercase">
+                Clear
+              </button>
+            </div>
+
+            <p class="text-[11px] text-slate-500 mt-2 mb-3">
+              Suits swiped <strong>RIGHT (♥)</strong> appear here. Order them together via WhatsApp:
+            </p>
+
+            <div id="selected-list" class="space-y-2.5 max-h-[380px] overflow-y-auto custom-scroll pr-1">
+              <div id="selected-empty-state" class="py-12 text-center text-slate-400">
+                <div class="w-10 h-10 border border-slate-200 mx-auto flex items-center justify-center text-base mb-2 text-slate-500">
+                  ♥
+                </div>
+                <p class="text-xs font-bold text-slate-800">No suits selected</p>
+                <p class="text-[11px] text-slate-500 mt-1">Swipe right or tap ♥ on cards to save.</p>
+              </div>
+            </div>
+
+            <div id="order-all-container" class="hidden mt-4 pt-3 border-t border-slate-100">
+              <button id="order-whatsapp-btn" type="button" class="w-full py-3 bg-[#0f2135] hover:bg-black text-white font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer transition-colors shadow">
+                <span>INQUIRE SELECTED ON WHATSAPP</span>
+              </button>
+              <p class="text-[10px] text-center text-slate-400 mt-2">Direct Master Atelier Consultation</p>
+            </div>
+          </aside>
+
+          <!-- Right Tinder Stage -->
+          <div class="flex-1 w-full max-w-sm sm:max-w-md flex flex-col items-center order-1 lg:order-2">
+            
+            <div class="w-full flex items-center justify-between mb-2 text-xs font-bold uppercase tracking-wider text-slate-500">
+              <span class="text-rose-600">← Swipe Left (Skip)</span>
+              <span class="text-emerald-700">Swipe Right (Select) →</span>
+            </div>
+
+            <div class="relative w-full aspect-[3/4.6] max-h-[580px] flex items-center justify-center">
+              <div id="deck-container" class="relative w-full h-full">
+                <!-- Swipable cards injected by script -->
+              </div>
+
+              <div id="deck-empty-state" class="hidden absolute inset-0 bg-white border border-slate-200 p-8 flex flex-col items-center justify-center text-center shadow-lg">
+                <span class="text-3xl mb-2">✨</span>
+                <h3 class="text-sm font-extrabold uppercase tracking-wider text-slate-900">Entire Collection Reviewed</h3>
+                <p class="text-xs text-slate-500 mt-1 max-w-[220px]">Check your selected suits on the left, or reload the deck.</p>
+                <button id="reset-deck-btn" type="button" class="mt-4 px-6 py-2.5 bg-[#0f2135] text-white text-xs font-bold uppercase tracking-widest hover:bg-black cursor-pointer">
+                  Restart Deck ↺
+                </button>
+              </div>
+            </div>
+
+            <!-- Controls bar: Pass, Undo, Like -->
+            <div class="flex items-center justify-center gap-6 mt-6">
+              <button id="btn-pass" type="button" class="w-14 h-14 rounded-full border-2 border-slate-200 bg-white text-rose-600 hover:border-rose-500 hover:bg-rose-50 flex items-center justify-center text-xl font-bold shadow-md transition-transform hover:scale-110 cursor-pointer" aria-label="Pass">
+                ✕
+              </button>
+              <button id="btn-undo" type="button" class="w-11 h-11 rounded-full border border-slate-200 bg-white text-slate-600 hover:text-black hover:border-slate-400 flex items-center justify-center text-sm font-bold shadow-sm transition-transform hover:scale-105 cursor-pointer" aria-label="Undo">
+                ↺
+              </button>
+              <button id="btn-like" type="button" class="w-14 h-14 rounded-full border-2 border-emerald-500 bg-emerald-600 text-white hover:bg-emerald-700 flex items-center justify-center text-2xl font-bold shadow-md transition-transform hover:scale-110 cursor-pointer" aria-label="Like">
+                ♥
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- 3 ATELIER PILLARS (Tailoring, Fabrics, Atelier) -->
+      <!-- ============================================================ -->
+      <section class="border-t border-slate-100 py-10 bg-slate-50/60 mt-16">
+        <div class="max-w-5xl mx-auto px-6 grid grid-cols-3 gap-4 text-center">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 mb-2 flex items-center justify-center text-slate-800">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+            </div>
+            <span class="text-[11px] sm:text-xs font-bold tracking-wider text-slate-900 uppercase">18-STITCH TAILORING</span>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 mb-2 flex items-center justify-center text-slate-800">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"/></svg>
+            </div>
+            <span class="text-[11px] sm:text-xs font-bold tracking-wider text-slate-900 uppercase">ROYAL BOSKI & GIZA</span>
+          </div>
+
+          <a href="/about.html" class="flex flex-col items-center group cursor-pointer">
+            <div class="w-10 h-10 mb-2 flex items-center justify-center text-slate-800 group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.614A2.993 2.993 0 009 9.35c.828 0 1.574-.336 2.121-.882a3.001 3.001 0 004.242 0c.547.546 1.293.882 2.121.882.828 0 1.574-.336 2.121-.882a3 3 0 001.39 1.882"></path></svg>
+            </div>
+            <span class="text-[11px] sm:text-xs font-bold tracking-wider text-slate-900 uppercase">OUR ATELIER</span>
+          </a>
+        </div>
+      </section>
 
     </main>
 
-    <!-- Footer Links and Copyright -->
-    <footer class="w-full py-4 px-6 sm:px-10 lg:px-14 border-t border-white/20 mt-3 bg-sky-900/5">
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-medium text-slate-800">
-        <!-- Footer Links (Left) -->
-        <div class="flex items-center gap-5 sm:gap-6 flex-wrap">
-          <a href="/collection.html" class="font-bold text-[#0f2135] underline-offset-4 underline">
-            Collections
-          </a>
-          <a href="/about.html" class="hover:text-black transition-colors underline-offset-4 hover:underline">
-            About Us
-          </a>
-          <a href="/contact.html" class="hover:text-black transition-colors underline-offset-4 hover:underline">
-            Contact
-          </a>
-          <a href="/" class="hover:text-[#0f2135] transition-colors underline-offset-4 hover:underline">
-            Home
-          </a>
-          <span class="hidden md:inline text-slate-400">·</span>
-          <span class="hidden md:inline text-slate-600">
-            Artisanal Menswear & Bespoke Tailoring
-          </span>
+    <!-- Sapphire Accordion Footer -->
+    <footer class="w-full bg-white border-t border-slate-100">
+      <div class="max-w-4xl mx-auto px-6 py-8">
+        
+        <div class="border-b border-slate-100">
+          <button type="button" class="accordion-toggle w-full py-4 flex items-center justify-between text-left text-xs font-bold tracking-widest text-slate-900 uppercase cursor-pointer" data-target="acc-contact">
+            <span>CONTACT US</span>
+            <span class="acc-icon text-base font-light">+</span>
+          </button>
+          <div id="acc-contact" class="hidden pb-4 text-xs text-slate-600 space-y-2">
+            <p><strong>WhatsApp Concierge:</strong> +92 370 2265968</p>
+            <p><strong>Phone Support:</strong> 0370 2265968</p>
+            <p><strong>Email:</strong> fleexgarments@gmail.com</p>
+            <p><strong>Store Address:</strong> Mughal Market, Main Matli Road, Tando Ghulam Ali, Hyderabad & Sindh</p>
+          </div>
         </div>
 
-        <!-- Copyright (Right) -->
-        <div class="text-right text-slate-600">
-          <p>© Fleex Garments Shop. All rights reserved.</p>
+        <div class="border-b border-slate-100">
+          <button type="button" class="accordion-toggle w-full py-4 flex items-center justify-between text-left text-xs font-bold tracking-widest text-slate-900 uppercase cursor-pointer" data-target="acc-care">
+            <span>CUSTOMER CARE & SIZING</span>
+            <span class="acc-icon text-base font-light">+</span>
+          </button>
+          <div id="acc-care" class="hidden pb-4 text-xs text-slate-600 space-y-2">
+            <p><strong>Bespoke Sizing:</strong> Visit our atelier in Sindh or consult our head master tailor directly on WhatsApp</p>
+            <p><strong>Fabric Authenticity:</strong> 100% genuine Royal Boski silk-feel yarns and Egyptian Giza cottons</p>
+            <p><strong>Size Guarantee:</strong> Free 30-day adjustments on collar, chest & sleeve length</p>
+          </div>
         </div>
+
+        <div class="border-b border-slate-100">
+          <button type="button" class="accordion-toggle w-full py-4 flex items-center justify-between text-left text-xs font-bold tracking-widest text-slate-900 uppercase cursor-pointer" data-target="acc-info">
+            <span>INFORMATION</span>
+            <span class="acc-icon text-base font-light">+</span>
+          </button>
+          <div id="acc-info" class="hidden pb-4 text-xs text-slate-600 space-y-2">
+            <p>Founded on authentic Subcontinental menswear heritage, Fleex Garment crafts unstitched & ready-to-wear kurta shalwars from the finest Belgian flax, Royal Boski silk-feel yarns, and long-staple Egyptian cotton.</p>
+          </div>
+        </div>
+
+        <div class="pt-8 pb-6 text-center max-w-md mx-auto">
+          <span class="text-xs font-bold tracking-widest text-slate-900 uppercase block mb-3">NEWSLETTER SIGNUP</span>
+          <form id="newsletter-form" class="flex gap-2">
+            <input type="email" id="newsletter-email" placeholder="Enter your email address" required class="flex-1 px-4 py-2.5 text-xs border border-slate-200 rounded-none focus:outline-none focus:border-black" />
+            <button type="submit" class="px-5 py-2.5 bg-slate-900 hover:bg-black text-white text-xs font-bold tracking-wider uppercase transition-colors cursor-pointer">SUBSCRIBE</button>
+          </form>
+          <p id="newsletter-msg" class="hidden text-emerald-600 text-[11px] font-semibold mt-2">Thank you for subscribing to Fleex Garments newsletter!</p>
+        </div>
+
+        <div class="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <p class="text-[10px] text-slate-400 font-medium tracking-wider uppercase">© COPYRIGHT 2026 FLEEX GARMENTS SHOP. ALL RIGHTS RESERVED.</p>
+          <div class="flex items-center gap-2 text-[10px] text-slate-500 font-bold uppercase">
+            <span class="px-2 py-0.5 border border-slate-200 rounded bg-slate-50">ATELIER DIRECT</span>
+            <span class="px-2 py-0.5 border border-slate-200 rounded bg-slate-50">VISA</span>
+            <span class="px-2 py-0.5 border border-slate-200 rounded bg-slate-50">MASTERCARD</span>
+          </div>
+        </div>
+
       </div>
     </footer>
 
-    <!-- Slider JS: Slide Left to Right and Right to Left -->
+    <!-- Slide-Over Mobile Nav Drawer -->
+    <div id="mobile-nav-drawer" class="fixed inset-0 z-50 hidden">
+      <div id="drawer-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-xs"></div>
+      <div class="relative w-4/5 max-w-sm h-full bg-white shadow-2xl flex flex-col justify-between p-6 z-10">
+        <div>
+          <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
+            <span class="text-lg font-black tracking-widest uppercase text-slate-900">FLEEX</span>
+            <button id="drawer-close-btn" type="button" class="p-1 text-slate-500 hover:text-black cursor-pointer" aria-label="Close menu">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
+          <nav class="space-y-4 text-sm font-bold tracking-wider text-slate-900 uppercase">
+            <a href="/" class="block py-1 hover:text-slate-600 transition-colors">Home</a>
+            <a href="/collection.html" class="block py-1 text-black font-black">Collection</a>
+            <a href="/about.html" class="block py-1 hover:text-slate-600 transition-colors">Our Atelier</a>
+            <a href="/contact.html" class="block py-1 hover:text-slate-600 transition-colors">Contact Us</a>
+          </nav>
+        </div>
+        <div class="pt-6 border-t border-slate-100 text-xs text-slate-500 space-y-2">
+          <p><strong>WhatsApp:</strong> +92 370 2265968</p>
+          <a href="https://wa.me/923702265968" target="_blank" rel="noopener noreferrer" class="block w-full py-2.5 text-center bg-[#0f2135] text-white font-bold uppercase tracking-wider mt-3">Contact Concierge</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide-Over Shopping Bag / Cart Drawer -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
+      <div id="cart-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-xs"></div>
+      <div class="absolute right-0 top-0 w-full max-w-md h-full bg-white shadow-2xl flex flex-col justify-between p-6 z-10">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-black tracking-wider uppercase text-slate-900">SELECTED SUITS</span>
+            <span id="cart-drawer-count-badge" class="text-xs font-bold bg-slate-100 text-slate-800 px-2 py-0.5 rounded-full">0</span>
+          </div>
+          <button id="cart-close-btn" type="button" class="p-1 text-slate-500 hover:text-black cursor-pointer" aria-label="Close cart">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div id="cart-items-container" class="flex-1 overflow-y-auto py-4 space-y-3">
+          <div id="cart-empty-state" class="py-16 text-center text-slate-400">
+            <div class="w-12 h-12 rounded-full bg-slate-100 mx-auto flex items-center justify-center text-xl mb-2 text-slate-500">🛍️</div>
+            <p class="text-xs font-bold text-slate-800">Your selected bag is empty</p>
+            <p class="text-[11px] text-slate-500 mt-1">Explore our latest stitched and unstitched suits.</p>
+          </div>
+        </div>
+        <div id="cart-footer" class="border-t border-slate-100 pt-4 hidden">
+          <div class="flex items-center justify-between text-xs font-bold uppercase mb-3">
+            <span>SELECTION:</span>
+            <span class="text-xs font-extrabold text-slate-900">READY FOR ATELIER CONSULTATION</span>
+          </div>
+          <button id="cart-whatsapp-checkout-btn" type="button" class="w-full py-3 bg-[#0f2135] hover:bg-black text-white text-xs font-bold tracking-widest uppercase transition-colors flex items-center justify-center gap-2 shadow-lg cursor-pointer">
+            <span>INQUIRE & ORDER ON WHATSAPP</span>
+          </button>
+          <p class="text-[10px] text-center text-slate-400 mt-2">Direct Master Atelier Consultation</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unified Script -->
+    <script type="module" src="/src/script.js"></script>
+
+    <!-- Collection View Switcher & Tinder Swipe Logic -->
     <script>
-      let currentSlide = 0;
-      const totalSlides = 6;
-      const track = document.getElementById('slide-track');
-      const dots = document.querySelectorAll('.indicator-dot');
+      // 1. Grid vs Deck View Toggle
+      const tabGrid = document.getElementById('tab-grid-view');
+      const tabDeck = document.getElementById('tab-deck-view');
+      const viewGrid = document.getElementById('collection-grid-view');
+      const viewDeck = document.getElementById('collection-deck-view');
 
-      function updateSlider(index) {
-        if (index < 0) currentSlide = totalSlides - 1;
-        else if (index >= totalSlides) currentSlide = 0;
-        else currentSlide = index;
+      if (tabGrid && tabDeck && viewGrid && viewDeck) {
+        tabGrid.addEventListener('click', () => {
+          tabGrid.className = 'view-toggle-btn px-4 sm:px-6 py-2 text-xs font-bold tracking-wider uppercase bg-[#0f2135] text-white transition-all cursor-pointer';
+          tabDeck.className = 'view-toggle-btn px-4 sm:px-6 py-2 text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-black transition-all cursor-pointer';
+          viewGrid.classList.remove('hidden');
+          viewDeck.classList.add('hidden');
+        });
 
-        track.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-        dots.forEach((dot, idx) => {
-          if (idx === currentSlide) {
-            dot.className = 'indicator-dot w-8 h-2 rounded-full bg-[#0f2135] transition-all cursor-pointer';
-          } else {
-            dot.className = 'indicator-dot w-2.5 h-2 rounded-full bg-white/60 hover:bg-white transition-all cursor-pointer';
-          }
+        tabDeck.addEventListener('click', () => {
+          tabDeck.className = 'view-toggle-btn px-4 sm:px-6 py-2 text-xs font-bold tracking-wider uppercase bg-[#0f2135] text-white transition-all cursor-pointer';
+          tabGrid.className = 'view-toggle-btn px-4 sm:px-6 py-2 text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-black transition-all cursor-pointer';
+          viewDeck.classList.remove('hidden');
+          viewGrid.classList.add('hidden');
         });
       }
 
-      // Dot click to slide left-to-right / right-to-left
-      dots.forEach((dot) => {
-        dot.addEventListener('click', () => {
-          const idx = parseInt(dot.getAttribute('data-index') || '0', 10);
-          updateSlider(idx);
+      // 2. Catalog Grid Category Filter
+      const filterBtns = document.querySelectorAll('.catalog-filter-btn');
+      const productItems = document.querySelectorAll('.product-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('text-slate-900', 'border-b-2', 'border-slate-900');
+            b.classList.add('text-slate-500');
+          });
+          btn.classList.remove('text-slate-500');
+          btn.classList.add('text-slate-900', 'border-b-2', 'border-slate-900');
+
+          const category = btn.getAttribute('data-cat');
+          productItems.forEach(item => {
+            if (category === 'all' || item.getAttribute('data-cat') === category) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          });
         });
       });
 
+      // 3. Swipe Deck Dataset & Engine
+      const SUITS = [
+        {
+          id: 'suit-boski',
+          title: 'Royal Boski 2 Piece Stitched Suit',
+          category: 'Silk & Boski Collection',
+          price: 5850,
+          image: '/src/assets/images/boski_kurta_suit_1790890729308.jpg',
+          tag: 'Royal Boski',
+          badge: 'BESTSELLER'
+        },
+        {
+          id: 'suit-charcoal',
+          title: 'Charcoal Master Atelier Suit',
+          category: 'Atelier Tailoring',
+          price: 12990,
+          image: '/src/assets/images/charcoal_kurta_suit_1790890713358.jpg',
+          tag: 'Wash & Wear',
+          badge: 'NEW ARRIVAL'
+        },
+        {
+          id: 'suit-crimson',
+          title: 'Crimson Grip Embroidered Suit',
+          category: 'Ready to Wear',
+          price: 12990,
+          image: '/src/assets/images/fleex_kurta_model_1790884646861.jpg',
+          tag: 'Lawn & Grip',
+          badge: 'LIMITED'
+        },
+        {
+          id: 'suit-washwear',
+          title: 'Signature Slate Navy Suit',
+          category: 'Wash and Wear Collection',
+          price: 4950,
+          image: '/src/assets/images/wash_wear_suit_1790890742415.jpg',
+          tag: 'Wash & Wear',
+          badge: 'WRINKLE FREE'
+        },
+        {
+          id: 'suit-waistcoat',
+          title: '3 Piece Groom Ceremonial Set',
+          category: 'Waistcoat Collection',
+          price: 8950,
+          image: '/src/assets/images/groom_suit_set_1790890754363.jpg',
+          tag: 'Waistcoat',
+          badge: 'EXCLUSIVE'
+        },
+        {
+          id: 'suit-cotton',
+          title: 'Egyptian Giza Long-Staple Cotton',
+          category: 'Cotton Collection',
+          price: 6450,
+          image: '/src/assets/images/model_white_studio_1793772224859.jpg',
+          tag: 'Egyptian Cotton',
+          badge: 'PURE YARN'
+        }
+      ];
 
-      // Touch swipe left/right for seamless mobile navigation
-      let touchStartX = 0;
-      let touchEndX = 0;
-      const slider = document.getElementById('slider-viewport');
-      if (slider) {
-        slider.addEventListener('touchstart', (e) => {
-          touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
+      let deck = [...SUITS];
+      let selectedSuits = [];
+      let swipeHistory = [];
 
-        slider.addEventListener('touchend', (e) => {
-          touchEndX = e.changedTouches[0].screenX;
-          const diff = touchStartX - touchEndX;
-          if (diff > 45) updateSlider(currentSlide + 1); // Swipe left -> next
-          if (diff < -45) updateSlider(currentSlide - 1); // Swipe right -> prev
-        }, { passive: true });
-      }
+      const deckContainer = document.getElementById('deck-container');
+      const deckEmptyState = document.getElementById('deck-empty-state');
+      const resetDeckBtn = document.getElementById('reset-deck-btn');
+      const selectedList = document.getElementById('selected-list');
+      const selectedCountPill = document.getElementById('selected-count-pill');
+      const selectedEmptyState = document.getElementById('selected-empty-state');
+      const clearSelectedBtn = document.getElementById('clear-selected-btn');
+      const orderAllContainer = document.getElementById('order-all-container');
+      const orderWhatsappBtn = document.getElementById('order-whatsapp-btn');
 
-      // Keyboard arrow keys
-      window.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') updateSlider(currentSlide - 1);
-        if (e.key === 'ArrowRight') updateSlider(currentSlide + 1);
-      });
+      function renderDeck() {
+        if (!deckContainer) return;
+        deckContainer.innerHTML = '';
+        if (deck.length === 0) {
+          if (deckEmptyState) deckEmptyState.classList.remove('hidden');
+          return;
+        }
+        if (deckEmptyState) deckEmptyState.classList.add('hidden');
 
-      // Mobile Menu
-      const toggle = document.getElementById('mobile-menu-toggle');
-      const menu = document.getElementById('mobile-menu');
-      const hamburger = document.getElementById('hamburger-icon');
-      const closeIcon = document.getElementById('close-icon');
+        deck.slice(0, 3).reverse().forEach((suit, index) => {
+          const depth = deck.slice(0, 3).length - 1 - index;
+          const scale = 1 - depth * 0.04;
+          const translateY = depth * 10;
+          const opacity = depth === 0 ? 1 : 0.9 - depth * 0.15;
+          const zIndex = 30 - depth;
 
-      if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-          const isHidden = menu.classList.contains('hidden');
-          if (isHidden) {
-            menu.classList.remove('hidden');
-            if (hamburger) hamburger.classList.add('hidden');
-            if (closeIcon) closeIcon.classList.remove('hidden');
-          } else {
-            menu.classList.add('hidden');
-            if (hamburger) hamburger.classList.remove('hidden');
-            if (closeIcon) closeIcon.classList.add('hidden');
+          const card = document.createElement('div');
+          card.className = `tinder-card absolute inset-0 w-full h-full rounded-none overflow-hidden bg-white border border-slate-200 shadow-md flex flex-col justify-between cursor-grab active:cursor-grabbing select-none`;
+          card.style.transform = `translate3d(0, ${translateY}px, 0) scale(${scale})`;
+          card.style.opacity = opacity;
+          card.style.zIndex = zIndex;
+          card.setAttribute('data-id', suit.id);
+
+          card.innerHTML = `
+            <div class="relative w-full h-[76%] overflow-hidden bg-slate-900 pointer-events-none">
+              <img src="${suit.image}" alt="${suit.title}" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+              
+              <!-- Stamps -->
+              <div class="swipe-stamp stamp-like absolute top-6 left-6 border-2 border-emerald-500 text-emerald-500 font-black text-sm tracking-widest px-3 py-1 uppercase opacity-0 rotate-[-12deg] bg-black/40">
+                SAVE ♥
+              </div>
+              <div class="swipe-stamp stamp-pass absolute top-6 right-6 border-2 border-rose-500 text-rose-500 font-black text-sm tracking-widest px-3 py-1 uppercase opacity-0 rotate-[12deg] bg-black/40">
+                SKIP ✕
+              </div>
+
+              <div class="absolute top-4 left-4">
+                <span class="bg-black/60 backdrop-blur-xs text-white text-[9px] font-bold px-2 py-0.5 tracking-wider uppercase">
+                  ${suit.badge}
+                </span>
+              </div>
+
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-300 block mb-0.5">${suit.category}</span>
+                <h3 class="text-base font-black uppercase tracking-tight leading-snug drop-shadow">${suit.title}</h3>
+                <span class="text-xs font-bold text-slate-200 mt-1 block tracking-wider uppercase">Bespoke Atelier Stitched</span>
+              </div>
+            </div>
+
+            <!-- Card Bottom Bar -->
+            <div class="p-3.5 bg-white flex items-center justify-between border-t border-slate-100">
+              <span class="text-xs font-bold text-slate-800 uppercase tracking-wider">${suit.tag}</span>
+              <span class="text-[11px] font-bold text-emerald-700 uppercase tracking-widest">Swipe Right to Select →</span>
+            </div>
+          `;
+
+          if (depth === 0) {
+            setupCardInteractions(card, suit);
           }
+
+          deckContainer.appendChild(card);
         });
       }
+
+      let activeCard = null;
+      let startX = 0, startY = 0, currentX = 0, currentY = 0;
+      let isDragging = false;
+
+      function setupCardInteractions(card, suit) {
+        activeCard = card;
+        card.onpointerdown = (e) => {
+          isDragging = true;
+          startX = e.clientX;
+          startY = e.clientY;
+          card.classList.remove('transitioning');
+          card.setPointerCapture(e.pointerId);
+          card.onpointermove = (ev) => handlePointerMove(ev);
+          card.onpointerup = (ev) => handlePointerUp(ev);
+          card.onpointercancel = (ev) => handlePointerUp(ev);
+        };
+      }
+
+      function handlePointerMove(e) {
+        if (!isDragging || !activeCard) return;
+        currentX = e.clientX - startX;
+        currentY = e.clientY - startY;
+        const rotate = currentX * 0.08;
+        activeCard.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${rotate}deg)`;
+
+        const stampLike = activeCard.querySelector('.stamp-like');
+        const stampPass = activeCard.querySelector('.stamp-pass');
+
+        if (currentX > 0) {
+          const ratio = Math.min(1, currentX / 75);
+          if (stampLike) stampLike.style.opacity = ratio;
+          if (stampPass) stampPass.style.opacity = 0;
+        } else {
+          const ratio = Math.min(1, Math.abs(currentX) / 75);
+          if (stampPass) stampPass.style.opacity = ratio;
+          if (stampLike) stampLike.style.opacity = 0;
+        }
+      }
+
+      function handlePointerUp() {
+        if (!isDragging || !activeCard) return;
+        isDragging = false;
+        activeCard.onpointermove = null;
+        activeCard.onpointerup = null;
+
+        if (currentX > 80) {
+          swipe('right');
+        } else if (currentX < -80) {
+          swipe('left');
+        } else {
+          activeCard.classList.add('transitioning');
+          activeCard.style.transform = 'translate(0px, 0px) rotate(0deg)';
+          const sLike = activeCard.querySelector('.stamp-like');
+          const sPass = activeCard.querySelector('.stamp-pass');
+          if (sLike) sLike.style.opacity = 0;
+          if (sPass) sPass.style.opacity = 0;
+        }
+      }
+
+      function swipe(direction) {
+        if (deck.length === 0 || !activeCard) return;
+        const currentSuit = deck[0];
+        activeCard.classList.add('transitioning');
+        const throwX = direction === 'right' ? window.innerWidth : -window.innerWidth;
+        activeCard.style.transform = `translate(${throwX}px, ${currentY || 0}px) rotate(${direction === 'right' ? 20 : -20}deg)`;
+        activeCard.style.opacity = 0;
+
+        if (direction === 'right') {
+          addSuitToSelected(currentSuit);
+        }
+        swipeHistory.push({ suit: currentSuit, direction });
+
+        setTimeout(() => {
+          deck.shift();
+          renderDeck();
+        }, 300);
+      }
+
+      function addSuitToSelected(suit) {
+        if (!selectedSuits.some(s => s.id === suit.id)) {
+          selectedSuits.unshift(suit);
+        }
+        renderSelectedPanel();
+      }
+
+      function renderSelectedPanel() {
+        const count = selectedSuits.length;
+        if (selectedCountPill) selectedCountPill.textContent = count;
+
+        if (count === 0) {
+          if (selectedEmptyState) selectedEmptyState.classList.remove('hidden');
+          if (clearSelectedBtn) clearSelectedBtn.classList.add('hidden');
+          if (orderAllContainer) orderAllContainer.classList.add('hidden');
+          if (selectedList) {
+            selectedList.innerHTML = '';
+            selectedList.appendChild(selectedEmptyState);
+          }
+        } else {
+          if (selectedEmptyState) selectedEmptyState.classList.add('hidden');
+          if (clearSelectedBtn) clearSelectedBtn.classList.remove('hidden');
+          if (orderAllContainer) orderAllContainer.classList.remove('hidden');
+
+          if (selectedList) {
+            selectedList.innerHTML = selectedSuits.map(suit => `
+              <div class="pop-in flex items-center justify-between p-2 bg-slate-50 border border-slate-200">
+                <div class="flex items-center gap-2.5">
+                  <img src="${suit.image}" alt="${suit.title}" class="w-10 h-13 object-cover bg-slate-200" />
+                  <div>
+                    <h4 class="text-xs font-bold text-slate-900 line-clamp-1 uppercase">${suit.title}</h4>
+                    <span class="text-[11px] font-bold text-slate-500 block mt-0.5 tracking-wider uppercase">${suit.tag}</span>
+                  </div>
+                </div>
+                <button type="button" data-remove-id="${suit.id}" class="remove-suit-btn text-xs font-bold text-slate-400 hover:text-rose-600 p-1 cursor-pointer">✕</button>
+              </div>
+            `).join('');
+
+            selectedList.querySelectorAll('.remove-suit-btn').forEach(btn => {
+              btn.addEventListener('click', () => {
+                const idToRemove = btn.getAttribute('data-remove-id');
+                selectedSuits = selectedSuits.filter(s => s.id !== idToRemove);
+                renderSelectedPanel();
+              });
+            });
+          }
+        }
+      }
+
+      if (clearSelectedBtn) {
+        clearSelectedBtn.addEventListener('click', () => {
+          selectedSuits = [];
+          renderSelectedPanel();
+        });
+      }
+
+      if (orderWhatsappBtn) {
+        orderWhatsappBtn.addEventListener('click', () => {
+          if (selectedSuits.length === 0) return;
+          let msg = `Salam Fleex Garments! I would like to inquire about my selected suits:%0A%0A`;
+          selectedSuits.forEach((s, idx) => {
+            msg += `${idx + 1}. *${s.title}* (${s.tag})%0A`;
+          });
+          msg += `%0APlease confirm bespoke suit sizing & consultation details.`;
+          window.location.href = `https://wa.me/923702265968?text=${msg}`;
+        });
+      }
+
+      const btnPass = document.getElementById('btn-pass');
+      const btnLike = document.getElementById('btn-like');
+      const btnUndo = document.getElementById('btn-undo');
+
+      if (btnPass) btnPass.addEventListener('click', () => swipe('left'));
+      if (btnLike) btnLike.addEventListener('click', () => swipe('right'));
+      if (btnUndo) {
+        btnUndo.addEventListener('click', () => {
+          if (swipeHistory.length === 0) return;
+          const last = swipeHistory.pop();
+          if (last.direction === 'right') {
+            selectedSuits = selectedSuits.filter(s => s.id !== last.suit.id);
+            renderSelectedPanel();
+          }
+          deck.unshift(last.suit);
+          renderDeck();
+        });
+      }
+
+      if (resetDeckBtn) {
+        resetDeckBtn.addEventListener('click', () => {
+          deck = [...SUITS];
+          swipeHistory = [];
+          renderDeck();
+        });
+      }
+
+      renderDeck();
+      renderSelectedPanel();
     </script>
   </body>
 </html>
