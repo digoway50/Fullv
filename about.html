@@ -60,12 +60,12 @@
   </head>
   <body class="bg-white text-slate-900 antialiased selection:bg-[#0f2135] selection:text-white min-h-screen flex flex-col justify-between font-['Outfit',sans-serif]">
 
-    <!-- Sticky Header: Left Menu Bar + Right Logo (Card & Profile Removed) -->
+    <!-- Sticky Header: Left Menu Bar + Center Logo -->
     <header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all">
-      <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 grid grid-cols-3 items-center">
         
         <!-- Left: Menu Bar (Hamburger + Desktop Nav Links on the Left Side) -->
-        <div class="flex items-center gap-4 sm:gap-6">
+        <div class="flex items-center gap-4 sm:gap-6 justify-self-start">
           <button id="mobile-drawer-toggle" type="button" class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-slate-100 text-slate-900 transition-colors cursor-pointer" aria-label="Open menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"></path>
@@ -82,15 +82,18 @@
           </nav>
         </div>
 
-        <!-- Right: Brand Logo (Placed where Profile and Card were) -->
-        <a href="/" class="block text-right select-none group">
+        <!-- Center: Brand Logo -->
+        <a href="/" class="block text-center select-none group justify-self-center">
           <span class="text-xl sm:text-2xl lg:text-3xl font-black tracking-[0.22em] text-slate-900 uppercase transition-opacity group-hover:opacity-80">
             FLEEX
           </span>
-          <span class="block text-[8px] sm:text-[9px] font-bold tracking-[0.38em] text-slate-500 uppercase -mt-1 text-right">
+          <span class="block text-[8px] sm:text-[9px] font-bold tracking-[0.38em] text-slate-500 uppercase -mt-1 text-center">
             GARMENT
           </span>
         </a>
+
+        <!-- Right: Spacer for Grid Balance -->
+        <div class="justify-self-end"></div>
 
       </div>
     </header>
@@ -296,13 +299,8 @@
           <p id="newsletter-msg" class="hidden text-emerald-600 text-[11px] font-semibold mt-2">Thank you for subscribing to Fleex Garments newsletter!</p>
         </div>
 
-        <div class="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+        <div class="pt-6 border-t border-slate-100 text-center">
           <p class="text-[10px] text-slate-400 font-medium tracking-wider uppercase">© COPYRIGHT 2026 FLEEX GARMENTS SHOP. ALL RIGHTS RESERVED.</p>
-          <div class="flex items-center gap-2 text-[10px] text-slate-500 font-bold uppercase">
-            <span class="px-2 py-0.5 border border-slate-200 rounded bg-slate-50">ATELIER DIRECT</span>
-            <span class="px-2 py-0.5 border border-slate-200 rounded bg-slate-50">VISA</span>
-            <span class="px-2 py-0.5 border border-slate-200 rounded bg-slate-50">MASTERCARD</span>
-          </div>
         </div>
 
       </div>
