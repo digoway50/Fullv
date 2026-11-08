@@ -345,8 +345,20 @@ function initFleexApp() {
   if (newsletterForm) {
     newsletterForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      const email = newsletterEmail ? newsletterEmail.value.trim() : '';
+      if (email) {
+        try {
+          const subs = JSON.parse(localStorage.getItem('fleex_newsletter_subscribers') || '[]');
+          subs.push({ email: email, date: new Date().toLocaleDateString('en-PK') });
+          localStorage.setItem('fleex_newsletter_subscribers', JSON.stringify(subs));
+        } catch (err) {}
+      }
       if (newsletterMsg) {
         newsletterMsg.classList.remove('hidden');
+        newsletterMsg.textContent = 'Thank you for subscribing! Your email has been registered for Fleex Garments updates.';
+        setTimeout(() => {
+          newsletterMsg.classList.add('hidden');
+        }, 6000);
       }
       if (newsletterEmail) {
         newsletterEmail.value = '';
@@ -385,3 +397,22 @@ if (document.readyState === 'loading') {
 } else {
   initFleexApp();
 }
+
+// ============================================================
+// UNIVERSAL IMAGE RECOVERY FOR GITHUB PAGES SUBPATHS
+// ============================================================
+document.addEventListener('error', function(e) {
+  if (e.target && e.target.tagName === 'IMG') {
+    var img = e.target;
+    var src = img.getAttribute('src') || '';
+    if (src.indexOf('fleex-brand') !== -1 || (img.alt && img.alt.indexOf('Logo') !== -1)) {
+      if (window.__FLEEX_LOGO_DATA_URI && img.src !== window.__FLEEX_LOGO_DATA_URI) {
+        img.src = window.__FLEEX_LOGO_DATA_URI;
+      }
+    } else if (src.indexOf('assets/aistudio/') !== -1 && !img.dataset.retried) {
+      img.dataset.retried = '1';
+      var fname = src.split('/').pop();
+      img.src = 'assets/aistudio/' + fname;
+    }
+  }
+}, true);
