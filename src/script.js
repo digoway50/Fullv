@@ -1,10 +1,9 @@
-import './style.css';
-
 // ============================================================
-// FLEEX GARMENTS - SAPPHIRE INSPIRED E-COMMERCE SCRIPT
+// FLEEX GARMENTS - UNIVERSAL CLIENT SCRIPT
+// Standalone, bundler-agnostic JavaScript (works in Vite and raw GitHub Pages)
 // ============================================================
 
-document.addEventListener('DOMContentLoaded', () => {
+function initFleexApp() {
   // ----------------------------------------------------------
   // 1. HERO CAROUSEL LOGIC
   // ----------------------------------------------------------
@@ -40,23 +39,25 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(prevIndex);
   }
 
+  function resetInterval() {
+    if (slideInterval) clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 5000);
+  }
+
   if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       nextSlide();
       resetInterval();
     });
   }
 
   if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       prevSlide();
       resetInterval();
     });
-  }
-
-  function resetInterval() {
-    if (slideInterval) clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, 5000);
   }
 
   if (heroSlides.length > 1) {
@@ -66,45 +67,35 @@ document.addEventListener('DOMContentLoaded', () => {
   // ----------------------------------------------------------
   // 2. MOBILE NAVIGATION DRAWER
   // ----------------------------------------------------------
-  const drawerToggle = document.getElementById('mobile-drawer-toggle');
   const navDrawer = document.getElementById('mobile-nav-drawer');
-  const drawerCloseBtn = document.getElementById('drawer-close-btn');
-  const drawerBackdrop = document.getElementById('drawer-backdrop');
 
-  function openNavDrawer() {
-    if (navDrawer) {
-      navDrawer.classList.remove('hidden');
+  window.openNavDrawer = function() {
+    const drawer = document.getElementById('mobile-nav-drawer');
+    if (drawer) {
+      drawer.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
     }
-  }
+  };
 
-  function closeNavDrawer() {
-    if (navDrawer) {
-      navDrawer.classList.add('hidden');
+  window.closeNavDrawer = function() {
+    const drawer = document.getElementById('mobile-nav-drawer');
+    if (drawer) {
+      drawer.classList.add('hidden');
       document.body.style.overflow = '';
     }
-  }
-
-  if (drawerToggle) drawerToggle.addEventListener('click', openNavDrawer);
-  if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeNavDrawer);
-  if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeNavDrawer);
+  };
 
   // ----------------------------------------------------------
   // 3. SHOPPING BAG / CART STATE & DRAWER
   // ----------------------------------------------------------
-  const cartTrigger = document.getElementById('cart-drawer-trigger');
   const cartDrawer = document.getElementById('cart-drawer');
-  const cartCloseBtn = document.getElementById('cart-close-btn');
-  const cartBackdrop = document.getElementById('cart-backdrop');
   const cartBadge = document.getElementById('cart-badge-count');
   const cartDrawerCount = document.getElementById('cart-drawer-count-badge');
   const cartItemsContainer = document.getElementById('cart-items-container');
   const cartEmptyState = document.getElementById('cart-empty-state');
   const cartFooter = document.getElementById('cart-footer');
-  const cartSubtotal = document.getElementById('cart-subtotal-price');
   const cartCheckoutBtn = document.getElementById('cart-whatsapp-checkout-btn');
 
-  // Load cart from localStorage
   let cart = [];
   try {
     const saved = localStorage.getItem('fleex_cart');
@@ -122,23 +113,21 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCart();
   }
 
-  function openCart() {
-    if (cartDrawer) {
-      cartDrawer.classList.remove('hidden');
+  window.openCart = function() {
+    const drawer = document.getElementById('cart-drawer');
+    if (drawer) {
+      drawer.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
     }
-  }
+  };
 
-  function closeCart() {
-    if (cartDrawer) {
-      cartDrawer.classList.add('hidden');
+  window.closeCart = function() {
+    const drawer = document.getElementById('cart-drawer');
+    if (drawer) {
+      drawer.classList.add('hidden');
       document.body.style.overflow = '';
     }
-  }
-
-  if (cartTrigger) cartTrigger.addEventListener('click', openCart);
-  if (cartCloseBtn) cartCloseBtn.addEventListener('click', closeCart);
-  if (cartBackdrop) cartBackdrop.addEventListener('click', closeCart);
+  };
 
   function renderCart() {
     const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -151,14 +140,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (cart.length === 0) {
       if (cartEmptyState) cartEmptyState.classList.remove('hidden');
       if (cartFooter) cartFooter.classList.add('hidden');
-      // Remove any rendered item cards except empty state
       const existingItems = cartItemsContainer.querySelectorAll('.cart-item-row');
       existingItems.forEach((el) => el.remove());
     } else {
       if (cartEmptyState) cartEmptyState.classList.add('hidden');
       if (cartFooter) cartFooter.classList.remove('hidden');
 
-      // Rebuild items
       const existingItems = cartItemsContainer.querySelectorAll('.cart-item-row');
       existingItems.forEach((el) => el.remove());
 
@@ -182,62 +169,16 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         cartItemsContainer.appendChild(itemRow);
       });
-
-      // Attach quantity / remove handlers
-      cartItemsContainer.querySelectorAll('.qty-dec').forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-          const idx = parseInt(e.currentTarget.getAttribute('data-index'), 10);
-          if (cart[idx].quantity > 1) {
-            cart[idx].quantity -= 1;
-          } else {
-            cart.splice(idx, 1);
-          }
-          saveCart();
-        });
-      });
-
-      cartItemsContainer.querySelectorAll('.qty-inc').forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-          const idx = parseInt(e.currentTarget.getAttribute('data-index'), 10);
-          cart[idx].quantity += 1;
-          saveCart();
-        });
-      });
-
-      cartItemsContainer.querySelectorAll('.item-remove').forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-          const idx = parseInt(e.currentTarget.getAttribute('data-index'), 10);
-          cart.splice(idx, 1);
-          saveCart();
-        });
-      });
     }
   }
 
-  // Quick Add To Bag Handler
-  document.querySelectorAll('.quick-add-btn').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = e.currentTarget;
-      const title = target.getAttribute('data-title') || 'Fleex Bespoke Suit';
-      const rawImage = target.getAttribute('data-image') || 'images/charcoal_kurta_suit_1790890713358.jpg';
-      const image = rawImage.replace(/^\/+/, '');
-
-      const existingItem = cart.find((i) => i.title === title);
-      if (existingItem) {
-        existingItem.quantity += 1;
-      } else {
-        cart.push({ title, image, quantity: 1 });
-      }
-
-      saveCart();
-      openCart();
-    });
-  });
+  // Initial cart render
+  renderCart();
 
   // WhatsApp Checkout Handler
   if (cartCheckoutBtn) {
-    cartCheckoutBtn.addEventListener('click', () => {
+    cartCheckoutBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       if (cart.length === 0) return;
       let orderMsg = `Salam Fleex Garments! I would like to inquire about these suits from the Atelier:%0A%0A`;
       cart.forEach((item, i) => {
@@ -250,16 +191,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Initial cart render
-  renderCart();
-
   // ----------------------------------------------------------
   // 4. TRENDING CATEGORY TABS FILTER
   // ----------------------------------------------------------
   const trendingTabs = document.querySelectorAll('.trending-tab-btn');
   if (trendingTabs.length) {
     trendingTabs.forEach((tab) => {
-      tab.addEventListener('click', () => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
         trendingTabs.forEach((t) => {
           t.classList.remove('text-slate-900', 'border-b-2', 'border-slate-900');
           t.classList.add('text-slate-500');
@@ -267,11 +206,10 @@ document.addEventListener('DOMContentLoaded', () => {
         tab.classList.remove('text-slate-500');
         tab.classList.add('text-slate-900', 'border-b-2', 'border-slate-900');
 
-        // Subtle animation on products grid
         const grid = document.getElementById('trending-products-grid');
         if (grid) {
           grid.classList.remove('fade-in');
-          void grid.offsetWidth; // trigger reflow
+          void grid.offsetWidth;
           grid.classList.add('fade-in');
         }
       });
@@ -279,14 +217,109 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ----------------------------------------------------------
-  // 5. FOOTER ACCORDIONS (Exact Sapphire Style)
+  // 5. GLOBAL DELEGATED CLICK HANDLERS
+  // (Ensures buttons work 100% reliably even if re-rendered)
   // ----------------------------------------------------------
-  const accordionToggles = document.querySelectorAll('.accordion-toggle');
-  accordionToggles.forEach((toggle) => {
-    toggle.addEventListener('click', () => {
-      const targetId = toggle.getAttribute('data-target');
+  document.addEventListener('click', (e) => {
+    // Menu toggle open
+    const menuToggle = e.target.closest('#mobile-drawer-toggle');
+    if (menuToggle) {
+      e.preventDefault();
+      window.openNavDrawer();
+      return;
+    }
+
+    // Menu drawer close
+    const menuClose = e.target.closest('#drawer-close-btn, #drawer-backdrop');
+    if (menuClose) {
+      e.preventDefault();
+      window.closeNavDrawer();
+      return;
+    }
+
+    // Cart drawer trigger
+    const cartTrig = e.target.closest('#cart-drawer-trigger');
+    if (cartTrig) {
+      e.preventDefault();
+      window.openCart();
+      return;
+    }
+
+    // Cart close
+    const cartClose = e.target.closest('#cart-close-btn, #cart-backdrop');
+    if (cartClose) {
+      e.preventDefault();
+      window.closeCart();
+      return;
+    }
+
+    // Quick add to bag button
+    const quickAdd = e.target.closest('.quick-add-btn');
+    if (quickAdd) {
+      e.preventDefault();
+      const title = quickAdd.getAttribute('data-title') || 'Fleex Bespoke Suit';
+      const rawImage = quickAdd.getAttribute('data-image') || 'images/charcoal_kurta_suit_1790890713358.jpg';
+      const image = rawImage.replace(/^\/+/, '');
+
+      const existingItem = cart.find((i) => i.title === title);
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({ title, image, quantity: 1 });
+      }
+
+      saveCart();
+      window.openCart();
+      return;
+    }
+
+    // Cart item qty increment
+    const qtyInc = e.target.closest('.qty-inc');
+    if (qtyInc) {
+      e.preventDefault();
+      const idx = parseInt(qtyInc.getAttribute('data-index'), 10);
+      if (cart[idx]) {
+        cart[idx].quantity += 1;
+        saveCart();
+      }
+      return;
+    }
+
+    // Cart item qty decrement
+    const qtyDec = e.target.closest('.qty-dec');
+    if (qtyDec) {
+      e.preventDefault();
+      const idx = parseInt(qtyDec.getAttribute('data-index'), 10);
+      if (cart[idx]) {
+        if (cart[idx].quantity > 1) {
+          cart[idx].quantity -= 1;
+        } else {
+          cart.splice(idx, 1);
+        }
+        saveCart();
+      }
+      return;
+    }
+
+    // Cart item remove
+    const itemRemove = e.target.closest('.item-remove');
+    if (itemRemove) {
+      e.preventDefault();
+      const idx = parseInt(itemRemove.getAttribute('data-index'), 10);
+      if (cart[idx]) {
+        cart.splice(idx, 1);
+        saveCart();
+      }
+      return;
+    }
+
+    // Footer accordions
+    const accordionToggle = e.target.closest('.accordion-toggle');
+    if (accordionToggle) {
+      e.preventDefault();
+      const targetId = accordionToggle.getAttribute('data-target');
       const targetContent = document.getElementById(targetId);
-      const icon = toggle.querySelector('.acc-icon');
+      const icon = accordionToggle.querySelector('.acc-icon');
 
       if (targetContent) {
         const isHidden = targetContent.classList.contains('hidden');
@@ -298,7 +331,8 @@ document.addEventListener('DOMContentLoaded', () => {
           if (icon) icon.textContent = '+';
         }
       }
-    });
+      return;
+    }
   });
 
   // ----------------------------------------------------------
@@ -321,12 +355,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ----------------------------------------------------------
-  // 7. GLOBAL ESCAPE & MODAL BACKDROP LISTENER
+  // 7. KEYBOARD ESCAPE LISTENER
   // ----------------------------------------------------------
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      closeNavDrawer();
-      closeCart();
+      window.closeNavDrawer();
+      window.closeCart();
     }
   });
 
@@ -343,4 +377,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }, true);
-});
+}
+
+// Initialize immediately if DOM is ready, or on DOMContentLoaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initFleexApp);
+} else {
+  initFleexApp();
+}

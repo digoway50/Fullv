@@ -1,0 +1,21 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /favicon.ico
+Allow: /favicon.svg
+Allow: /favicon.png
+Allow: /favicon*.png
+Allow: /apple-touch-icon.png
+Allow: /assets/
+
+# Host
+Host: https://fleexgarments.shop
+
+# Sitemaps
+Sitemap: https://fleexgarments.shop/sitemap.xml
