@@ -382,8 +382,8 @@
 
         <div class="pt-8 pb-6 text-center max-w-md mx-auto">
           <span class="text-xs font-bold tracking-widest text-slate-900 uppercase block mb-3">NEWSLETTER SIGNUP</span>
-          <form id="newsletter-form" class="flex gap-2">
-            <input type="email" id="newsletter-email" placeholder="Enter your email address" required class="flex-1 px-4 py-2.5 text-xs border border-slate-200 rounded-none focus:outline-none focus:border-black" />
+          <form id="newsletter-form" novalidate class="flex gap-2">
+            <input type="text" id="newsletter-email" placeholder="Enter your email address" required class="flex-1 px-4 py-2.5 text-xs border border-slate-200 rounded-none focus:outline-none focus:border-black" />
             <button type="submit" class="px-5 py-2.5 bg-slate-900 hover:bg-black text-white text-xs font-bold tracking-wider uppercase transition-colors cursor-pointer">SUBSCRIBE</button>
           </form>
           <p id="newsletter-msg" class="hidden text-emerald-600 text-[11px] font-semibold mt-2">Thank you for subscribing to Fleex Garments newsletter!</p>
@@ -470,6 +470,7 @@
 
     <!-- Unified Script -->
     <script src="src/script.js"></script>
+    <script src="src/admin.js"></script>
 
     <!-- Contact Form WhatsApp Dispatch Script -->
     <script>
