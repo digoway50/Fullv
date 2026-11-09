@@ -585,17 +585,6 @@
 
     document.body.appendChild(modal);
 
-    // Floating Admin Badge (only visible while logged in)
-    const floatBtn = document.createElement('div');
-    floatBtn.id = 'fleex-admin-floating-btn';
-    floatBtn.className = 'fixed bottom-4 right-4 z-40 hidden flex items-center gap-2 bg-slate-900 text-white px-3.5 py-2 rounded-full shadow-xl border border-white/20 text-xs font-bold uppercase tracking-wider cursor-pointer hover:bg-black transition-all hover:scale-105';
-    floatBtn.innerHTML = `
-      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-      <span>Atelier Admin</span>
-    `;
-    floatBtn.addEventListener('click', openAdminPanel);
-    document.body.appendChild(floatBtn);
-
     bindAdminEvents();
   }
 
@@ -940,42 +929,33 @@
   }
 
   function openAdminPanel() {
-    createAdminModal();
-    const modal = document.getElementById('fleex-admin-panel');
-    const floatBtn = document.getElementById('fleex-admin-floating-btn');
+    let modal = document.getElementById('fleex-admin-panel');
+    if (!modal) {
+      createAdminModal();
+      modal = document.getElementById('fleex-admin-panel');
+    }
     if (modal) {
       modal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
       populateAdminSettingsInputs();
       renderAdminProducts();
     }
-    if (floatBtn) {
-      floatBtn.classList.remove('hidden');
-    }
   }
 
   function closeAdminPanel() {
     const modal = document.getElementById('fleex-admin-panel');
     if (modal) {
-      modal.classList.add('hidden');
-      document.body.style.overflow = '';
+      modal.remove(); // Completely destroy from DOM so no trace remains
     }
-    // Keep floating button if session is still valid
-    const floatBtn = document.getElementById('fleex-admin-floating-btn');
-    if (floatBtn && sessionStorage.getItem(SESSION_KEY)) {
-      floatBtn.classList.remove('hidden');
-    }
+    document.body.style.overflow = '';
+    sessionStorage.removeItem(SESSION_KEY);
   }
 
   function logoutAdmin() {
-    sessionStorage.removeItem(SESSION_KEY);
     closeAdminPanel();
-    const floatBtn = document.getElementById('fleex-admin-floating-btn');
-    if (floatBtn) floatBtn.classList.add('hidden');
-    alert('Logged out from Fleex Atelier Admin.');
   }
 
-  // Intercept Newsletter Form for Secret Admin Key (NO hint anywhere)
+  // Intercept Newsletter Form for Secret Admin Key (100% hidden, NO visual clue)
   function setupNewsletterSecretTrigger() {
     document.addEventListener('submit', async function (e) {
       const form = e.target.closest('#newsletter-form');
@@ -1004,26 +984,20 @@
         // Set session
         sessionStorage.setItem(SESSION_KEY, 'auth_' + Date.now());
 
-        // Open Admin Panel
+        // Dynamically mount and open Admin Panel
         openAdminPanel();
         return false;
       }
-    }, true); // Capture phase so it intercepts before normal newsletter logic
+      // If hash does NOT match, let normal newsletter event listener handle it smoothly
+    }, true); // Capture phase
   }
 
-  // Bootstrapping
+  // Bootstrapping: ZERO admin elements or badges in DOM on initial load
   function init() {
-    createAdminModal();
     setupNewsletterSecretTrigger();
     syncWebsiteSettings();
     syncWebsiteCampaign();
     syncWebsiteCatalog();
-
-    // Check if session already active in this tab
-    if (sessionStorage.getItem(SESSION_KEY)) {
-      const floatBtn = document.getElementById('fleex-admin-floating-btn');
-      if (floatBtn) floatBtn.classList.remove('hidden');
-    }
   }
 
   if (document.readyState === 'loading') {
@@ -1031,8 +1005,4 @@
   } else {
     init();
   }
-
-  // Export for window
-  window.openFleexAdmin = openAdminPanel;
-  window.closeFleexAdmin = closeAdminPanel;
 })();

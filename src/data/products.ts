@@ -13,6 +13,24 @@ export interface ProductItem {
   tag: string;
 }
 
+import {
+  ALL_REGIONAL_SEO_KEYWORDS,
+  TARGET_LOCATIONS,
+  CORE_SEED_KEYWORD_ANALYSIS,
+  BRAND_SPECIFIC_KEYWORDS,
+  CITY_WISE_KEYWORDS,
+  ROMAN_URDU_KEYWORDS
+} from "./seoKeywords";
+
+export {
+  ALL_REGIONAL_SEO_KEYWORDS,
+  TARGET_LOCATIONS,
+  CORE_SEED_KEYWORD_ANALYSIS,
+  BRAND_SPECIFIC_KEYWORDS,
+  CITY_WISE_KEYWORDS,
+  ROMAN_URDU_KEYWORDS
+};
+
 export const STORE_BRAND: string = "Fleex Garment";
 
 export const BRAND_KEYWORDS: string[] = [
@@ -23,6 +41,9 @@ export const BRAND_KEYWORDS: string[] = [
 export const UNIVERSAL_BACKEND_SEO_TAGS: string[] = [
   "Fleex",
   "fleex garment",
+  "readymade",
+  "ready to wear",
+  "garments",
   "Kids Shalwar Kameez Pakistan",
   "Boys Readymade Suit",
   "Stitched 2 Piece Boys",
@@ -35,7 +56,12 @@ export const UNIVERSAL_BACKEND_SEO_TAGS: string[] = [
   "Baby Boy Kurta Pajama",
   "Pakistani Traditional Dress for Boys",
   "Peshawari Chappal Outfit",
-  "Breathable Cotton Kids Wear"
+  "Breathable Cotton Kids Wear",
+  "Hyderabad Sindh Garments",
+  "Mithi Tharparkar Readymade",
+  "Islamkot Tharparkar Ready to Wear",
+  "Cash on Delivery Pakistan Garments",
+  ...ALL_REGIONAL_SEO_KEYWORDS
 ];
 
 export const PRODUCTS: ProductItem[] = [
