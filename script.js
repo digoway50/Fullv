@@ -156,7 +156,7 @@ function initFleexApp() {
           <img src="${item.image}" alt="${item.title}" class="w-14 h-18 object-cover bg-slate-200 shrink-0" />
           <div class="flex-1 min-w-0">
             <h4 class="text-xs font-bold text-slate-900 uppercase truncate">${item.title}</h4>
-            <span class="text-[11px] font-bold text-slate-500 block mt-0.5 tracking-wider uppercase">Bespoke Atelier Stitched</span>
+            <span class="text-[11px] font-bold text-slate-500 block mt-0.5 tracking-wider uppercase">Premium Stitched Suit (Wholesale & Retail)</span>
             <div class="flex items-center gap-2 mt-2">
               <div class="flex items-center border border-slate-300 bg-white">
                 <button type="button" class="qty-dec px-2 py-0.5 text-xs text-slate-600 hover:text-black hover:bg-slate-100" data-index="${index}">−</button>
@@ -180,11 +180,11 @@ function initFleexApp() {
     cartCheckoutBtn.addEventListener('click', (e) => {
       e.preventDefault();
       if (cart.length === 0) return;
-      let orderMsg = `Salam Fleex Garments! I would like to inquire about these suits from the Atelier:%0A%0A`;
+      let orderMsg = `Salam Fleex Garments! I would like to order / inquire about these suits (Wholesale & Retail):%0A%0A`;
       cart.forEach((item, i) => {
         orderMsg += `${i + 1}. *${item.title}* x ${item.quantity}%0A`;
       });
-      orderMsg += `%0APlease let me know sizing availability and consultation details.`;
+      orderMsg += `%0APlease confirm available sizes, wholesale rates, and delivery details.`;
 
       const whatsappUrl = `https://wa.me/923702265968?text=${orderMsg}`;
       window.location.href = whatsappUrl;
@@ -257,7 +257,7 @@ function initFleexApp() {
     const quickAdd = e.target.closest('.quick-add-btn');
     if (quickAdd) {
       e.preventDefault();
-      const title = quickAdd.getAttribute('data-title') || 'Fleex Bespoke Suit';
+      const title = quickAdd.getAttribute('data-title') || 'Fleex Stitched Suit';
       const rawImage = quickAdd.getAttribute('data-image') || 'images/charcoal_kurta_suit_1790890713358.jpg';
       const image = rawImage.replace(/^\/+/, '');
 
