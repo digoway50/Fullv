@@ -267,7 +267,7 @@
             </p>
           </div>
           <a href="https://wa.me/${phone}?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(p.title)}." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
-            INQUIRE ATELIER →
+            ORDER NOW →
           </a>
         </div>
       `).join('');
@@ -302,7 +302,7 @@
             </p>
           </div>
           <a href="https://wa.me/${phone}?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(p.title)}." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
-            INQUIRE ATELIER →
+            ORDER NOW →
           </a>
         </div>
       `).join('');
