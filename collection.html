@@ -384,23 +384,13 @@
         <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 uppercase mb-3">
           COLLECTIONS & CATALOG
         </h1>
-        <p class="text-xs sm:text-sm text-slate-600 max-w-lg mx-auto font-normal leading-relaxed mb-6">
+        <p class="text-xs sm:text-sm text-slate-600 max-w-lg mx-auto font-normal leading-relaxed">
           Direct factory ready-to-wear stitched suits, wash-and-wear kameez shalwar, and soft cotton sets. Supplying shopkeepers, boutiques, resellers, and families across Pakistan.
         </p>
-
-        <!-- View Switcher (Catalog Grid vs Interactive Swipe Deck) -->
-        <div class="inline-flex items-center p-1 bg-slate-100 rounded-none border border-slate-200">
-          <button id="tab-grid-view" type="button" class="view-toggle-btn px-4 sm:px-6 py-2 text-xs font-bold tracking-wider uppercase bg-[#0f2135] text-white transition-all cursor-pointer">
-            CATALOG GRID (ALL)
-          </button>
-          <button id="tab-deck-view" type="button" class="view-toggle-btn px-4 sm:px-6 py-2 text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-black transition-all cursor-pointer">
-            INTERACTIVE SWIPE DECK
-          </button>
-        </div>
       </section>
 
       <!-- ============================================================ -->
-      <!-- VIEW 1: SAPPHIRE 2-COLUMN / 4-COLUMN CATALOG GRID VIEW -->
+      <!-- SAPPHIRE 2-COLUMN / 4-COLUMN CATALOG GRID VIEW -->
       <!-- ============================================================ -->
       <section id="collection-grid-view" class="max-w-7xl mx-auto px-4 sm:px-8 pt-8">
         
@@ -838,89 +828,6 @@
       </section>
 
       <!-- ============================================================ -->
-      <!-- VIEW 2: INTERACTIVE TINDER SWIPE DECK VIEW (HIDDEN BY DEFAULT) -->
-      <!-- ============================================================ -->
-      <section id="collection-deck-view" class="hidden max-w-7xl mx-auto px-4 sm:px-8 pt-8">
-        
-        <div class="flex flex-col lg:flex-row gap-8 items-center lg:items-start justify-center">
-
-          <!-- Left Selected Suits Panel (Matching Sapphire clean white look) -->
-          <aside id="selected-panel" class="w-full lg:w-80 xl:w-96 bg-white border border-slate-200 p-5 shadow-sm flex flex-col shrink-0 order-2 lg:order-1 transition-all">
-            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
-              <div class="flex items-center gap-2">
-                <span class="text-xs font-black tracking-wider uppercase text-slate-900">SELECTED SUITS</span>
-                <span id="selected-count-pill" class="text-[10px] font-bold bg-[#0f2135] text-white px-2 py-0.5">0</span>
-              </div>
-              <button id="clear-selected-btn" type="button" class="hidden text-[11px] font-bold text-slate-400 hover:text-rose-600 transition-colors cursor-pointer uppercase">
-                Clear
-              </button>
-            </div>
-
-            <p class="text-[11px] text-slate-500 mt-2 mb-3">
-              Suits swiped <strong>RIGHT (♥)</strong> appear here. Order them together via WhatsApp:
-            </p>
-
-            <div id="selected-list" class="space-y-2.5 max-h-[380px] overflow-y-auto custom-scroll pr-1">
-              <div id="selected-empty-state" class="py-12 text-center text-slate-400">
-                <div class="w-10 h-10 border border-slate-200 mx-auto flex items-center justify-center text-base mb-2 text-slate-500">
-                  ♥
-                </div>
-                <p class="text-xs font-bold text-slate-800">No suits selected</p>
-                <p class="text-[11px] text-slate-500 mt-1">Swipe right or tap ♥ on cards to save.</p>
-              </div>
-            </div>
-
-            <div id="order-all-container" class="hidden mt-4 pt-3 border-t border-slate-100">
-              <button id="order-whatsapp-btn" type="button" class="w-full py-3 bg-[#0f2135] hover:bg-black text-white font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 cursor-pointer transition-colors shadow">
-                <span>INQUIRE SELECTED ON WHATSAPP</span>
-              </button>
-              <p class="text-[10px] text-center text-slate-400 mt-2">Direct Factory & Wholesale WhatsApp Support</p>
-            </div>
-          </aside>
-
-          <!-- Right Tinder Stage -->
-          <div class="flex-1 w-full max-w-sm sm:max-w-md flex flex-col items-center order-1 lg:order-2">
-            
-            <div class="w-full flex items-center justify-between mb-2 text-xs font-bold uppercase tracking-wider text-slate-500">
-              <span class="text-rose-600">← Swipe Left (Skip)</span>
-              <span class="text-emerald-700">Swipe Right (Select) →</span>
-            </div>
-
-            <div class="relative w-full aspect-[3/4.6] max-h-[580px] flex items-center justify-center">
-              <div id="deck-container" class="relative w-full h-full">
-                <!-- Swipable cards injected by script -->
-              </div>
-
-              <div id="deck-empty-state" class="hidden absolute inset-0 bg-white border border-slate-200 p-8 flex flex-col items-center justify-center text-center shadow-lg">
-                <span class="text-3xl mb-2">✨</span>
-                <h3 class="text-sm font-extrabold uppercase tracking-wider text-slate-900">Entire Collection Reviewed</h3>
-                <p class="text-xs text-slate-500 mt-1 max-w-[220px]">Check your selected suits on the left, or reload the deck.</p>
-                <button id="reset-deck-btn" type="button" class="mt-4 px-6 py-2.5 bg-[#0f2135] text-white text-xs font-bold uppercase tracking-widest hover:bg-black cursor-pointer">
-                  Restart Deck ↺
-                </button>
-              </div>
-            </div>
-
-            <!-- Controls bar: Pass, Undo, Like -->
-            <div class="flex items-center justify-center gap-6 mt-6">
-              <button id="btn-pass" type="button" class="w-14 h-14 rounded-full border-2 border-slate-200 bg-white text-rose-600 hover:border-rose-500 hover:bg-rose-50 flex items-center justify-center text-xl font-bold shadow-md transition-transform hover:scale-110 cursor-pointer" aria-label="Pass">
-                ✕
-              </button>
-              <button id="btn-undo" type="button" class="w-11 h-11 rounded-full border border-slate-200 bg-white text-slate-600 hover:text-black hover:border-slate-400 flex items-center justify-center text-sm font-bold shadow-sm transition-transform hover:scale-105 cursor-pointer" aria-label="Undo">
-                ↺
-              </button>
-              <button id="btn-like" type="button" class="w-14 h-14 rounded-full border-2 border-emerald-500 bg-emerald-600 text-white hover:bg-emerald-700 flex items-center justify-center text-2xl font-bold shadow-md transition-transform hover:scale-110 cursor-pointer" aria-label="Like">
-                ♥
-              </button>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- ============================================================ -->
       <!-- 3 ATELIER PILLARS (Tailoring, Fabrics, Atelier) -->
       <!-- ============================================================ -->
       <section class="border-t border-slate-100 py-10 bg-slate-50/60 mt-16">
@@ -992,8 +899,8 @@
         <div class="pt-8 pb-6 text-center max-w-md mx-auto">
           <span class="text-xs font-bold tracking-widest text-slate-900 uppercase block mb-3">NEWSLETTER SIGNUP</span>
           <form id="newsletter-form" novalidate class="flex gap-2">
-            <input type="text" id="newsletter-email" placeholder="Enter your email address" required class="flex-1 px-4 py-2.5 text-xs border border-slate-200 rounded-none focus:outline-none focus:border-black" />
-            <button type="submit" class="px-5 py-2.5 bg-slate-900 hover:bg-black text-white text-xs font-bold tracking-wider uppercase transition-colors cursor-pointer">SUBSCRIBE</button>
+            <input type="text" id="newsletter-email" placeholder="Enter your email address" required class="flex-1 px-4 py-2.5 text-xs border border-slate-200 rounded-xl focus:outline-none focus:border-black" />
+            <button type="submit" class="px-5 py-2.5 bg-slate-900 hover:bg-black text-white text-xs font-bold tracking-wider uppercase transition-colors cursor-pointer rounded-xl">SUBSCRIBE</button>
           </form>
           <p id="newsletter-msg" class="hidden text-emerald-600 text-[11px] font-semibold mt-2">Thank you for subscribing to Fleex Garments newsletter!</p>
         </div>
@@ -1083,29 +990,7 @@
 
     <!-- Collection View Switcher & Tinder Swipe Logic -->
     <script>
-      // 1. Grid vs Deck View Toggle
-      const tabGrid = document.getElementById('tab-grid-view');
-      const tabDeck = document.getElementById('tab-deck-view');
-      const viewGrid = document.getElementById('collection-grid-view');
-      const viewDeck = document.getElementById('collection-deck-view');
-
-      if (tabGrid && tabDeck && viewGrid && viewDeck) {
-        tabGrid.addEventListener('click', () => {
-          tabGrid.className = 'view-toggle-btn px-4 sm:px-6 py-2 text-xs font-bold tracking-wider uppercase bg-[#0f2135] text-white transition-all cursor-pointer';
-          tabDeck.className = 'view-toggle-btn px-4 sm:px-6 py-2 text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-black transition-all cursor-pointer';
-          viewGrid.classList.remove('hidden');
-          viewDeck.classList.add('hidden');
-        });
-
-        tabDeck.addEventListener('click', () => {
-          tabDeck.className = 'view-toggle-btn px-4 sm:px-6 py-2 text-xs font-bold tracking-wider uppercase bg-[#0f2135] text-white transition-all cursor-pointer';
-          tabGrid.className = 'view-toggle-btn px-4 sm:px-6 py-2 text-xs font-bold tracking-wider uppercase text-slate-600 hover:text-black transition-all cursor-pointer';
-          viewDeck.classList.remove('hidden');
-          viewGrid.classList.add('hidden');
-        });
-      }
-
-      // 2. Catalog Grid Category Filter
+      // 1. Catalog Grid Category Filter
       const filterBtns = document.querySelectorAll('.catalog-filter-btn');
       const productItems = document.querySelectorAll('.product-item');
 
@@ -1284,258 +1169,7 @@
         }
       ];
 
-      let deck = [...SUITS];
-      let selectedSuits = [];
-      let swipeHistory = [];
-
-      const deckContainer = document.getElementById('deck-container');
-      const deckEmptyState = document.getElementById('deck-empty-state');
-      const resetDeckBtn = document.getElementById('reset-deck-btn');
-      const selectedList = document.getElementById('selected-list');
-      const selectedCountPill = document.getElementById('selected-count-pill');
-      const selectedEmptyState = document.getElementById('selected-empty-state');
-      const clearSelectedBtn = document.getElementById('clear-selected-btn');
-      const orderAllContainer = document.getElementById('order-all-container');
-      const orderWhatsappBtn = document.getElementById('order-whatsapp-btn');
-
-      function renderDeck() {
-        if (!deckContainer) return;
-        deckContainer.innerHTML = '';
-        if (deck.length === 0) {
-          if (deckEmptyState) deckEmptyState.classList.remove('hidden');
-          return;
-        }
-        if (deckEmptyState) deckEmptyState.classList.add('hidden');
-
-        deck.slice(0, 3).reverse().forEach((suit, index) => {
-          const depth = deck.slice(0, 3).length - 1 - index;
-          const scale = 1 - depth * 0.04;
-          const translateY = depth * 10;
-          const opacity = depth === 0 ? 1 : 0.9 - depth * 0.15;
-          const zIndex = 30 - depth;
-
-          const card = document.createElement('div');
-          card.className = `tinder-card absolute inset-0 w-full h-full rounded-none overflow-hidden bg-white border border-slate-200 shadow-md flex flex-col justify-between cursor-grab active:cursor-grabbing select-none`;
-          card.style.transform = `translate3d(0, ${translateY}px, 0) scale(${scale})`;
-          card.style.opacity = opacity;
-          card.style.zIndex = zIndex;
-          card.setAttribute('data-id', suit.id);
-
-          card.innerHTML = `
-            <div class="relative w-full h-[76%] overflow-hidden bg-slate-900 pointer-events-none">
-              <img src="${suit.image}" alt="${suit.title}" class="w-full h-full object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
-              
-              <!-- Stamps -->
-              <div class="swipe-stamp stamp-like absolute top-6 left-6 border-2 border-emerald-500 text-emerald-500 font-black text-sm tracking-widest px-3 py-1 uppercase opacity-0 rotate-[-12deg] bg-black/40">
-                SAVE ♥
-              </div>
-              <div class="swipe-stamp stamp-pass absolute top-6 right-6 border-2 border-rose-500 text-rose-500 font-black text-sm tracking-widest px-3 py-1 uppercase opacity-0 rotate-[12deg] bg-black/40">
-                SKIP ✕
-              </div>
-
-              <div class="absolute top-4 left-4">
-                <span class="bg-black/60 backdrop-blur-xs text-white text-[9px] font-bold px-2 py-0.5 tracking-wider uppercase">
-                  ${suit.badge}
-                </span>
-              </div>
-
-              <div class="absolute bottom-4 left-4 right-4 text-white">
-                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-300 block mb-0.5">${suit.category}</span>
-                <h3 class="text-base font-black uppercase tracking-tight leading-snug drop-shadow">${suit.title}</h3>
-                <span class="text-xs font-bold text-slate-200 mt-1 block tracking-wider uppercase">${suit.fabric}</span>
-              </div>
-            </div>
-
-            <!-- Card Bottom Bar -->
-            <div class="p-3.5 bg-white flex items-center justify-between border-t border-slate-100">
-              <span class="text-xs font-bold text-slate-800 uppercase tracking-wider">${suit.tag}</span>
-              <span class="text-[11px] font-bold text-emerald-700 uppercase tracking-widest">Swipe Right to Inquire →</span>
-            </div>
-          `;
-
-          if (depth === 0) {
-            setupCardInteractions(card, suit);
-          }
-
-          deckContainer.appendChild(card);
-        });
-      }
-
-      let activeCard = null;
-      let startX = 0, startY = 0, currentX = 0, currentY = 0;
-      let isDragging = false;
-
-      function setupCardInteractions(card, suit) {
-        activeCard = card;
-        card.onpointerdown = (e) => {
-          isDragging = true;
-          startX = e.clientX;
-          startY = e.clientY;
-          card.classList.remove('transitioning');
-          card.setPointerCapture(e.pointerId);
-          card.onpointermove = (ev) => handlePointerMove(ev);
-          card.onpointerup = (ev) => handlePointerUp(ev);
-          card.onpointercancel = (ev) => handlePointerUp(ev);
-        };
-      }
-
-      function handlePointerMove(e) {
-        if (!isDragging || !activeCard) return;
-        currentX = e.clientX - startX;
-        currentY = e.clientY - startY;
-        const rotate = currentX * 0.08;
-        activeCard.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${rotate}deg)`;
-
-        const stampLike = activeCard.querySelector('.stamp-like');
-        const stampPass = activeCard.querySelector('.stamp-pass');
-
-        if (currentX > 0) {
-          const ratio = Math.min(1, currentX / 75);
-          if (stampLike) stampLike.style.opacity = ratio;
-          if (stampPass) stampPass.style.opacity = 0;
-        } else {
-          const ratio = Math.min(1, Math.abs(currentX) / 75);
-          if (stampPass) stampPass.style.opacity = ratio;
-          if (stampLike) stampLike.style.opacity = 0;
-        }
-      }
-
-      function handlePointerUp() {
-        if (!isDragging || !activeCard) return;
-        isDragging = false;
-        activeCard.onpointermove = null;
-        activeCard.onpointerup = null;
-
-        if (currentX > 80) {
-          swipe('right');
-        } else if (currentX < -80) {
-          swipe('left');
-        } else {
-          activeCard.classList.add('transitioning');
-          activeCard.style.transform = 'translate(0px, 0px) rotate(0deg)';
-          const sLike = activeCard.querySelector('.stamp-like');
-          const sPass = activeCard.querySelector('.stamp-pass');
-          if (sLike) sLike.style.opacity = 0;
-          if (sPass) sPass.style.opacity = 0;
-        }
-      }
-
-      function swipe(direction) {
-        if (deck.length === 0 || !activeCard) return;
-        const currentSuit = deck[0];
-        activeCard.classList.add('transitioning');
-        const throwX = direction === 'right' ? window.innerWidth : -window.innerWidth;
-        activeCard.style.transform = `translate(${throwX}px, ${currentY || 0}px) rotate(${direction === 'right' ? 20 : -20}deg)`;
-        activeCard.style.opacity = 0;
-
-        if (direction === 'right') {
-          addSuitToSelected(currentSuit);
-        }
-        swipeHistory.push({ suit: currentSuit, direction });
-
-        setTimeout(() => {
-          deck.shift();
-          renderDeck();
-        }, 300);
-      }
-
-      function addSuitToSelected(suit) {
-        if (!selectedSuits.some(s => s.id === suit.id)) {
-          selectedSuits.unshift(suit);
-        }
-        renderSelectedPanel();
-      }
-
-      function renderSelectedPanel() {
-        const count = selectedSuits.length;
-        if (selectedCountPill) selectedCountPill.textContent = count;
-
-        if (count === 0) {
-          if (selectedEmptyState) selectedEmptyState.classList.remove('hidden');
-          if (clearSelectedBtn) clearSelectedBtn.classList.add('hidden');
-          if (orderAllContainer) orderAllContainer.classList.add('hidden');
-          if (selectedList) {
-            selectedList.innerHTML = '';
-            selectedList.appendChild(selectedEmptyState);
-          }
-        } else {
-          if (selectedEmptyState) selectedEmptyState.classList.add('hidden');
-          if (clearSelectedBtn) clearSelectedBtn.classList.remove('hidden');
-          if (orderAllContainer) orderAllContainer.classList.remove('hidden');
-
-          if (selectedList) {
-            selectedList.innerHTML = selectedSuits.map(suit => `
-              <div class="pop-in flex items-center justify-between p-2 bg-slate-50 border border-slate-200">
-                <div class="flex items-center gap-2.5">
-                  <img src="${suit.image}" alt="${suit.title}" class="w-10 h-13 object-cover bg-slate-200" />
-                  <div>
-                    <h4 class="text-xs font-bold text-slate-900 line-clamp-1 uppercase">${suit.title}</h4>
-                    <span class="text-[11px] font-bold text-slate-500 block mt-0.5 tracking-wider uppercase">${suit.fabric}</span>
-                  </div>
-                </div>
-                <button type="button" data-remove-id="${suit.id}" class="remove-suit-btn text-xs font-bold text-slate-400 hover:text-rose-600 p-1 cursor-pointer">✕</button>
-              </div>
-            `).join('');
-
-            selectedList.querySelectorAll('.remove-suit-btn').forEach(btn => {
-              btn.addEventListener('click', () => {
-                const idToRemove = parseInt(btn.getAttribute('data-remove-id'), 10);
-                selectedSuits = selectedSuits.filter(s => s.id !== idToRemove);
-                renderSelectedPanel();
-              });
-            });
-          }
-        }
-      }
-
-      if (clearSelectedBtn) {
-        clearSelectedBtn.addEventListener('click', () => {
-          selectedSuits = [];
-          renderSelectedPanel();
-        });
-      }
-
-      if (orderWhatsappBtn) {
-        orderWhatsappBtn.addEventListener('click', () => {
-          if (selectedSuits.length === 0) return;
-          let msg = `Salam Fleex Garments! I would like to inquire about my saved stitched designs:%0A%0A`;
-          selectedSuits.forEach((s, idx) => {
-            msg += `${idx + 1}. *${s.title}* (${s.fabric})%0A`;
-          });
-          msg += `%0APlease share sizing chart, fabric details, and order process.`;
-          window.location.href = `https://wa.me/923702265968?text=${msg}`;
-        });
-      }
-
-      const btnPass = document.getElementById('btn-pass');
-      const btnLike = document.getElementById('btn-like');
-      const btnUndo = document.getElementById('btn-undo');
-
-      if (btnPass) btnPass.addEventListener('click', () => swipe('left'));
-      if (btnLike) btnLike.addEventListener('click', () => swipe('right'));
-      if (btnUndo) {
-        btnUndo.addEventListener('click', () => {
-          if (swipeHistory.length === 0) return;
-          const last = swipeHistory.pop();
-          if (last.direction === 'right') {
-            selectedSuits = selectedSuits.filter(s => s.id !== last.suit.id);
-            renderSelectedPanel();
-          }
-          deck.unshift(last.suit);
-          renderDeck();
-        });
-      }
-
-      if (resetDeckBtn) {
-        resetDeckBtn.addEventListener('click', () => {
-          deck = [...SUITS];
-          swipeHistory = [];
-          renderDeck();
-        });
-      }
-
-      // 4. Product Overview Modal with 3-Picture Gallery & Short Description
+      // 3. Product Overview Modal with 3-Picture Gallery & Short Description
       const quickModal = document.getElementById('quick-details-modal');
       const modalCloseBtn = document.getElementById('modal-close-btn');
       const modalBackdrop = document.getElementById('modal-backdrop');
@@ -1676,16 +1310,13 @@
           return;
         }
       });
-
-      renderDeck();
-      renderSelectedPanel();
     </script>
 
     <!-- Product Overview Modal (Showing 3 Pictures & Short Description) -->
     <div id="quick-details-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-4">
       <div id="modal-backdrop" class="fixed inset-0 bg-black/75 backdrop-blur-xs transition-opacity"></div>
       
-      <div class="relative bg-white max-w-3xl w-full max-h-[92vh] overflow-y-auto z-10 shadow-2xl border border-slate-200 flex flex-col md:flex-row">
+      <div class="relative bg-white max-w-3xl w-full max-h-[92vh] overflow-y-auto z-10 shadow-2xl border border-slate-200 flex flex-col md:flex-row rounded-3xl overflow-hidden">
         <!-- Close Button -->
         <button id="modal-close-btn" type="button" class="absolute top-3 right-3 z-30 w-8 h-8 rounded-full bg-white/95 text-slate-900 flex items-center justify-center font-black text-sm hover:bg-slate-900 hover:text-white transition-colors cursor-pointer border border-slate-300 shadow-sm" aria-label="Close Overview">
           ✕
@@ -1699,12 +1330,12 @@
             
             <!-- Badges -->
             <div class="absolute top-3 left-3 flex flex-col gap-1 items-start">
-              <span id="modal-badge" class="bg-black/85 text-white text-[10px] font-black px-2 py-0.5 tracking-wider uppercase"></span>
-              <span class="bg-emerald-700 text-white text-[9px] font-bold px-2 py-0.5 tracking-wider uppercase">PRODUCT OVERVIEW</span>
+              <span id="modal-badge" class="bg-black/85 text-white text-[10px] font-black px-2.5 py-0.5 tracking-wider uppercase rounded-full"></span>
+              <span class="bg-emerald-700 text-white text-[9px] font-bold px-2.5 py-0.5 tracking-wider uppercase rounded-full">PRODUCT OVERVIEW</span>
             </div>
 
             <!-- Picture Counter Badge -->
-            <div class="absolute bottom-3 right-3 bg-black/70 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 tracking-widest uppercase">
+            <div class="absolute bottom-3 right-3 bg-black/70 backdrop-blur-xs text-white text-[10px] font-bold px-2.5 py-0.5 tracking-widest uppercase rounded-full">
               <span id="modal-img-counter">1 / 3</span>
             </div>
 
@@ -1724,15 +1355,15 @@
               <span class="text-[9px] text-emerald-400">CLICK TO SWITCH</span>
             </div>
             <div id="modal-thumbs-container" class="grid grid-cols-3 gap-2">
-              <button type="button" class="modal-thumb-btn aspect-[3/3.8] border-2 border-slate-900 rounded-xs overflow-hidden cursor-pointer relative transition-all" data-idx="0">
+              <button type="button" class="modal-thumb-btn aspect-[3/3.8] border-2 border-slate-900 rounded-xl overflow-hidden cursor-pointer relative transition-all" data-idx="0">
                 <img id="modal-thumb-0" src="" alt="View 1" class="w-full h-full object-cover" />
                 <span class="absolute bottom-0 inset-x-0 bg-black/70 text-white text-[8px] font-bold py-0.5 text-center uppercase">1. Front</span>
               </button>
-              <button type="button" class="modal-thumb-btn aspect-[3/3.8] border-2 border-transparent opacity-60 hover:opacity-100 rounded-xs overflow-hidden cursor-pointer relative transition-all" data-idx="1">
+              <button type="button" class="modal-thumb-btn aspect-[3/3.8] border-2 border-transparent opacity-60 hover:opacity-100 rounded-xl overflow-hidden cursor-pointer relative transition-all" data-idx="1">
                 <img id="modal-thumb-1" src="" alt="View 2" class="w-full h-full object-cover" />
                 <span class="absolute bottom-0 inset-x-0 bg-black/70 text-white text-[8px] font-bold py-0.5 text-center uppercase">2. Detail</span>
               </button>
-              <button type="button" class="modal-thumb-btn aspect-[3/3.8] border-2 border-transparent opacity-60 hover:opacity-100 rounded-xs overflow-hidden cursor-pointer relative transition-all" data-idx="2">
+              <button type="button" class="modal-thumb-btn aspect-[3/3.8] border-2 border-transparent opacity-60 hover:opacity-100 rounded-xl overflow-hidden cursor-pointer relative transition-all" data-idx="2">
                 <img id="modal-thumb-2" src="" alt="View 3" class="w-full h-full object-cover" />
                 <span class="absolute bottom-0 inset-x-0 bg-black/70 text-white text-[8px] font-bold py-0.5 text-center uppercase">3. Angle</span>
               </button>
@@ -1745,14 +1376,14 @@
           <div>
             <div class="flex items-center justify-between mb-2">
               <span id="modal-category" class="text-[11px] font-bold uppercase tracking-widest text-slate-500"></span>
-              <span id="modal-type-badge" class="text-[10px] font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 border border-emerald-200">Stitched Suit</span>
+              <span id="modal-type-badge" class="text-[10px] font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2.5 py-0.5 border border-emerald-200 rounded-full">Stitched Suit</span>
             </div>
             
             <h3 id="modal-title" class="text-lg sm:text-xl font-black text-slate-900 uppercase tracking-tight mb-1"></h3>
             <p id="modal-seo-title" class="text-[11px] font-semibold text-slate-500 mb-3 leading-relaxed"></p>
 
             <!-- Specifications Table -->
-            <div class="border-t border-b border-slate-100 py-2.5 mb-3 space-y-1.5">
+            <div class="border border-slate-100 bg-slate-50/50 rounded-xl p-3 mb-3 space-y-1.5">
               <div class="flex items-center justify-between text-xs">
                 <span class="text-slate-500 font-bold uppercase tracking-wider">Fabric Quality:</span>
                 <span id="modal-fabric" class="font-black text-slate-900"></span>
@@ -1772,7 +1403,7 @@
             </div>
 
             <!-- Short Description Section -->
-            <div class="bg-slate-50/80 border border-slate-200 p-3 mb-3 rounded-xs">
+            <div class="bg-slate-50/90 border border-slate-200 p-3.5 mb-3 rounded-xl">
               <span class="text-[10px] font-black uppercase tracking-wider text-slate-900 block mb-1.5 flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 PRODUCT OVERVIEW & SHORT DESCRIPTION
@@ -1789,7 +1420,7 @@
 
           <!-- Inquire & Order WhatsApp Button -->
           <div class="pt-3 border-t border-slate-100">
-            <a id="modal-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 transition-colors shadow-md">
+            <a id="modal-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 transition-colors shadow-md rounded-xl">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.586 1.761.884 2.791.884h.003c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.77-5.772-5.77zm0 10.384c-.908 0-1.745-.259-2.483-.728l-.178-.113-1.844.484.492-1.799-.115-.184c-.516-.826-.788-1.785-.788-2.774 0-2.544 2.07-4.614 4.617-4.614 2.545 0 4.615 2.07 4.615 4.614 0 2.545-2.07 4.614-4.615 4.614z"/>
               </svg>

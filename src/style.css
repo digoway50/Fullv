@@ -9,6 +9,50 @@
     font-family: 'Outfit', sans-serif;
     letter-spacing: -0.02em;
   }
+
+  /* Universal Rounded Corners for All Website Components */
+  button,
+  .btn,
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    border-radius: 0.75rem !important; /* rounded-xl (12px) */
+  }
+
+  /* Rounded Product Cards & Media Containers */
+  .product-card,
+  .product-item {
+    border-radius: 1rem;
+  }
+
+  .product-card > div > div:first-child,
+  .product-item > div > div:first-child,
+  [class*="aspect-["] {
+    border-radius: 1rem !important; /* 16px */
+    overflow: hidden !important;
+  }
+
+  /* Rounded Badges & Pills */
+  span[class*="backdrop-blur"],
+  span[class*="tracking-wider"][class*="uppercase"] {
+    border-radius: 0.5rem;
+  }
+
+  /* Rounded Modals & Dialogs */
+  #quick-details-modal > div:last-child > div,
+  .modal-card {
+    border-radius: 1.25rem !important; /* 20px */
+    overflow: hidden;
+  }
+
+  /* Rounded Navigation & Accordions */
+  .accordion-item,
+  .feature-box {
+    border-radius: 0.875rem;
+  }
 }
 
 @keyframes pulseGlow {
