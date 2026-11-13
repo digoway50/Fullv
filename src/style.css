@@ -41,8 +41,7 @@
     border-radius: 0.5rem;
   }
 
-  /* Rounded Modals & Dialogs */
-  #quick-details-modal > div:last-child > div,
+  /* Rounded Dialogs */
   .modal-card {
     border-radius: 1.25rem !important; /* 20px */
     overflow: hidden;

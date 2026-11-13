@@ -24,127 +24,139 @@
     return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
   }
 
-  // Initial Default Products (12 Fleex Garment Stitched Suits)
+  // Initial Default Products (12 Fleex Garment Stitched Suits - Synced with Storefront)
   const DEFAULT_PRODUCTS = [
     {
       id: 1,
       title: 'Olive Green Classic Collar Suit',
       category: 'Uploaded Designs',
       fabric: 'Wash & Wear Blended Fabric',
+      price: 2550,
       badge: 'BESTSELLER',
       tag: 'Wash & Wear',
       image: 'assets/aistudio/1793957376347_4a65293c.jpg',
-      description: 'Elevate your young gentleman\'s festive wardrobe with this classic Olive Green 2-Piece Stitched Kameez Shalwar by Fleex Garment. Crafted from premium wrinkle-free blended wash-and-wear fabric with crisp turn-down collar and contrast black stitching.'
+      description: 'Classic Olive Green 2-Piece Stitched Kameez Shalwar tailored from breathable wrinkle-resistant wash-and-wear fabric with turn-down collar and subtle contrast stitching.'
     },
     {
       id: 2,
       title: 'Dove Grey Ban Collar Suit',
       category: 'Uploaded Designs',
       fabric: 'Breathable Blended Cotton',
+      price: 2450,
       badge: 'MINIMALIST',
       tag: 'Cotton Blend',
       image: 'assets/aistudio/1793957380265_c059a715.jpg',
-      description: 'Keep it timeless and sophisticated with our Dove Grey Stitched Kameez Shalwar for boys. Tailored from breathable, soft-touch blended cotton with a neat mandarin ban collar and delicate white double-track stitching.'
+      description: 'Minimalist Dove Grey Stitched Kameez Shalwar tailored from soft-touch blended cotton with neat mandarin ban collar and white double-track stitching.'
     },
     {
       id: 3,
       title: 'Royal Navy Blue Textured Suit',
       category: 'Uploaded Designs',
       fabric: 'Textured Cotton Blend',
+      price: 2750,
       badge: 'NEW ARRIVAL',
       tag: 'Textured Cotton',
       image: 'assets/aistudio/1793957392138_6a9e5128.jpg',
-      description: 'Make a sharp statement with this Royal Navy Blue 2-Piece Kameez Shalwar. Featuring self-textured breathable fabric, silver-grey thread work on ban collar and button placket.'
+      description: 'Royal Navy Blue 2-Piece Kameez Shalwar in self-textured breathable cotton with fine silver-grey thread work on collar and cuffs.'
     },
     {
       id: 4,
       title: 'Ash Grey Geometric Stitch Suit',
       category: 'Uploaded Designs',
-      fabric: 'Wrinkle-Free Wash & Wear',
+      fabric: 'Wrinkle-Resistant Poly-Viscose',
+      price: 2850,
       badge: 'DESIGNER',
       tag: 'Wash & Wear',
       image: 'assets/aistudio/1793957396101_628635cd.jpg',
-      description: 'Modern geometric detailing with classic Pakistani heritage. Features bold black criss-cross anchor thread embroidery across the pointed shirt collar, cuffs, and placket.'
+      description: 'Ash Grey Stitched Kameez Shalwar featuring bold black criss-cross anchor thread detailing across collar, cuffs, and placket.'
     },
     {
       id: 5,
       title: 'Cream Beige Modern Motif Suit',
       category: 'Uploaded Designs',
-      fabric: 'Premium Wash & Wear',
+      fabric: 'Silk-Touch Wash & Wear',
+      price: 3150,
       badge: 'LUXURY PRET',
       tag: 'Wash & Wear',
       image: 'assets/aistudio/1793957401142_6f15b946.jpg',
-      description: 'Designed for weddings and Eid ul-Fitr, this Cream Beige Stitched Kameez Shalwar offers a luxury designer look accented with sleek black bar embroidery and metallic gold buttons.'
+      description: 'Cream Beige Festive 2-Piece Suit with lustrous silk-touch drape, sleek black bar embroidery on collar tips, cuffs, and metallic gold buttons.'
     },
     {
       id: 6,
       title: 'Teal Blue Designer Zig-Zag Suit',
       category: 'Creative & Minimalist Store Designs',
       fabric: 'Textured Dobby Cotton',
+      price: 2950,
       badge: 'TRENDING',
       tag: 'Textured Dobby',
       image: 'assets/aistudio/1793957405200_e121423d.jpg',
-      description: 'Signature Teal Blue 2-Piece Kameez Shalwar featuring an artistic asymmetrical zig-zag embroidered placket, contrast piping, and flapped chest pocket.'
+      description: 'Teal Blue Designer 2-Piece Kameez Shalwar featuring an asymmetrical zig-zag embroidered placket, contrast piping, and flapped chest pocket.'
     },
     {
       id: 7,
       title: 'Sage Green Linen Minimalist Suit',
       category: 'Creative & Minimalist Store Designs',
-      fabric: 'Slub Cotton-Linen Blend',
-      badge: 'SUMMER WEAR',
+      fabric: 'Slub Cotton Linen',
+      price: 2450,
+      badge: 'SUMMER HIT',
       tag: 'Cotton Blend',
       image: 'assets/aistudio/1793957409076_a446f27c.jpg',
-      description: 'Lightweight, breathable slub cotton-linen everyday and Jummah outfit featuring a clean concealed placket, single top button, and delicate cream micro-stitching.'
+      description: 'Sage Green Slub Cotton-Linen Stitched Kameez Shalwar designed with a clean concealed placket and delicate cream micro-stitching.'
     },
     {
       id: 8,
       title: 'Rust Terracotta Contrast Piping Suit',
       category: 'Creative & Minimalist Store Designs',
-      fabric: 'All-Season Wash & Wear',
-      badge: 'EARTH TONES',
+      fabric: 'Mid-Weight Blended Fabric',
+      price: 2650,
+      badge: 'ALL SEASON',
       tag: 'Wash & Wear',
       image: 'assets/aistudio/1793957412810_b52fae88.jpg',
-      description: 'Warm terracotta tones meet sharp tailoring. Highlighted by sleek navy blue piping along mandarin collar and front pocket edge.'
+      description: 'Warm Rust Terracotta 2-Piece Kameez Shalwar highlighted by crisp navy piping along the mandarin collar and chest pocket edge.'
     },
     {
       id: 9,
-      title: 'Classic Navy Blue Pocket & Contrast Trim',
+      title: 'Classic Navy Blue Contrast Trim Suit',
       category: 'Creative & Minimalist Store Designs',
-      fabric: 'Durable Wash & Wear',
-      badge: 'ESSENTIAL',
+      fabric: 'Tropical Wash & Wear',
+      price: 2650,
+      badge: 'SIGNATURE',
       tag: 'Wash & Wear',
       image: 'assets/aistudio/1793957407265_38f6545f.jpg',
-      description: 'Wardrobe staple featuring structured turn-down collar, subtle white piping along cuffs and chest pocket. Highly durable for energetic kids.'
+      description: 'Structured Classic Navy Blue 2-Piece Suit accented with bone-white twin-needle stitching along the ban neckline and chest pocket.'
     },
     {
       id: 10,
-      title: 'Charcoal Slate Minimal Ban Kurta Suit',
+      title: 'Olive Charcoal Contrast Pocket Suit',
       category: 'Creative & Minimalist Store Designs',
-      fabric: 'Premium Tropical Wash & Wear',
-      badge: 'FORMAL WEAR',
-      tag: 'Tropical Blend',
+      fabric: 'High-Twist Wash & Wear',
+      price: 2750,
+      badge: 'TIMELESS',
+      tag: 'Wash & Wear',
       image: 'images/charcoal_kurta_suit_1790890713358.jpg',
-      description: 'Sophisticated Charcoal Slate stitched suit with minimalist ban collar, hidden button placket, and deep silhouette.'
+      description: 'Refined Olive Charcoal Kameez Shalwar tailored in high-twist wash-and-wear fabric with twin-needle topstitching and flapped breast pocket.'
     },
     {
       id: 11,
-      title: 'Pure White Luxury Egyptian Cotton Suit',
+      title: 'Deep Maroon Streamlined Pocketless Suit',
       category: 'Signature Classics',
-      fabric: '100% Long-Staple Egyptian Giza Cotton',
-      badge: 'HERITAGE EID',
-      tag: 'Egyptian Cotton',
+      fabric: 'Lustrous Blended Suiting',
+      price: 2850,
+      badge: 'FESTIVE EDIT',
+      tag: 'Wash & Wear',
       image: 'images/fleex_kurta_model_1790884646861.jpg',
-      description: 'The epitome of Pakistani eastern menswear. Crisp, immaculate pure white Giza cotton stitched 2-piece kameez shalwar with master tailoring.'
+      description: 'Deep Maroon Stitched Kameez Shalwar featuring a streamlined pocketless front, concealed placket, and crisp mandarin collar.'
     },
     {
       id: 12,
-      title: 'Onyx Black Imperial Boski Silk-Feel Suit',
+      title: 'Midnight Blue Pocketless Minimalist Suit',
       category: 'Signature Classics',
-      fabric: 'Royal Boski Silk-Feel Weave',
-      badge: 'IMPERIAL',
-      tag: 'Royal Boski',
+      fabric: 'Fine Count Blended Cotton',
+      price: 2650,
+      badge: 'MODERN CLASSIC',
+      tag: 'Cotton Blend',
       image: 'assets/aistudio/1793957417585_f8752f13.jpg',
-      description: 'Jet black elegance crafted from Royal Boski silk-feel yarns. Features refined lustre, subtle tone-on-tone ban collar embroidery, and fluid drape.'
+      description: 'Midnight Blue Pocketless 2-Piece Stitched Kameez Shalwar with pure lines, double-fused ban collar, and fine-count breathable cotton.'
     }
   ];
 
@@ -154,14 +166,13 @@
       const data = localStorage.getItem(PRODUCTS_STORAGE_KEY);
       if (data) return JSON.parse(data);
     } catch (e) {}
-    localStorage.setItem(PRODUCTS_STORAGE_KEY, JSON.stringify(DEFAULT_PRODUCTS));
     return DEFAULT_PRODUCTS;
   }
 
   function saveStoredProducts(products) {
     localStorage.setItem(PRODUCTS_STORAGE_KEY, JSON.stringify(products));
-    // Trigger real-time website re-render
-    syncWebsiteCatalog();
+    localStorage.setItem('fleex_custom_products_dirty', '1');
+    syncWebsiteCatalog(true);
   }
 
   function getStoredSettings() {
@@ -176,9 +187,8 @@
       storeEmail: 'fleexgarments@gmail.com',
       storePhone: '0370 2265968',
       announcementActive: false,
-      announcementText: '✨ BOYS EID COLLECTION 2026 – BESPOKE ADJUSTMENTS & NATIONWIDE DISPATCH'
+      announcementText: 'BOYS EID COLLECTION 2026 – WHOLESALE & RETAIL COD DISPATCH'
     };
-    localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(defaultSettings));
     return defaultSettings;
   }
 
@@ -192,7 +202,7 @@
       const data = localStorage.getItem(CAMPAIGN_STORAGE_KEY);
       if (data) return JSON.parse(data);
     } catch (e) {}
-    const defaultCampaign = {
+    return {
       heroTag: 'BOYS EID COLLECTION 2026',
       heroTitle: 'STITCHED KAMEEZ SHALWAR',
       heroCta: 'EXPLORE COLLECTION',
@@ -201,8 +211,6 @@
       slide3Image: 'assets/aistudio/1793957405200_e121423d.jpg',
       slide4Image: 'assets/aistudio/1793957392138_6a9e5128.jpg'
     };
-    localStorage.setItem(CAMPAIGN_STORAGE_KEY, JSON.stringify(defaultCampaign));
-    return defaultCampaign;
   }
 
   function saveStoredCampaign(campaign) {
@@ -210,17 +218,17 @@
     syncWebsiteCampaign();
   }
 
-  // Real-time synchronization with website elements
+  // Real-time synchronization with website elements (fixes broken ?&text= query string)
   function syncWebsiteSettings() {
     const settings = getStoredSettings();
-    const phone = settings.whatsappNumber.replace(/[^0-9]/g, '');
-    
-    // Update all WhatsApp links
+    const phone = (settings.whatsappNumber || '923702265968').replace(/[^0-9]/g, '');
+    if (!phone) return;
+
     document.querySelectorAll('a[href*="wa.me"]').forEach(a => {
-      const currentHref = a.getAttribute('href');
-      const textMatch = currentHref.match(/text=([^&]*)/);
-      const textParam = textMatch ? '&text=' + textMatch[1] : '';
-      a.setAttribute('href', `https://wa.me/${phone}?${textParam}`);
+      const currentHref = a.getAttribute('href') || '';
+      const textMatch = currentHref.match(/[?&]text=([^&]*)/);
+      const query = textMatch ? `?text=${textMatch[1]}` : '';
+      a.setAttribute('href', `https://wa.me/${phone}${query}`);
     });
   }
 
@@ -233,79 +241,69 @@
     if (heroSlides[3] && campaign.slide4Image) heroSlides[3].src = campaign.slide4Image;
   }
 
-  function syncWebsiteCatalog() {
-    const products = getStoredProducts();
-    const grid = document.getElementById('trending-products-grid');
-    const settings = getStoredSettings();
-    const phone = settings.whatsappNumber.replace(/[^0-9]/g, '');
+  function renderAdminCardHTML(p, phone) {
+    const priceText = typeof window.formatFleexPKR === 'function'
+      ? window.formatFleexPKR(p.price || 2650)
+      : `PKR ${Number(p.price || 2650).toLocaleString('en-PK')}`;
+    const catSlug = [
+      (p.category || '').toLowerCase().includes('uploaded') ? 'uploaded' : 'creative',
+      (p.tag || p.fabric || '').toLowerCase().includes('cotton') || (p.tag || '').toLowerCase().includes('linen') ? 'cotton' : 'washwear',
+      'all'
+    ].join(' ');
 
-    if (grid) {
-      grid.innerHTML = products.slice(0, 8).map(p => `
-        <div class="product-card group flex flex-col justify-between" data-id="${p.id}">
-          <div>
-            <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2">
-              <img 
-                src="${p.image}" 
-                alt="${p.title}" 
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                onerror="this.onerror=null; this.src='favicon-512x512.png';"
-              />
-              <span class="absolute top-2 right-2 bg-black/60 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
-                ${p.badge || 'SIGNATURE'}
-              </span>
-            </div>
-            <div class="flex items-start justify-between gap-1">
-              <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
-                ${p.title}
-              </h3>
-              <a href="https://wa.me/${phone}?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(p.title)}." target="_blank" rel="noopener noreferrer" class="p-1 text-slate-600 hover:text-black cursor-pointer" aria-label="Inquire via WhatsApp">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
-              </a>
-            </div>
-            <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
-              ${p.tag || p.fabric} • STITCHED 2-PIECE
-            </p>
+    return `
+      <div class="product-item product-card group flex flex-col justify-between" data-cat="${catSlug}" data-id="${p.id}">
+        <div>
+          <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2 cursor-pointer product-card-thumb rounded-2xl" data-id="${p.id}">
+            <img src="${p.image}" alt="${p.title}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2 right-2 bg-black/70 backdrop-blur-xs text-white text-[9px] font-bold px-2 py-0.5 tracking-wider uppercase rounded-md">
+              ${p.badge || 'SIGNATURE'}
+            </span>
           </div>
-          <a href="https://wa.me/${phone}?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(p.title)}." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+          <div class="flex items-start justify-between gap-1">
+            <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
+              ${p.title}
+            </h3>
+            <button type="button" class="quick-add-btn p-1 text-slate-600 hover:text-black cursor-pointer" data-title="${p.title}" data-image="${p.image}" aria-label="Add to Bag">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            </button>
+          </div>
+          <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-0.5">${p.tag || p.fabric} · STITCHED 2-PIECE</p>
+          <p class="text-xs font-extrabold text-slate-900 tabular-nums mb-1">${priceText}</p>
+        </div>
+        <div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100">
+          <button type="button" class="open-modal-btn text-[10px] font-bold tracking-wider uppercase text-emerald-800 hover:text-black cursor-pointer" data-id="${p.id}">
+            OVERVIEW
+          </button>
+          <a href="https://wa.me/${phone}?text=${encodeURIComponent(`Salam Fleex Garments! I would like to order ${p.title}.`)}" target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
             ORDER NOW →
           </a>
         </div>
-      `).join('');
+      </div>
+    `;
+  }
+
+  function syncWebsiteCatalog(forceRender = false) {
+    const isDirty = localStorage.getItem('fleex_custom_products_dirty') === '1';
+    if (!forceRender && !isDirty) return; // Keep fast SSR HTML cards unless admin customized catalog
+
+    const products = getStoredProducts();
+    const settings = getStoredSettings();
+    const phone = (settings.whatsappNumber || '923702265968').replace(/[^0-9]/g, '');
+
+    if (Array.isArray(window.FLEEX_SUITS)) {
+      window.FLEEX_SUITS = products;
+    }
+
+    const grid = document.getElementById('trending-products-grid');
+    if (grid) {
+      grid.innerHTML = products.slice(0, 8).map(p => renderAdminCardHTML(p, phone)).join('');
     }
 
     const catalogContainer = document.getElementById('catalog-products-container');
     if (catalogContainer) {
-      catalogContainer.innerHTML = products.map(p => `
-        <div class="product-item product-card group flex flex-col justify-between" data-cat="${(p.category || '').toLowerCase()} ${(p.tag || '').toLowerCase()} all">
-          <div>
-            <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2.5">
-              <img 
-                src="${p.image}" 
-                alt="${p.title}" 
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                onerror="this.onerror=null; this.src='favicon-512x512.png';"
-              />
-              <span class="absolute top-2 right-2 bg-black/60 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
-                ${p.badge || 'SIGNATURE'}
-              </span>
-            </div>
-            <div class="flex items-start justify-between gap-1">
-              <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
-                ${p.title}
-              </h3>
-              <a href="https://wa.me/${phone}?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(p.title)}." target="_blank" rel="noopener noreferrer" class="p-1 text-slate-600 hover:text-black cursor-pointer" aria-label="Inquire via WhatsApp">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
-              </a>
-            </div>
-            <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
-              ${p.tag || p.fabric} • STITCHED 2-PIECE
-            </p>
-          </div>
-          <a href="https://wa.me/${phone}?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(p.title)}." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
-            ORDER NOW →
-          </a>
-        </div>
-      `).join('');
+      catalogContainer.innerHTML = products.map(p => renderAdminCardHTML(p, phone)).join('');
+      if (typeof window.applyCatalogFilters === 'function') window.applyCatalogFilters();
     }
   }
 
@@ -719,9 +717,9 @@
       btnReset.addEventListener('click', () => {
         if (confirm('Are you sure you want to restore all original 12 stitched suit designs?')) {
           localStorage.removeItem(PRODUCTS_STORAGE_KEY);
+          localStorage.removeItem('fleex_custom_products_dirty');
           renderAdminProducts();
-          syncWebsiteCatalog();
-          alert('Default products restored.');
+          window.location.reload();
         }
       });
     }

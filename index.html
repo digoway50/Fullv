@@ -137,43 +137,12 @@
       }
     </style>
 
-    <!-- Instant Zero-Latency Menu & Drawer Controller -->
+    <!-- Preload LCP Hero Image -->
+    <link rel="preload" as="image" href="assets/aistudio/1793957376347_4a65293c.jpg" />
+
+    <!-- Brand Logo Fallback Data URI -->
     <script>
       window.__FLEEX_LOGO_DATA_URI = "data:image/png;base64,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";
-      // Global Image Recovery for GitHub Pages subpaths & broken assets
-      document.addEventListener('error', function(e) {
-        if (e.target && e.target.tagName === 'IMG') {
-          var img = e.target;
-          var src = img.getAttribute('src') || '';
-          if (src.indexOf('fleex-brand') !== -1 || (img.alt && img.alt.indexOf('Logo') !== -1)) {
-            if (window.__FLEEX_LOGO_DATA_URI && img.src !== window.__FLEEX_LOGO_DATA_URI) {
-              img.src = window.__FLEEX_LOGO_DATA_URI;
-            }
-          } else if (src.indexOf('assets/aistudio/') !== -1 && !img.dataset.retried) {
-            img.dataset.retried = '1';
-            var fname = src.split('/').pop();
-            img.src = 'assets/aistudio/' + fname;
-          }
-        }
-      }, true);
-    </script>
-    <script>
-      (function() {
-        document.addEventListener('click', function(e) {
-          var menuBtn = e.target.closest('#mobile-drawer-toggle');
-          if (menuBtn) {
-            e.preventDefault();
-            var d = document.getElementById('mobile-nav-drawer');
-            if (d) { d.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
-          }
-          var closeBtn = e.target.closest('#drawer-close-btn, #drawer-backdrop');
-          if (closeBtn) {
-            e.preventDefault();
-            var d = document.getElementById('mobile-nav-drawer');
-            if (d) { d.classList.add('hidden'); document.body.style.overflow = ''; }
-          }
-        });
-      })();
     </script>
   </head>
   <body class="bg-white text-slate-900 antialiased selection:bg-[#0f2135] selection:text-white min-h-screen flex flex-col justify-between font-['Outfit',sans-serif]">
@@ -217,8 +186,15 @@
           </div>
         </a>
 
-        <!-- Right: Spacer for Grid Balance -->
-        <div class="justify-self-end"></div>
+        <!-- Right: Shopping Bag Trigger -->
+        <div class="justify-self-end flex items-center gap-2">
+          <button id="cart-drawer-trigger" type="button" class="relative p-2 rounded-xl hover:bg-slate-100 text-slate-900 transition-colors cursor-pointer" aria-label="Open bag">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"/>
+            </svg>
+            <span id="cart-badge-count" class="hidden absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] px-1 bg-slate-900 text-white text-[10px] font-bold rounded-full flex items-center justify-center tabular-nums">0</span>
+          </button>
+        </div>
 
       </div>
     </header>
@@ -239,6 +215,8 @@
             <img 
               src="assets/aistudio/1793957376347_4a65293c.jpg" 
               alt="Fleex Boys Olive Green Stitched Kameez Shalwar" 
+              fetchpriority="high"
+              decoding="async"
               class="w-full h-full object-cover object-top sm:object-center brightness-95"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
@@ -261,6 +239,8 @@
             <img 
               src="assets/aistudio/1793957401142_6f15b946.jpg" 
               alt="Fleex Boys Cream Beige Luxury Stitched Suit" 
+              loading="lazy"
+              decoding="async"
               class="w-full h-full object-cover object-top sm:object-center brightness-95"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
@@ -283,6 +263,8 @@
             <img 
               src="assets/aistudio/1793957405200_e121423d.jpg" 
               alt="Fleex Boys Teal Blue Festive Kameez Shalwar" 
+              loading="lazy"
+              decoding="async"
               class="w-full h-full object-cover object-top sm:object-center brightness-95"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
@@ -305,6 +287,8 @@
             <img 
               src="assets/aistudio/1793957392138_6a9e5128.jpg" 
               alt="Fleex Boys Navy Blue Stitched Kameez Shalwar" 
+              loading="lazy"
+              decoding="async"
               class="w-full h-full object-cover object-top sm:object-center brightness-95"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
@@ -360,10 +344,12 @@
           
           <!-- Category 1: Classic Collar (Olive Green) -->
           <a href="collection.html" class="snap-start shrink-0 w-[42vw] sm:w-[28vw] lg:w-[22vw] max-w-[280px] group cursor-pointer block">
-            <div class="w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2.5">
+            <div class="w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2.5 rounded-2xl">
               <img 
                 src="assets/aistudio/1793957376347_4a65293c.jpg" 
                 alt="Classic Shirt Collar Suit" 
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -374,10 +360,12 @@
 
           <!-- Category 2: Ban Collar (Dove Grey) -->
           <a href="collection.html" class="snap-start shrink-0 w-[42vw] sm:w-[28vw] lg:w-[22vw] max-w-[280px] group cursor-pointer block">
-            <div class="w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2.5">
+            <div class="w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2.5 rounded-2xl">
               <img 
                 src="assets/aistudio/1793957380265_c059a715.jpg" 
                 alt="Mandarin Ban Collar Suit" 
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -388,10 +376,12 @@
 
           <!-- Category 3: Contrast Stitching (Ash Grey) -->
           <a href="collection.html" class="snap-start shrink-0 w-[42vw] sm:w-[28vw] lg:w-[22vw] max-w-[280px] group cursor-pointer block">
-            <div class="w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2.5">
+            <div class="w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2.5 rounded-2xl">
               <img 
                 src="assets/aistudio/1793957396101_628635cd.jpg" 
                 alt="Geometric Contrast Stitch" 
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -402,10 +392,12 @@
 
           <!-- Category 4: Luxury Motif (Cream Beige) -->
           <a href="collection.html" class="snap-start shrink-0 w-[42vw] sm:w-[28vw] lg:w-[22vw] max-w-[280px] group cursor-pointer block">
-            <div class="w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2.5">
+            <div class="w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2.5 rounded-2xl">
               <img 
                 src="assets/aistudio/1793957401142_6f15b946.jpg" 
                 alt="Luxury Motif & Gold Buttons" 
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -416,10 +408,12 @@
 
           <!-- Category 5: Slub Linen (Sage Green) -->
           <a href="collection.html" class="snap-start shrink-0 w-[42vw] sm:w-[28vw] lg:w-[22vw] max-w-[280px] group cursor-pointer block">
-            <div class="w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2.5">
+            <div class="w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2.5 rounded-2xl">
               <img 
                 src="assets/aistudio/1793957409076_a446f27c.jpg" 
                 alt="Summer Linen Minimalist" 
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -443,6 +437,8 @@
           <img 
             src="assets/aistudio/1793957401142_6f15b946.jpg" 
             alt="Fleex Garment Boys Readymade Suit Collection" 
+            loading="lazy"
+            decoding="async"
             class="w-full h-full object-cover object-top sm:object-center"
           />
           <!-- Vertical Carousel Dots on Right Edge -->
@@ -483,10 +479,12 @@
         <div class="grid grid-cols-2 gap-1.5 sm:gap-3">
           
           <!-- Card 1: Teal Blue Designer -->
-          <a href="collection.html" class="relative group block aspect-[3/4.2] overflow-hidden bg-slate-900 cursor-pointer">
+          <a href="collection.html" class="relative group block aspect-[3/4.2] overflow-hidden bg-slate-900 cursor-pointer rounded-2xl">
             <img 
               src="assets/aistudio/1793957405200_e121423d.jpg" 
               alt="Teal Blue Zig-Zag Suit" 
+              loading="lazy"
+              decoding="async"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -501,10 +499,12 @@
           </a>
 
           <!-- Card 2: Rust Terracotta -->
-          <a href="collection.html" class="relative group block aspect-[3/4.2] overflow-hidden bg-slate-900 cursor-pointer">
+          <a href="collection.html" class="relative group block aspect-[3/4.2] overflow-hidden bg-slate-900 cursor-pointer rounded-2xl">
             <img 
               src="assets/aistudio/1793957412810_b52fae88.jpg" 
               alt="Rust Terracotta Piping Suit" 
+              loading="lazy"
+              decoding="async"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -519,10 +519,12 @@
           </a>
 
           <!-- Card 3: Classic Navy Blue -->
-          <a href="collection.html" class="relative group block aspect-[3/4.2] overflow-hidden bg-slate-900 cursor-pointer">
+          <a href="collection.html" class="relative group block aspect-[3/4.2] overflow-hidden bg-slate-900 cursor-pointer rounded-2xl">
             <img 
               src="assets/aistudio/1793957407265_38f6545f.jpg" 
               alt="Classic Navy Blue Pocket Trim" 
+              loading="lazy"
+              decoding="async"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -537,10 +539,12 @@
           </a>
 
           <!-- Card 4: Midnight Blue -->
-          <a href="collection.html" class="relative group block aspect-[3/4.2] overflow-hidden bg-slate-900 cursor-pointer">
+          <a href="collection.html" class="relative group block aspect-[3/4.2] overflow-hidden bg-slate-900 cursor-pointer rounded-2xl">
             <img 
               src="assets/aistudio/1793957417585_f8752f13.jpg" 
               alt="Midnight Blue Pocketless Suit" 
+              loading="lazy"
+              decoding="async"
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -573,143 +577,351 @@
 
           <!-- Category Filter Tabs -->
           <div class="flex items-center justify-center gap-6 sm:gap-8 overflow-x-auto pb-2 scrollbar-none text-xs font-bold tracking-widest text-slate-500 uppercase">
-            <a href="collection.html" class="trending-tab-btn text-slate-900 border-b-2 border-slate-900 pb-1 cursor-pointer">
+            <button type="button" data-filter="all" class="trending-tab-btn text-slate-900 border-b-2 border-slate-900 pb-1 cursor-pointer shrink-0">
               ALL DESIGNS
-            </a>
-            <a href="collection.html" class="trending-tab-btn hover:text-slate-900 transition-colors pb-1 cursor-pointer">
+            </button>
+            <button type="button" data-filter="uploaded" class="trending-tab-btn hover:text-slate-900 transition-colors pb-1 cursor-pointer shrink-0">
               UPLOADED DESIGNS
-            </a>
-            <a href="collection.html" class="trending-tab-btn hover:text-slate-900 transition-colors pb-1 cursor-pointer">
-              WASH & WEAR
-            </a>
-            <a href="collection.html" class="trending-tab-btn hover:text-slate-900 transition-colors pb-1 cursor-pointer">
+            </button>
+            <button type="button" data-filter="washwear" class="trending-tab-btn hover:text-slate-900 transition-colors pb-1 cursor-pointer shrink-0">
+              WASH &amp; WEAR
+            </button>
+            <button type="button" data-filter="cotton" class="trending-tab-btn hover:text-slate-900 transition-colors pb-1 cursor-pointer shrink-0">
               COTTON BLEND
-            </a>
+            </button>
           </div>
         </div>
 
 
         <!-- 2-Column Product Grid -->
-        <div id="trending-products-grid" class="grid grid-cols-2 gap-3 sm:gap-6">
+        <div id="trending-products-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           
           <!-- Product Card 1 -->
-          <div class="product-card group flex flex-col justify-between">
+          <div class="product-card group flex flex-col justify-between" data-cat="uploaded washwear" data-id="1">
             <div>
-              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2">
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2 cursor-pointer product-card-thumb rounded-2xl" data-id="1">
                 <img 
                   src="assets/aistudio/1793957376347_4a65293c.jpg" 
                   alt="Olive Green Classic Collar Suit" 
+                  loading="lazy"
+                  decoding="async"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span class="absolute top-2 right-2 bg-black/60 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
+                <button type="button" class="card-wishlist-btn absolute top-2 left-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-xs text-slate-700 hover:text-rose-500 flex items-center justify-center transition-colors cursor-pointer" data-id="1" aria-label="Save Olive Green Classic Collar Suit">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+                </button>
+                <span class="absolute top-2 right-2 bg-black/65 backdrop-blur-xs text-white text-[9px] font-bold px-2 py-0.5 tracking-wider uppercase rounded-md">
                   BESTSELLER
                 </span>
               </div>
               <div class="flex items-start justify-between gap-1">
-                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1 cursor-pointer hover:text-slate-600">
                   OLIVE GREEN CLASSIC COLLAR SUIT
                 </h3>
-                <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Olive%20Green%20Classic%20Collar%20Suit." target="_blank" rel="noopener noreferrer" class="p-1 text-slate-600 hover:text-black cursor-pointer" aria-label="Inquire via WhatsApp">
+                <button type="button" class="quick-add-btn p-1 text-slate-600 hover:text-black cursor-pointer" data-title="Olive Green Classic Collar Suit" data-image="assets/aistudio/1793957376347_4a65293c.jpg" aria-label="Add to Bag">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
-                </a>
+                </button>
               </div>
-              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
-                WASH & WEAR • STITCHED 2-PIECE
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-0.5">
+                WASH &amp; WEAR • STITCHED 2-PIECE
               </p>
+              <p class="text-xs font-extrabold text-slate-900 tabular-nums mb-1">PKR 2,550</p>
             </div>
-            <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Olive%20Green%20Classic%20Collar%20Suit." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
-              ORDER NOW →
-            </a>
+            <div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100">
+              <button type="button" class="open-modal-btn text-[10px] font-bold tracking-wider uppercase text-emerald-800 hover:text-black cursor-pointer" data-id="1">
+                OVERVIEW (3 PICS)
+              </button>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Olive%20Green%20Classic%20Collar%20Suit." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                ORDER NOW →
+              </a>
+            </div>
           </div>
 
           <!-- Product Card 2 -->
-          <div class="product-card group flex flex-col justify-between">
+          <div class="product-card group flex flex-col justify-between" data-cat="uploaded cotton" data-id="2">
             <div>
-              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2">
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2 cursor-pointer product-card-thumb rounded-2xl" data-id="2">
                 <img 
                   src="assets/aistudio/1793957380265_c059a715.jpg" 
                   alt="Dove Grey Ban Collar Suit" 
+                  loading="lazy"
+                  decoding="async"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span class="absolute top-2 right-2 bg-black/60 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
+                <button type="button" class="card-wishlist-btn absolute top-2 left-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-xs text-slate-700 hover:text-rose-500 flex items-center justify-center transition-colors cursor-pointer" data-id="2" aria-label="Save Dove Grey Ban Collar Suit">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+                </button>
+                <span class="absolute top-2 right-2 bg-black/65 backdrop-blur-xs text-white text-[9px] font-bold px-2 py-0.5 tracking-wider uppercase rounded-md">
                   MINIMALIST
                 </span>
               </div>
               <div class="flex items-start justify-between gap-1">
-                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1 cursor-pointer hover:text-slate-600">
                   DOVE GREY BAN COLLAR SUIT
                 </h3>
-                <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Dove%20Grey%20Ban%20Collar%20Suit." target="_blank" rel="noopener noreferrer" class="p-1 text-slate-600 hover:text-black cursor-pointer" aria-label="Inquire via WhatsApp">
+                <button type="button" class="quick-add-btn p-1 text-slate-600 hover:text-black cursor-pointer" data-title="Dove Grey Ban Collar Suit" data-image="assets/aistudio/1793957380265_c059a715.jpg" aria-label="Add to Bag">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
-                </a>
+                </button>
               </div>
-              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-0.5">
                 BREATHABLE COTTON BLEND • BAN COLLAR
               </p>
+              <p class="text-xs font-extrabold text-slate-900 tabular-nums mb-1">PKR 2,450</p>
             </div>
-            <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Dove%20Grey%20Ban%20Collar%20Suit." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
-              ORDER NOW →
-            </a>
+            <div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100">
+              <button type="button" class="open-modal-btn text-[10px] font-bold tracking-wider uppercase text-emerald-800 hover:text-black cursor-pointer" data-id="2">
+                OVERVIEW (3 PICS)
+              </button>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Dove%20Grey%20Ban%20Collar%20Suit." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                ORDER NOW →
+              </a>
+            </div>
           </div>
 
           <!-- Product Card 3 -->
-          <div class="product-card group flex flex-col justify-between">
+          <div class="product-card group flex flex-col justify-between" data-cat="uploaded washwear" data-id="3">
             <div>
-              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2">
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2 cursor-pointer product-card-thumb rounded-2xl" data-id="3">
                 <img 
                   src="assets/aistudio/1793957392138_6a9e5128.jpg" 
                   alt="Royal Navy Blue Textured Suit" 
+                  loading="lazy"
+                  decoding="async"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span class="absolute top-2 right-2 bg-black/60 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
+                <button type="button" class="card-wishlist-btn absolute top-2 left-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-xs text-slate-700 hover:text-rose-500 flex items-center justify-center transition-colors cursor-pointer" data-id="3" aria-label="Save Royal Navy Blue Textured Suit">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+                </button>
+                <span class="absolute top-2 right-2 bg-black/65 backdrop-blur-xs text-white text-[9px] font-bold px-2 py-0.5 tracking-wider uppercase rounded-md">
                   NEW ARRIVAL
                 </span>
               </div>
               <div class="flex items-start justify-between gap-1">
-                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1 cursor-pointer hover:text-slate-600">
                   ROYAL NAVY BLUE TEXTURED SUIT
                 </h3>
-                <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Royal%20Navy%20Blue%20Textured%20Suit." target="_blank" rel="noopener noreferrer" class="p-1 text-slate-600 hover:text-black cursor-pointer" aria-label="Inquire via WhatsApp">
+                <button type="button" class="quick-add-btn p-1 text-slate-600 hover:text-black cursor-pointer" data-title="Royal Navy Blue Textured Suit" data-image="assets/aistudio/1793957392138_6a9e5128.jpg" aria-label="Add to Bag">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
-                </a>
+                </button>
               </div>
-              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-0.5">
                 TEXTURED COTTON BLEND • FORMAL
               </p>
+              <p class="text-xs font-extrabold text-slate-900 tabular-nums mb-1">PKR 2,750</p>
             </div>
-            <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Royal%20Navy%20Blue%20Textured%20Suit." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
-              ORDER NOW →
-            </a>
+            <div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100">
+              <button type="button" class="open-modal-btn text-[10px] font-bold tracking-wider uppercase text-emerald-800 hover:text-black cursor-pointer" data-id="3">
+                OVERVIEW (3 PICS)
+              </button>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Royal%20Navy%20Blue%20Textured%20Suit." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                ORDER NOW →
+              </a>
+            </div>
           </div>
 
           <!-- Product Card 4 -->
-          <div class="product-card group flex flex-col justify-between">
+          <div class="product-card group flex flex-col justify-between" data-cat="uploaded washwear" data-id="5">
             <div>
-              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2">
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2 cursor-pointer product-card-thumb rounded-2xl" data-id="5">
                 <img 
                   src="assets/aistudio/1793957401142_6f15b946.jpg" 
                   alt="Cream Beige Modern Motif Suit" 
+                  loading="lazy"
+                  decoding="async"
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span class="absolute top-2 right-2 bg-black/60 backdrop-blur-xs text-white text-[9px] font-bold px-1.5 py-0.5 tracking-wider uppercase">
+                <button type="button" class="card-wishlist-btn absolute top-2 left-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-xs text-slate-700 hover:text-rose-500 flex items-center justify-center transition-colors cursor-pointer" data-id="5" aria-label="Save Cream Beige Modern Motif Suit">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+                </button>
+                <span class="absolute top-2 right-2 bg-black/65 backdrop-blur-xs text-white text-[9px] font-bold px-2 py-0.5 tracking-wider uppercase rounded-md">
                   LUXURY PRET
                 </span>
               </div>
               <div class="flex items-start justify-between gap-1">
-                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1 cursor-pointer hover:text-slate-600">
                   CREAM BEIGE MODERN MOTIF SUIT
                 </h3>
-                <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Cream%20Beige%20Modern%20Motif%20Suit." target="_blank" rel="noopener noreferrer" class="p-1 text-slate-600 hover:text-black cursor-pointer" aria-label="Inquire via WhatsApp">
+                <button type="button" class="quick-add-btn p-1 text-slate-600 hover:text-black cursor-pointer" data-title="Cream Beige Modern Motif Suit" data-image="assets/aistudio/1793957401142_6f15b946.jpg" aria-label="Add to Bag">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
-                </a>
+                </button>
               </div>
-              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-1">
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-0.5">
                 GOLD BUTTONS • BLACK BAR EMBROIDERY
               </p>
+              <p class="text-xs font-extrabold text-slate-900 tabular-nums mb-1">PKR 3,150</p>
             </div>
-            <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Cream%20Beige%20Modern%20Motif%20Suit." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
-              ORDER NOW →
-            </a>
+            <div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100">
+              <button type="button" class="open-modal-btn text-[10px] font-bold tracking-wider uppercase text-emerald-800 hover:text-black cursor-pointer" data-id="5">
+                OVERVIEW (3 PICS)
+              </button>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Cream%20Beige%20Modern%20Motif%20Suit." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                ORDER NOW →
+              </a>
+            </div>
+          </div>
+
+          <!-- Product Card 5: Ash Grey Geometric -->
+          <div class="product-card group flex flex-col justify-between" data-cat="uploaded washwear" data-id="4">
+            <div>
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2 cursor-pointer product-card-thumb rounded-2xl" data-id="4">
+                <img 
+                  src="assets/aistudio/1793957396101_628635cd.jpg" 
+                  alt="Ash Grey Geometric Stitch Suit" 
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <button type="button" class="card-wishlist-btn absolute top-2 left-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-xs text-slate-700 hover:text-rose-500 flex items-center justify-center transition-colors cursor-pointer" data-id="4" aria-label="Save Ash Grey Geometric Stitch Suit">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+                </button>
+                <span class="absolute top-2 right-2 bg-black/65 backdrop-blur-xs text-white text-[9px] font-bold px-2 py-0.5 tracking-wider uppercase rounded-md">
+                  DESIGNER
+                </span>
+              </div>
+              <div class="flex items-start justify-between gap-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1 cursor-pointer hover:text-slate-600">
+                  ASH GREY GEOMETRIC STITCH SUIT
+                </h3>
+                <button type="button" class="quick-add-btn p-1 text-slate-600 hover:text-black cursor-pointer" data-title="Ash Grey Geometric Stitch Suit" data-image="assets/aistudio/1793957396101_628635cd.jpg" aria-label="Add to Bag">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                </button>
+              </div>
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-0.5">
+                CRISS-CROSS STITCH • WASH &amp; WEAR
+              </p>
+              <p class="text-xs font-extrabold text-slate-900 tabular-nums mb-1">PKR 2,850</p>
+            </div>
+            <div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100">
+              <button type="button" class="open-modal-btn text-[10px] font-bold tracking-wider uppercase text-emerald-800 hover:text-black cursor-pointer" data-id="4">
+                OVERVIEW (3 PICS)
+              </button>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Ash%20Grey%20Geometric%20Stitch%20Suit." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                ORDER NOW →
+              </a>
+            </div>
+          </div>
+
+          <!-- Product Card 6: Teal Blue Zig-Zag -->
+          <div class="product-card group flex flex-col justify-between" data-cat="cotton" data-id="6">
+            <div>
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2 cursor-pointer product-card-thumb rounded-2xl" data-id="6">
+                <img 
+                  src="assets/aistudio/1793957405200_e121423d.jpg" 
+                  alt="Teal Blue Designer Zig-Zag Suit" 
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <button type="button" class="card-wishlist-btn absolute top-2 left-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-xs text-slate-700 hover:text-rose-500 flex items-center justify-center transition-colors cursor-pointer" data-id="6" aria-label="Save Teal Blue Designer Zig-Zag Suit">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+                </button>
+                <span class="absolute top-2 right-2 bg-black/65 backdrop-blur-xs text-white text-[9px] font-bold px-2 py-0.5 tracking-wider uppercase rounded-md">
+                  TRENDING
+                </span>
+              </div>
+              <div class="flex items-start justify-between gap-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1 cursor-pointer hover:text-slate-600">
+                  TEAL BLUE ZIG-ZAG SUIT
+                </h3>
+                <button type="button" class="quick-add-btn p-1 text-slate-600 hover:text-black cursor-pointer" data-title="Teal Blue Designer Zig-Zag Suit" data-image="assets/aistudio/1793957405200_e121423d.jpg" aria-label="Add to Bag">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                </button>
+              </div>
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-0.5">
+                TEXTURED DOBBY COTTON • EID EDIT
+              </p>
+              <p class="text-xs font-extrabold text-slate-900 tabular-nums mb-1">PKR 2,950</p>
+            </div>
+            <div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100">
+              <button type="button" class="open-modal-btn text-[10px] font-bold tracking-wider uppercase text-emerald-800 hover:text-black cursor-pointer" data-id="6">
+                OVERVIEW (3 PICS)
+              </button>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Teal%20Blue%20Designer%20Zig-Zag%20Suit." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                ORDER NOW →
+              </a>
+            </div>
+          </div>
+
+          <!-- Product Card 7: Sage Green Linen -->
+          <div class="product-card group flex flex-col justify-between" data-cat="cotton" data-id="7">
+            <div>
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2 cursor-pointer product-card-thumb rounded-2xl" data-id="7">
+                <img 
+                  src="assets/aistudio/1793957409076_a446f27c.jpg" 
+                  alt="Sage Green Linen Minimalist Suit" 
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <button type="button" class="card-wishlist-btn absolute top-2 left-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-xs text-slate-700 hover:text-rose-500 flex items-center justify-center transition-colors cursor-pointer" data-id="7" aria-label="Save Sage Green Linen Minimalist Suit">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+                </button>
+                <span class="absolute top-2 right-2 bg-black/65 backdrop-blur-xs text-white text-[9px] font-bold px-2 py-0.5 tracking-wider uppercase rounded-md">
+                  SUMMER HIT
+                </span>
+              </div>
+              <div class="flex items-start justify-between gap-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1 cursor-pointer hover:text-slate-600">
+                  SAGE GREEN LINEN MINIMALIST SUIT
+                </h3>
+                <button type="button" class="quick-add-btn p-1 text-slate-600 hover:text-black cursor-pointer" data-title="Sage Green Linen Minimalist Suit" data-image="assets/aistudio/1793957409076_a446f27c.jpg" aria-label="Add to Bag">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                </button>
+              </div>
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-0.5">
+                SLUB COTTON LINEN • BREATHABLE
+              </p>
+              <p class="text-xs font-extrabold text-slate-900 tabular-nums mb-1">PKR 2,450</p>
+            </div>
+            <div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100">
+              <button type="button" class="open-modal-btn text-[10px] font-bold tracking-wider uppercase text-emerald-800 hover:text-black cursor-pointer" data-id="7">
+                OVERVIEW (3 PICS)
+              </button>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Sage%20Green%20Linen%20Minimalist%20Suit." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                ORDER NOW →
+              </a>
+            </div>
+          </div>
+
+          <!-- Product Card 8: Midnight Blue -->
+          <div class="product-card group flex flex-col justify-between" data-cat="cotton" data-id="12">
+            <div>
+              <div class="relative w-full aspect-[3/4.2] overflow-hidden bg-slate-100 mb-2 cursor-pointer product-card-thumb rounded-2xl" data-id="12">
+                <img 
+                  src="assets/aistudio/1793957417585_f8752f13.jpg" 
+                  alt="Midnight Blue Pocketless Minimalist Suit" 
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <button type="button" class="card-wishlist-btn absolute top-2 left-2 w-7 h-7 rounded-full bg-white/85 backdrop-blur-xs text-slate-700 hover:text-rose-500 flex items-center justify-center transition-colors cursor-pointer" data-id="12" aria-label="Save Midnight Blue Pocketless Minimalist Suit">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+                </button>
+                <span class="absolute top-2 right-2 bg-black/65 backdrop-blur-xs text-white text-[9px] font-bold px-2 py-0.5 tracking-wider uppercase rounded-md">
+                  MODERN CLASSIC
+                </span>
+              </div>
+              <div class="flex items-start justify-between gap-1">
+                <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-tight line-clamp-1 cursor-pointer hover:text-slate-600">
+                  MIDNIGHT BLUE POCKETLESS SUIT
+                </h3>
+                <button type="button" class="quick-add-btn p-1 text-slate-600 hover:text-black cursor-pointer" data-title="Midnight Blue Pocketless Minimalist Suit" data-image="assets/aistudio/1793957417585_f8752f13.jpg" aria-label="Add to Bag">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                </button>
+              </div>
+              <p class="text-[10px] text-slate-500 font-medium uppercase tracking-wider mb-0.5">
+                CLEAN CUT • FINE COTTON BLEND
+              </p>
+              <p class="text-xs font-extrabold text-slate-900 tabular-nums mb-1">PKR 2,650</p>
+            </div>
+            <div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100">
+              <button type="button" class="open-modal-btn text-[10px] font-bold tracking-wider uppercase text-emerald-800 hover:text-black cursor-pointer" data-id="12">
+                OVERVIEW (3 PICS)
+              </button>
+              <a href="https://wa.me/923702265968?text=Salam%20Fleex%20Garments!%20I%20would%20like%20to%20inquire%20about%20Midnight%20Blue%20Pocketless%20Minimalist%20Suit." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold tracking-wider uppercase text-slate-900 hover:underline">
+                ORDER NOW →
+              </a>
+            </div>
           </div>
 
         </div>
@@ -787,7 +999,8 @@
         <!-- Accordion 2: Customer Care -->
         <div class="border-b border-slate-100">
           <button type="button" class="accordion-toggle w-full py-4 flex items-center justify-between text-left text-xs font-bold tracking-widest text-slate-900 uppercase cursor-pointer" data-target="acc-care">
-            <span>CUSTOMER CARE & SIZING</span>
+            <span>CUSTOMER CARE &amp; SIZING</span>
+            <span class="acc-icon text-base font-light">+</span>
           </button>
           <div id="acc-care" class="hidden pb-4 text-xs text-slate-600 space-y-2">
             <p><strong>Custom Sizes & Wholesale:</strong> Visit our factory store in Sindh or order directly on WhatsApp for single or bulk orders.</p>
@@ -847,7 +1060,7 @@
       <div id="drawer-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-xs transition-opacity"></div>
       
       <!-- Drawer Content -->
-      <div class="relative w-4/5 max-w-sm h-full bg-white shadow-2xl flex flex-col justify-between p-6 z-10 transition-transform">
+      <div class="relative w-4/5 max-w-sm h-full bg-white shadow-2xl flex flex-col justify-between p-6 z-10 transition-transform rounded-r-3xl">
         <div>
           <!-- Header with Close Button -->
           <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
@@ -903,16 +1116,19 @@
     <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
       <div id="cart-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-xs"></div>
       
-      <div class="absolute right-0 top-0 w-full max-w-md h-full bg-white shadow-2xl flex flex-col justify-between p-6 z-10">
+      <div class="absolute right-0 top-0 w-full max-w-md h-full bg-white shadow-2xl flex flex-col justify-between p-6 z-10 rounded-l-3xl">
         <!-- Cart Header -->
         <div class="flex items-center justify-between pb-4 border-b border-slate-100">
           <div class="flex items-center gap-2">
             <span class="text-sm font-black tracking-wider uppercase text-slate-900">SELECTED SUITS</span>
             <span id="cart-drawer-count-badge" class="text-xs font-bold bg-slate-100 text-slate-800 px-2 py-0.5 rounded-full">0</span>
           </div>
-          <button id="cart-close-btn" type="button" class="p-1 text-slate-500 hover:text-black cursor-pointer" aria-label="Close cart">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-          </button>
+          <div class="flex items-center gap-2">
+            <button id="cart-clear-btn" type="button" class="text-[10px] font-bold uppercase tracking-wider text-slate-400 hover:text-rose-600 cursor-pointer px-1.5 py-1 rounded-lg">Clear</button>
+            <button id="cart-close-btn" type="button" class="p-1 text-slate-500 hover:text-black cursor-pointer" aria-label="Close cart">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
         </div>
 
         <!-- Cart Items List -->
@@ -923,27 +1139,28 @@
               🛍️
             </div>
             <p class="text-xs font-bold text-slate-800">Your selected bag is empty</p>
-            <p class="text-[11px] text-slate-500 mt-1">Explore our latest stitched and unstitched suits.</p>
+            <p class="text-[11px] text-slate-500 mt-1">Explore our latest stitched suits.</p>
           </div>
         </div>
 
         <!-- Cart Subtotal & WhatsApp Checkout -->
-        <div id="cart-footer" class="border-t border-slate-100 pt-4 hidden">
-          <div class="flex items-center justify-between text-xs font-bold uppercase mb-3">
-            <span>SELECTION:</span>
-            <span class="text-xs font-extrabold text-slate-900">READY FOR ORDER (WHOLESALE & RETAIL)</span>
+        <div id="cart-footer" class="border-t border-slate-100 pt-4 hidden space-y-3">
+          <p id="cart-delivery-note" class="text-[11px] font-semibold text-emerald-800 bg-emerald-50 rounded-xl px-3 py-2 text-center"></p>
+          <div class="flex items-center justify-between text-xs font-bold uppercase">
+            <span class="text-slate-600">Estimated Total</span>
+            <span id="cart-subtotal-price" class="text-base font-black text-slate-900 tabular-nums">PKR 0</span>
           </div>
-          <button id="cart-whatsapp-checkout-btn" type="button" class="w-full py-3 bg-[#0f2135] hover:bg-black text-white text-xs font-bold tracking-widest uppercase transition-colors flex items-center justify-center gap-2 shadow-lg cursor-pointer">
-            <span>INQUIRE & ORDER ON WHATSAPP</span>
+          <button id="cart-whatsapp-checkout-btn" type="button" class="w-full py-3 bg-[#0f2135] hover:bg-black text-white text-xs font-bold tracking-widest uppercase transition-colors flex items-center justify-center gap-2 shadow-lg cursor-pointer rounded-xl">
+            <span>ORDER NOW ON WHATSAPP</span>
           </button>
-          <p class="text-[10px] text-center text-slate-400 mt-2">Direct Factory & Wholesale WhatsApp Support</p>
+          <p class="text-[10px] text-center text-slate-400">Direct Factory &amp; Wholesale WhatsApp Support</p>
         </div>
       </div>
     </div>
 
 
     <!-- Application Script -->
-    <script src="src/script.js"></script>
-    <script src="src/admin.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="admin.js"></script>
   </body>
 </html>
